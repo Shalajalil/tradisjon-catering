@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tradisjon Catering</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --red: #8d0d0d;
+      --bright-red: #d62828;
+      --dark-red: #5f0808;
+      --white: #ffffff;
+      --black: #111111;
+      --light-bg: #f8f4f1;
+      --gray: #666666;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: var(--black);
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(17, 17, 17, 0.94);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-text {
+      color: white;
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 0.3px;
+    }
+
+    .logo-text span {
+      color: var(--bright-red);
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--bright-red);
+    }
+
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #4d0000 0%, #7a0b0b 100%);
+      display: flex;
+      align-items: center;
+      padding: 130px 8% 60px;
+    }
+
+    .hero-wrapper {
+      width: 100%;
+      max-width: 1300px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero-text {
+      color: white;
+    }
+
+    .hero-text h1 {
+      font-size: 64px;
+      line-height: 1.08;
+      margin-bottom: 22px;
+      font-weight: 900;
+    }
+
+    .hero-text p {
+      font-size: 22px;
+      line-height: 1.6;
+      margin-bottom: 34px;
+      color: rgba(255,255,255,0.92);
+      max-width: 700px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 16px;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-main {
+      background: var(--bright-red);
+      color: white;
+    }
+
+    .btn-main:hover {
+      background: #b71f1f;
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.9);
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--black);
+      transform: translateY(-3px);
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image-box {
+      width: 100%;
+      max-width: 500px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 30px;
+      padding: 30px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+
+    .hero-image-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    section {
+      padding: 90px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+
+    .section-title p {
+      font-size: 18px;
+      color: var(--gray);
+    }
+
+    .about {
+      background: white;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 19px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .menu {
+      background: var(--light-bg);
+    }
+
+    .menu-grid {
+      max-width: 1250px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .menu-card {
+      background: white;
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      min-height: 230px;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      border-bottom: 5px solid transparent;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-8px);
+      border-bottom: 5px solid var(--bright-red);
+    }
+
+    .menu-card.active {
+      border-bottom: 5px solid var(--bright-red);
+      box-shadow: 0 18px 45px rgba(214, 40, 40, 0.22);
+    }
+
+    .menu-card h3 {
+      font-size: 25px;
+      margin-bottom: 14px;
+      color: var(--red);
+    }
+
+    .menu-card p {
+      color: #555;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .details {
+      background: white;
+      padding-top: 80px;
+    }
+
+    .details-box {
+      max-width: 1180px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 45px;
+      align-items: center;
+      background: white;
+      padding: 38px;
+      border-radius: 30px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.1);
+      border-top: 6px solid var(--bright-red);
+    }
+
+    .details-text h2 {
+      font-size: 38px;
+      color: var(--red);
+      margin-bottom: 16px;
+      font-weight: 900;
+    }
+
+    .details-text p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .details-text ul {
+      margin-left: 20px;
+      margin-bottom: 28px;
+      color: #444;
+      line-height: 1.9;
+      font-size: 17px;
+    }
+
+    .slider {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 26px;
+      position: relative;
+      background: #eeeeee;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.14);
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    .slider-track img {
+      min-width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px;
+      pointer-events: none;
+    }
+
+    .arrow {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(0,0,0,0.65);
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+      pointer-events: all;
+      transition: 0.3s;
+    }
+
+    .arrow:hover {
+      background: var(--bright-red);
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 16px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      background: rgba(255,255,255,0.65);
+      border-radius: 50%;
+    }
+
+    .dot.active {
+      background: var(--bright-red);
+    }
+
+    .contact {
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .contact .section-title p {
+      color: #dddddd;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: #1c1c1c;
+      padding: 40px;
+      border-radius: 24px;
+      border-top: 5px solid var(--bright-red);
+    }
+
+    .contact-box p {
+      font-size: 19px;
+      margin-bottom: 18px;
+      color: #e7e7e7;
+    }
+
+    footer {
+      background: #070707;
+      color: #aaaaaa;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .hero-image-box {
+        max-width: 420px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .details-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 5%;
+      }
+
+      nav {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 140px 5% 60px;
+      }
+
+      .hero-text h1 {
+        font-size: 40px;
+      }
+
+      .hero-text p {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 70px 5%;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .details-box {
+        padding: 22px;
+      }
+
+      .slider-track img {
+        height: 290px;
+      }
+
+      .section-title h2 {
+        font-size: 34px;
+      }
+
+      .hero-image-box {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-text">Tradisjon <span>Catering</span></div>
+
+    <nav>
+      <a href="#hjem">Hjem</a>
+      <a href="#meny">Meny</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hjem">
+    <div class="hero-wrapper">
+      <div class="hero-text">
+        <h1>Tradisjonell mat til alle anledninger</h1>
+        <p>
+          Vi leverer smakfull catering til bryllup, møter,
+          bursdag og store selskaper.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-main" href="tel:+4747152310">Ring for å bestille</a>
+          <a class="btn btn-outline" href="#meny">Se meny</a>
+          <a class="btn btn-outline" href="#kontakt">Kontakt oss</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-image-box">
+          <img src="bilder/logo.jpg" alt="Tradisjon Catering logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="section-title">
+      <h2>Mat med smak av tradisjon</h2>
+    </div>
+
+    <p>
+      Hos Tradisjon Catering lager vi mat med fokus på kvalitet, gode råvarer og ekte smak.
+      Vi tilbyr catering til både små og store arrangementer, og hjelper deg gjerne med å finne
+      riktig løsning til ditt selskap.
+    </p>
+  </section>
+
+  <section class="menu" id="meny">
+    <div class="section-title">
+      <h2>Vår meny</h2>
+      <p>Trykk på en kategori for å se bilder og mer informasjon</p>
+    </div>
+
+    <div class="menu-grid">
+      <button class="menu-card active" type="button" onclick="velgMeny('ris', this)">
+        <h3>Ris typer</h3>
+        <p>En smakfull og variert cateringpakke med ris og godt utvalg av tradisjonelle retter.
+</p>
+      </button>
+
+      <button class="menu-card" type="button" onclick="velgMeny('gryter', this)">
+        <h3>Gryter</h3>
+        <p>Varme gryteretter med fyldig smak, perfekt til selskap.</p>
+      </button>
+
+      <button class="menu-card" type="button" onclick="velgMeny('kjott', this)">
+        <h3>Kjøtt & tradisjonelle retter</h3>
+        <p>Dolma, sauekjøtt, kylling.</p>
+      </button>
+
+      <button class="menu-card" type="button" onclick="velgMeny('dessert', this)">
+        <h3>Dessert</h3>
+        <p>Søte avslutninger som passer perfekt etter maten.</p>
+      </button>
+    </div>
+  </section>
+
+  <section class="details" id="detaljer">
+    <div class="details-box">
+      <div class="details-text">
+        <h2 id="detailsTitle">Ris typer</h2>
+
+        <p id="detailsText">
+          Velg mellom flere smakfulle risretter. Dette passer perfekt som tilbehør til både kjøtt,
+          kylling, gryter og større selskaper.
+        </p>
+
+        <ul id="detailsList">
+          <li>Hvit ris</li>
+          <li>Biryani</li>
+          <li>Ris med zereshk</li>
+          <li>Ris med dill</li>
+        </ul>
+
+        <a class="btn btn-main" href="tel:+4747152310">Ring for å bestille</a>
+      </div>
+
+      <div class="slider">
+        <div class="slider-track" id="sliderTrack">
+          <img src="bilder/ris1.jpg" alt="Ris bilde 1">
+          <img src="bilder/ris2.jpg" alt="Ris bilde 2">
+          <img src="bilder/ris3.jpg" alt="Ris bilde 3">
+        </div>
+
+        <div class="slider-buttons">
+          <button class="arrow" type="button" onclick="forrigeBilde()">‹</button>
+          <button class="arrow" type="button" onclick="nesteBilde()">›</button>
+        </div>
+
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <div class="section-title">
+      <h2>Kontakt oss</h2>
+      <p>Bestill catering enkelt på telefon</p>
+    </div>
+
+    <div class="contact-box">
+      <p><strong>Telefon:</strong> +47 471 52 310</p>
+      <p><strong>Mail</strong>:</strong> Tradisjoncatering@gmail.com</p>
+      <p><strong>Chef og Eier</strong>:</strong> Shala Jalil</p>
+
+      <a class="btn btn-main" href="tel:+4747152310">Ring nå for bestilling</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Tradisjon Catering. Alle rettigheter reservert.
+  </footer>
+
+  <script>
+    const menyData = {
+      ris: {
+        title: "Ris typer",
+        text: "Velg mellom flere smakfulle risretter. Dette kan du kombinere med kjøtt, kylling og gryter.",
+        list: [
+          "Hvit ris",
+          "Biryani",
+          "Ris med zereshk",
+          "Ris med dill"
+        ],
+        images: [
+          "bilder/ris1.jpg",
+          "bilder/ris2.jpg",
+          "bilder/ris3.jpg"
+        ]
+      },
+
+      gryter: {
+        title: "Gryter",
+        text: "Våre gryter er varme, fyldige og smakfulle. De passer veldig godt til større selskaper, familiefester og arrangementer.",
+        list: [
+          "Fasolia",
+          "Bamee",
+          "Tapsi",
+          "Annet gryter"
+        ],
+        images: [
+          "bilder/gryter1.jpg",
+          "bilder/gryter2.jpg",
+          "bilder/gryter3.jpg"
+        ]
+      },
+
+      kjott: {
+        title: "Kjøtt & tradisjonelle retter",
+        text: "Denne kategorien passer for deg som ønsker tradisjonelle retter med kjøtt, kylling og smakfulle andre retter.",
+        list: [
+          "Sauekjøtt",
+          "Kylling",
+          "Dolma"
+        ],
+        images: [
+          "bilder/kjott1.jpg",
+          "bilder/kjott2.jpg",
+          "bilder/kjott3.jpg"
+        ]
+      },
+
+      dessert: {
+        title: "Dessert og salater",
+        text: "Vi tilbyr 3 forskjellige salat typer og desserter som passer godt etter maten.",
+        list: [
+          "3 type Salater",
+          "Dessert i kopp, kaker, frukt og mye annet.",
+          "Kan tilpasses etter ønsket meny"
+        ],
+        images: [
+          "bilder/dessert1.jpg",
+          "bilder/dessert2.jpg",
+          "bilder/dessert3.jpg"
+        ]
+      }
+    };
+
+    let bildeIndex = 0;
+    let aktiveBilder = menyData.ris.images;
+
+    function velgMeny(type, knapp) {
+      const data = menyData[type];
+
+      document.getElementById("detailsTitle").textContent = data.title;
+      document.getElementById("detailsText").textContent = data.text;
+
+      const list = document.getElementById("detailsList");
+      list.innerHTML = "";
+
+      data.list.forEach(function(item) {
+        const li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+      });
+
+      aktiveBilder = data.images;
+      bildeIndex = 0;
+      oppdaterSlider();
+
+      document.querySelectorAll(".menu-card").forEach(function(card) {
+        card.classList.remove("active");
+      });
+
+      knapp.classList.add("active");
+
+      document.getElementById("detaljer").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    function oppdaterSlider() {
+      const sliderTrack = document.getElementById("sliderTrack");
+
+      sliderTrack.innerHTML = `
+        <img src="${aktiveBilder[0]}" alt="Catering bilde 1">
+        <img src="${aktiveBilder[1]}" alt="Catering bilde 2">
+        <img src="${aktiveBilder[2]}" alt="Catering bilde 3">
+      `;
+
+      sliderTrack.style.transform = `translateX(-${bildeIndex * 100}%)`;
+      oppdaterDots();
+    }
+
+    function nesteBilde() {
+      bildeIndex++;
+
+      if (bildeIndex >= aktiveBilder.length) {
+        bildeIndex = 0;
+      }
+
+      document.getElementById("sliderTrack").style.transform =
+        `translateX(-${bildeIndex * 100}%)`;
+
+      oppdaterDots();
+    }
+
+    function forrigeBilde() {
+      bildeIndex--;
+
+      if (bildeIndex < 0) {
+        bildeIndex = aktiveBilder.length - 1;
+      }
+
+      document.getElementById("sliderTrack").style.transform =
+        `translateX(-${bildeIndex * 100}%)`;
+
+      oppdaterDots();
+    }
+
+    function oppdaterDots() {
+      const dots = document.querySelectorAll(".dot");
+
+      dots.forEach(function(dot, index) {
+        dot.classList.toggle("active", index === bildeIndex);
+      });
+    }
+
+    setInterval(nesteBilde, 3500);
+  </script>
+
+</body>
+</html>
