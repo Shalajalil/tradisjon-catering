@@ -3,765 +3,1462 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tradisjon Catering</title>
+  <title>Tradisjon Catering | Midtøsten catering</title>
+  <meta name="description" content="Tradisjon Catering leverer smakfull mat fra Midtøsten til bryllup, møter, selskaper og arrangementer." />
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    :root {
+      --red: #9b111e;
+      --red-dark: #5d0a10;
+      --red-deep: #3b090c;
+      --cream: #fbf4eb;
+      --cream-2: #efe0cf;
+      --sand: #ead6bd;
+      --paper: #fffaf3;
+      --white: #ffffff;
+      --text: #2c1c16;
+      --muted: #715d52;
+      --line: rgba(87, 55, 38, 0.16);
+      --shadow: 0 24px 70px rgba(70, 37, 22, 0.13);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
     }
 
     html {
       scroll-behavior: smooth;
     }
 
-    :root {
-      --red: #8d0d0d;
-      --bright-red: #d62828;
-      --dark-red: #5f0808;
-      --white: #ffffff;
-      --black: #111111;
-      --light-bg: #f8f4f1;
-      --gray: #666666;
-    }
-
     body {
-      background: var(--light-bg);
-      color: var(--black);
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(155, 17, 30, 0.07), transparent 32%),
+        radial-gradient(circle at 85% 14%, rgba(148, 85, 44, 0.10), transparent 26%),
+        linear-gradient(180deg, var(--cream) 0%, #490000 48%, #940505 100%);
+      color: var(--text);
       overflow-x: hidden;
     }
 
-    header {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(17, 17, 17, 0.94);
-      padding: 18px 8%;
+      padding: 16px 7%;
+      background: rgba(255, 250, 243, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-    }
-
-    .logo-text {
-      color: white;
-      font-size: 27px;
-      font-weight: 900;
-      letter-spacing: 0.3px;
-    }
-
-    .logo-text span {
-      color: var(--bright-red);
-    }
-
-    nav {
-      display: flex;
+      justify-content: space-between;
       gap: 24px;
     }
 
-    nav a {
-      color: white;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
       text-decoration: none;
-      font-weight: 700;
-      transition: 0.3s;
+      min-width: max-content;
     }
 
-    nav a:hover {
-      color: var(--bright-red);
+    .brand img {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      object-fit: cover;
+      background: white;
+      box-shadow: 0 12px 34px rgba(92, 47, 26, 0.12);
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--red);
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 14px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      transition: 0.22s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--red);
+      background: #dff4d6;
+    }
+
+    .nav-links .nav-cta {
+      background: var(--red);
+      color: white;
+      box-shadow: 0 12px 28px rgba(179, 18, 27, 0.25);
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--red-dark);
+      color: rgb(66, 4, 4);
+      transform: translateY(-1px);
+    }
+
+    .page {
+      padding-top: 92px;
+    }
+
+    .container {
+      width: min(1180px, 86vw);
+      margin: 0 auto;
     }
 
     .hero {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #4d0000 0%, #7a0b0b 100%);
-      display: flex;
-      align-items: center;
-      padding: 130px 8% 60px;
-    }
-
-    .hero-wrapper {
-      width: 100%;
-      max-width: 1300px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: center;
-      gap: 50px;
-    }
-
-    .hero-text {
-      color: white;
-    }
-
-    .hero-text h1 {
-      font-size: 64px;
-      line-height: 1.08;
-      margin-bottom: 22px;
-      font-weight: 900;
-    }
-
-    .hero-text p {
-      font-size: 22px;
-      line-height: 1.6;
-      margin-bottom: 34px;
-      color: rgba(255,255,255,0.92);
-      max-width: 700px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 30px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 16px;
-      transition: 0.3s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-main {
-      background: var(--bright-red);
-      color: white;
-    }
-
-    .btn-main:hover {
-      background: #b71f1f;
-      transform: translateY(-3px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: white;
-      border: 2px solid rgba(255,255,255,0.9);
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: var(--black);
-      transform: translateY(-3px);
-    }
-
-    .hero-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-image-box {
-      width: 100%;
-      max-width: 500px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 30px;
-      padding: 30px;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-    }
-
-    .hero-image-box img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-    }
-
-    section {
-      padding: 90px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 42px;
-      margin-bottom: 10px;
-      font-weight: 900;
-    }
-
-    .section-title p {
-      font-size: 18px;
-      color: var(--gray);
-    }
-
-    .about {
-      background: white;
-      text-align: center;
-    }
-
-    .about p {
-      max-width: 900px;
-      margin: auto;
-      font-size: 19px;
-      line-height: 1.8;
-      color: #444;
-    }
-
-    .menu {
-      background: var(--light-bg);
-    }
-
-    .menu-grid {
-      max-width: 1250px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .menu-card {
-      background: white;
-      padding: 30px;
-      border-radius: 24px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-      transition: 0.3s;
-      min-height: 230px;
-      border: none;
-      text-align: left;
-      cursor: pointer;
-      border-bottom: 5px solid transparent;
-    }
-
-    .menu-card:hover {
-      transform: translateY(-8px);
-      border-bottom: 5px solid var(--bright-red);
-    }
-
-    .menu-card.active {
-      border-bottom: 5px solid var(--bright-red);
-      box-shadow: 0 18px 45px rgba(214, 40, 40, 0.22);
-    }
-
-    .menu-card h3 {
-      font-size: 25px;
-      margin-bottom: 14px;
-      color: var(--red);
-    }
-
-    .menu-card p {
-      color: #555;
-      font-size: 17px;
-      line-height: 1.7;
-    }
-
-    .details {
-      background: white;
-      padding-top: 80px;
-    }
-
-    .details-box {
-      max-width: 1180px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1.15fr;
-      gap: 45px;
-      align-items: center;
-      background: white;
-      padding: 38px;
-      border-radius: 30px;
-      box-shadow: 0 18px 50px rgba(0,0,0,0.1);
-      border-top: 6px solid var(--bright-red);
-    }
-
-    .details-text h2 {
-      font-size: 38px;
-      color: var(--red);
-      margin-bottom: 16px;
-      font-weight: 900;
-    }
-
-    .details-text p {
-      font-size: 18px;
-      color: #555;
-      line-height: 1.7;
-      margin-bottom: 22px;
-    }
-
-    .details-text ul {
-      margin-left: 20px;
-      margin-bottom: 28px;
-      color: #444;
-      line-height: 1.9;
-      font-size: 17px;
-    }
-
-    .slider {
-      width: 100%;
-      overflow: hidden;
-      border-radius: 26px;
       position: relative;
-      background: #eeeeee;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.14);
+      padding: 72px 0 62px;
+      overflow: hidden;
     }
 
-    .slider-track {
-      display: flex;
-      transition: transform 0.6s ease;
-    }
-
-    .slider-track img {
-      min-width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .slider-buttons {
+    .hero::before {
+      content: "";
       position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      transform: translateY(-50%);
-      display: flex;
-      justify-content: space-between;
-      padding: 0 15px;
+      inset: 26px 3% auto auto;
+      width: 510px;
+      height: 510px;
+      background: radial-gradient(circle, rgba(91, 26, 6, 0.16), transparent 68%);
       pointer-events: none;
     }
 
-    .arrow {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      border: none;
-      background: rgba(0,0,0,0.65);
-      color: white;
-      font-size: 28px;
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 3.2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--red);
+      opacity: 0.55;
+    }
+
+    .hero h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(48px, 6vw, 84px);
+      line-height: 0.96;
+      letter-spacing: -2.8px;
+      color: var(--red);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--text);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.8;
+      max-width: 640px;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions,
+    .detail-actions,
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
       cursor: pointer;
-      pointer-events: all;
-      transition: 0.3s;
+      transition: 0.22s ease;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      box-shadow: 0 16px 38px rgba(179, 18, 27, 0.26);
+    }
+
+    .btn-primary:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 20px 42px rgba(179, 18, 27, 0.32);
+    }
+
+    .btn-outline {
+      background: #4d0802;
+      color: var(--red);
+      border-color: rgba(73, 3, 10, 0.22);
+    }
+
+    .btn-outline:hover {
+      background: #f4e6d6;
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 560px;
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      background: linear-gradient(145deg, #540603, #760d03);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(179, 18, 27, 0.12);
+      overflow: hidden;
+    }
+
+    .hero-photo {
+      height: 100%;
+      min-height: 524px;
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(126, 72, 44, 0.04), rgba(82, 38, 22, 0.13)),
+        var(--cream-2);
+    }
+
+    .hero-photo img.food {
+      width: 100%;
+      height: 100%;
+      min-height: 524px;
+      object-fit: cover;
+      filter: saturate(1.03) contrast(1.02);
+    }
+
+    .hero-logo-panel {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255, 250, 243, 0.92);
+      border: 1px solid rgba(179, 18, 27, 0.14);
+      box-shadow: 0 22px 44px rgba(39, 24, 23, 0.14);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-logo-panel img {
+      width: 92px;
+      height: 92px;
+      object-fit: contain;
+      border-radius: 18px;
+      background: white;
+      padding: 6px;
+    }
+
+    .hero-logo-panel strong {
+      display: block;
+      color: var(--red);
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .hero-logo-panel span {
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 42px;
+      max-width: 680px;
+    }
+
+    .stat {
+      background: rgba(255,250,243,0.78);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--red);
+      font-size: 26px;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    section {
+      scroll-margin-top: 104px;
+    }
+
+    .section-pad {
+      padding: 72px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px;
+    }
+
+    .section-head h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(38px, 4.7vw, 68px);
+      line-height: 1;
+      color: var(--red);
+      letter-spacing: -1.8px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 span {
+      color: var(--text);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 18px;
+    }
+
+    .menu-panel {
+      background: rgba(255, 250, 243, 0.84);
+      border: 1px solid rgba(179, 18, 27, 0.12);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 30px;
+    }
+
+    .category-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 13px;
+      margin-bottom: 28px;
+    }
+
+    .category-btn {
+      border: 1px solid rgba(179, 18, 27, 0.22);
+      background: white;
+      color: var(--red);
+      border-radius: 999px;
+      min-height: 54px;
+      padding: 15px 22px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.22s ease;
+      font-size: 13px;
+    }
+
+    .category-btn:hover {
+      transform: translateY(-2px);
+      background: rgba(92, 47, 26, 0.07);
+    }
+
+    .category-btn.active {
+      background: var(--red);
+      color: white;
+      border-color: var(--red);
+      box-shadow: 0 14px 32px rgba(179, 18, 27, 0.24);
+    }
+
+    .detail-card {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 26px;
+      align-items: stretch;
+      background: linear-gradient(145deg, #fffdf8, #f2dfcb);
+      border: 1px solid rgba(179, 18, 27, 0.12);
+      border-radius: 28px;
+      padding: 22px;
+      overflow: hidden;
+    }
+
+    .detail-text {
+      padding: 28px 26px;
+      border-radius: 24px;
+      background: rgba(255, 250, 243, 0.78);
+      border: 1px solid rgba(179, 18, 27, 0.10);
+    }
+
+    .detail-text .mini {
+      color: var(--red);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .detail-text h3 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(34px, 3.6vw, 52px);
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .detail-text p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .dish-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .dish-list li {
+      position: relative;
+      padding: 13px 14px 13px 42px;
+      background: white;
+      color: var(--text);
+      border: 1px solid rgba(179, 18, 27, 0.12);
+      border-radius: 15px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .dish-list li::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      background: var(--red);
+      box-shadow: 0 0 0 5px rgba(179, 18, 27, 0.10);
+    }
+
+    .slider {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 480px;
+      background: var(--cream-2);
+      box-shadow: 0 18px 46px rgba(39, 24, 23, 0.12);
+    }
+
+    .slider-track {
+      height: 100%;
+      display: flex;
+      transition: transform 0.65s ease;
+    }
+
+    .slide-img {
+      min-width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .slider-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 90px 22px 22px;
+      background: linear-gradient(180deg, transparent, rgba(70, 17, 16, 0.72));
+      color: white;
+      pointer-events: none;
+    }
+
+    .slider-overlay strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .slider-overlay span {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .slider-controls {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .arrow {
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.72);
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--red);
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      transition: 0.22s ease;
     }
 
     .arrow:hover {
-      background: var(--bright-red);
+      background: var(--red);
+      color: white;
+      border-color: var(--red);
     }
 
     .dots {
       position: absolute;
-      bottom: 16px;
-      width: 100%;
+      left: 22px;
+      bottom: 22px;
       display: flex;
-      justify-content: center;
       gap: 8px;
+      z-index: 2;
     }
 
     .dot {
-      width: 11px;
-      height: 11px;
-      background: rgba(255,255,255,0.65);
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid rgba(255, 255, 255, 0.72);
     }
 
     .dot.active {
-      background: var(--bright-red);
+      width: 28px;
+      border-radius: 999px;
+      background: white;
     }
 
-    .contact {
-      background: #111;
-      color: white;
-      text-align: center;
+    .quote-section {
+      padding: 72px 0 82px;
+      background:
+        linear-gradient(135deg, rgba(126, 72, 44, 0.10), transparent 52%),
+        #fffdf9;
     }
 
-    .contact .section-title p {
-      color: #dddddd;
+    .quote-grid {
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 32px;
+      align-items: stretch;
     }
 
-    .contact-box {
-      max-width: 700px;
-      margin: auto;
-      background: #1c1c1c;
-      padding: 40px;
-      border-radius: 24px;
-      border-top: 5px solid var(--bright-red);
+    .quote-info,
+    .quote-form {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(179, 18, 27, 0.12);
+      background: white;
+      box-shadow: var(--shadow);
     }
 
-    .contact-box p {
-      font-size: 19px;
+    .quote-info {
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .quote-info::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: #f4e6d6;
+    }
+
+    .quote-info h2 {
+      position: relative;
+      z-index: 1;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(38px, 4vw, 60px);
+      line-height: 1;
+      color: var(--red);
+      letter-spacing: -1.4px;
       margin-bottom: 18px;
-      color: #e7e7e7;
+    }
+
+    .quote-info p {
+      position: relative;
+      z-index: 1;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 17px;
+      margin-bottom: 24px;
+    }
+
+    .contact-mini {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-mini a,
+    .contact-mini div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 16px;
+      background: #f6eadb;
+      font-weight: 800;
+    }
+
+    .quote-form {
+      padding: 30px;
+    }
+
+    .form-note {
+      margin-bottom: 20px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(92, 47, 26, 0.07);
+      color: var(--muted);
+      line-height: 1.55;
+      border: 1px solid rgba(179, 18, 27, 0.10);
+    }
+
+    .form-status {
+      display: none;
+      margin-bottom: 20px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .form-status.success {
+      display: block;
+      background: #edf8ef;
+      color: #1d6b2c;
+      border: 1px solid rgba(29, 107, 44, 0.18);
+    }
+
+    .form-status.error {
+      display: block;
+      background: #fff6ef;
+      color: var(--red-dark);
+      border: 1px solid rgba(179, 18, 27, 0.18);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid rgba(87, 55, 38, 0.16);
+      background: #fffdf8;
+      border-radius: 17px;
+    }
+
+    .choice-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 14px;
+      border-radius: 14px;
+      background: #fbf4eb;
+      border: 1px solid rgba(87, 55, 38, 0.12);
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: none;
+      cursor: pointer;
+      transition: 0.18s ease;
+      user-select: none;
+    }
+
+    .choice-option:hover {
+      border-color: rgba(155, 17, 30, 0.35);
+      background: #fff8ef;
+    }
+
+    .choice-option input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--red);
+      flex: 0 0 auto;
+    }
+
+    .choice-help {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    label {
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(179, 18, 27, 0.18);
+      background: #fffdf8;
+      border-radius: 15px;
+      padding: 15px 15px;
+      color: var(--text);
+      font-size: 16px;
+      outline: none;
+      transition: 0.18s ease;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    textarea {
+      min-height: 132px;
+      resize: vertical;
+      line-height: 1.55;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 4px rgba(155, 17, 30, 0.09);
+      background: white;
+    }
+
+    .hidden-field {
+      position: absolute;
+      left: -5000px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .form-actions {
+      margin-top: 18px;
+    }
+
+    .contact-section {
+      padding: 58px 0;
+      background: var(--red);
+      color: white;
+    }
+
+    .contact-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .contact-strip h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(32px, 3.5vw, 52px);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .contact-strip p {
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+
+    .contact-strip .btn-outline {
+      background: white;
+      border-color: white;
+      color: var(--red);
     }
 
     footer {
-      background: #070707;
-      color: #aaaaaa;
+      padding: 28px 0;
+      background: #fbf4eb;
+      color: var(--muted);
       text-align: center;
-      padding: 25px;
+      border-top: 1px solid var(--line);
       font-size: 14px;
     }
 
-    @media (max-width: 1100px) {
-      .hero-wrapper {
+    @media (max-width: 1040px) {
+      .nav-links {
+        gap: 4px;
+      }
+
+      .nav-links a {
+        padding: 11px 12px;
+      }
+
+      .hero-grid,
+      .detail-card,
+      .quote-grid {
         grid-template-columns: 1fr;
-        text-align: center;
       }
 
-      .hero-text p {
-        margin-left: auto;
-        margin-right: auto;
+      .hero-card {
+        min-height: auto;
       }
 
-      .buttons {
-        justify-content: center;
+      .hero-photo,
+      .hero-photo img.food {
+        min-height: 430px;
       }
 
-      .hero-image-box {
-        max-width: 420px;
-      }
-
-      .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .details-box {
-        grid-template-columns: 1fr;
+      .stats {
+        grid-template-columns: 1fr 1fr 1fr;
       }
     }
 
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        gap: 12px;
-        padding: 15px 5%;
+    @media (max-width: 780px) {
+      .topbar {
+        padding: 12px 4%;
       }
 
-      nav {
-        gap: 14px;
-        flex-wrap: wrap;
+      .nav-wrap {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .brand {
         justify-content: center;
       }
 
+      .nav-links {
+        overflow-x: auto;
+        padding-bottom: 4px;
+        justify-content: flex-start;
+      }
+
+      .nav-links a {
+        white-space: nowrap;
+      }
+
+      .page {
+        padding-top: 150px;
+      }
+
+      .container {
+        width: min(92vw, 1180px);
+      }
+
       .hero {
-        padding: 140px 5% 60px;
+        padding-top: 36px;
       }
 
-      .hero-text h1 {
-        font-size: 40px;
+      .hero h1 {
+        letter-spacing: -1.8px;
       }
 
-      .hero-text p {
-        font-size: 18px;
+      .hero-logo-panel {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        padding: 14px;
       }
 
-      section {
-        padding: 70px 5%;
+      .hero-logo-panel img {
+        width: 70px;
+        height: 70px;
       }
 
-      .menu-grid {
+      .stats {
         grid-template-columns: 1fr;
       }
 
-      .details-box {
-        padding: 22px;
+      .menu-panel,
+      .quote-form,
+      .quote-info {
+        padding: 20px;
       }
 
-      .slider-track img {
-        height: 290px;
+      .detail-card {
+        padding: 14px;
       }
 
-      .section-title h2 {
-        font-size: 34px;
+      .detail-text {
+        padding: 22px 18px;
       }
 
-      .hero-image-box {
-        padding: 18px;
+      .slider {
+        min-height: 350px;
+      }
+
+      .slide-img {
+        height: 350px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .choice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-strip {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .hero-actions,
+      .detail-actions,
+      .form-actions {
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .category-btn {
+        width: 100%;
       }
     }
   </style>
 </head>
 
 <body>
+  <header class="topbar">
+    <div class="nav-wrap">
+      <a class="brand" href="#hjem" aria-label="Gå til startsiden">
+<img src="bilder/logo.jpg" alt="Tradisjon Catering logo" onerror="this.style.display='none'" />
 
-  <header>
-    <div class="logo-text">Tradisjon <span>Catering</span></div>
+        <span class="brand-text">
+          <strong>Tradisjon Catering</strong>
+          <span>Midtøsten mat</span>
+        </span>
+      </a>
 
-    <nav>
-      <a href="#hjem">Hjem</a>
-      <a href="#meny">Meny</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
+      <nav class="nav-links" aria-label="Hovedmeny">
+        <a href="#hjem">Hjem</a>
+        <a href="#meny">Meny</a>
+        <a href="#tilbud">Be om tilbud</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="nav-cta" href="tel:+4747152310">Ring oss</a>
+      </nav>
+    </div>
   </header>
-
+<main class="page">
   <section class="hero" id="hjem">
-    <div class="hero-wrapper">
-      <div class="hero-text">
-        <h1>Tradisjonell mat til alle anledninger</h1>
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+        <div class="eyebrow">Catering til alle anledninger</div>
+
+        <h1>
+          Smaker fra <span>Midtøsten</span>, levert med kvalitet.
+        </h1>
+
         <p>
-          Vi leverer smakfull catering til bryllup, møter,
-          bursdag og store selskaper.
+          Tradisjon Catering lager ris, gryter, kjøtt, kylling, salater og desserter til
+          bryllup, familieselskap, møter og store arrangementer. Velg meny, send forespørsel,
+          så tar vi kontakt.
         </p>
 
-        <div class="buttons">
-          <a class="btn btn-main" href="tel:+4747152310">Ring for å bestille</a>
-          <a class="btn btn-outline" href="#meny">Se meny</a>
-          <a class="btn btn-outline" href="#kontakt">Kontakt oss</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#tilbud">Be om tilbud</a>
+          <a class="btn btn-outline" href="#meny">Se menyen</a>
+          <a class="btn btn-outline" href="tel:+4747152310">Ring oss</a>
         </div>
       </div>
 
-      <div class="hero-image">
-        <div class="hero-image-box">
-          <img src="bilder/logo.jpg" alt="Tradisjon Catering logo">
+      <div class="hero-card">
+        <div class="hero-photo">
+          <img
+            class="food"
+            src="bilder/forside.jpg"
+            alt="Mat fra Tradisjon Catering"
+            onerror="this.src='image.png'"
+          />
         </div>
       </div>
+
     </div>
   </section>
 
-  <section class="about">
-    <div class="section-title">
-      <h2>Mat med smak av tradisjon</h2>
-    </div>
-
-    <p>
-      Hos Tradisjon Catering lager vi mat med fokus på kvalitet, gode råvarer og ekte smak.
-      Vi tilbyr catering til både små og store arrangementer, og hjelper deg gjerne med å finne
-      riktig løsning til ditt selskap.
-    </p>
-  </section>
-
-  <section class="menu" id="meny">
-    <div class="section-title">
-      <h2>Vår meny</h2>
-      <p>Trykk på en kategori for å se bilder og mer informasjon</p>
-    </div>
-
-    <div class="menu-grid">
-      <button class="menu-card active" type="button" onclick="velgMeny('ris', this)">
-        <h3>Ris typer</h3>
-        <p>En smakfull og variert cateringpakke med ris og godt utvalg av tradisjonelle retter.
-</p>
-      </button>
-
-      <button class="menu-card" type="button" onclick="velgMeny('gryter', this)">
-        <h3>Gryter</h3>
-        <p>Varme gryteretter med fyldig smak, perfekt til selskap.</p>
-      </button>
-
-      <button class="menu-card" type="button" onclick="velgMeny('kjott', this)">
-        <h3>Kjøtt & tradisjonelle retter</h3>
-        <p>Dolma, sauekjøtt, kylling.</p>
-      </button>
-
-      <button class="menu-card" type="button" onclick="velgMeny('dessert', this)">
-        <h3>Dessert</h3>
-        <p>Søte avslutninger som passer perfekt etter maten.</p>
-      </button>
-    </div>
-  </section>
-
-  <section class="details" id="detaljer">
-    <div class="details-box">
-      <div class="details-text">
-        <h2 id="detailsTitle">Ris typer</h2>
-
-        <p id="detailsText">
-          Velg mellom flere smakfulle risretter. Dette passer perfekt som tilbehør til både kjøtt,
-          kylling, gryter og større selskaper.
-        </p>
-
-        <ul id="detailsList">
-          <li>Hvit ris</li>
-          <li>Biryani</li>
-          <li>Ris med zereshk</li>
-          <li>Ris med dill</li>
-        </ul>
-
-        <a class="btn btn-main" href="tel:+4747152310">Ring for å bestille</a>
-      </div>
-
-      <div class="slider">
-        <div class="slider-track" id="sliderTrack">
-          <img src="bilder/ris1.jpg" alt="Ris bilde 1">
-          <img src="bilder/ris2.jpg" alt="Ris bilde 2">
-          <img src="bilder/ris3.jpg" alt="Ris bilde 3">
+    <section class="section-pad" id="meny">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Velg kategori</div>
+          <h2>Hva har du <span>lyst på?</span></h2>
+          
         </div>
 
-        <div class="slider-buttons">
-          <button class="arrow" type="button" onclick="forrigeBilde()">‹</button>
-          <button class="arrow" type="button" onclick="nesteBilde()">›</button>
-        </div>
+        <div class="menu-panel">
+          <div class="category-grid" id="categoryGrid">
+            <button class="category-btn active" type="button" data-category="ris">Ris typer</button>
+            <button class="category-btn" type="button" data-category="gryter">Gryter</button>
+            <button class="category-btn" type="button" data-category="salater">Salater</button>
+            <button class="category-btn" type="button" data-category="kjott">Kjøtt</button>
+            <button class="category-btn" type="button" data-category="kylling">Kylling</button>
+            <button class="category-btn" type="button" data-category="grill">Grill & kebab</button>
+            <button class="category-btn" type="button" data-category="tilbehor">Brød & tilbehør</button>
+            <button class="category-btn" type="button" data-category="desserter">Desserter</button>
+          </div>
 
-        <div class="dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+          <div class="detail-card" id="menyDetaljer">
+            <div class="detail-text">
+              <div class="mini">Menyvalg</div>
+              <h3 id="detailTitle">Ris typer</h3>
+              <p id="detailText">
+                Ris er en viktig del av mange retter fra Midtøsten. Vi lager ris som passer
+                perfekt sammen med gryter, kjøtt, kylling og selskapsmenyer.
+              </p>
+              <ul class="dish-list" id="dishList">
+                <li>Hvit ris</li>
+                <li>Biryani</li>
+                <li>Ris med dill</li>
+                <li>Ris med zereshk</li>
+              </ul> 
+              <div class="detail-actions">
+                <button class="btn btn-primary" type="button" onclick="goToOffer()">Be om tilbud</button>
+                <a class="btn btn-outline" href="tel:+4747152310">Ring oss</a>
+              </div>
+            </div>
+
+            <div class="slider" aria-label="Bildegalleri">
+              <div class="slider-track" id="sliderTrack"></div>
+              <div class="slider-controls">
+                <button class="arrow" type="button" onclick="prevSlide()" aria-label="Forrige bilde">‹</button>
+                <button class="arrow" type="button" onclick="nextSlide()" aria-label="Neste bilde">›</button>
+              </div>
+              <div class="slider-overlay">
+                <strong id="sliderCaption">Ris typer</strong>
+                <span>Vi tilbyr hvit ris, ris med zhresk, ris med dill, og biryani.</span>
+              </div>
+              <div class="dots" id="sliderDots" aria-hidden="true"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="contact" id="kontakt">
-    <div class="section-title">
-      <h2>Kontakt oss</h2>
-      <p>Bestill catering enkelt på telefon</p>
-    </div>
+    <section class="quote-section" id="tilbud">
+      <div class="container quote-grid">
+        <div class="quote-info">
+          <div>
+            <div class="eyebrow">Forespørsel</div>
+            <h2>Be om tilbud</h2>
+            <p>
+              Fyll ut hva du trenger, antall gjester og dato. Når skjemaet sendes, går
+              forespørselen til Tradisjon Catering på e-post.
+            </p>
+          </div>
 
-    <div class="contact-box">
-      <p><strong>Telefon:</strong> +47 471 52 310</p>
-      <p><strong>Mail</strong>:</strong> Tradisjoncatering@gmail.com</p>
-      <p><strong>Chef og Eier</strong>:</strong> Shala Jalil</p>
+          <div class="contact-mini">
+            <a href="tel:+4747152310">Telefon: +47 471 52 310</a>
+            <a href="mailto:Tradisjoncatering@gmail.com">Tradisjoncatering@gmail.com</a>
+            <div>Chef og eier: Shala Jalil</div>
+          </div>
+        </div>
 
-      <a class="btn btn-main" href="tel:+4747152310">Ring nå for bestilling</a>
-    </div>
-  </section>
+        <form class="quote-form" id="quoteForm" action="send-tilbud.php" method="POST">
+          <div class="form-status" id="formStatus"></div>
+          <div class="form-note">
+            Velg gjerne flere kategorier, for eksempel ris, gryter og salater.
+          </div>
+
+          <input class="hidden-field" type="text" name="website" tabindex="-1" autocomplete="off" />
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="navn">Navn</label>
+              <input id="navn" name="navn" type="text" placeholder="Ditt navn" required />
+            </div>
+
+            <div class="field">
+              <label for="telefon">Telefon</label>
+              <input id="telefon" name="telefon" type="tel" placeholder="+47 ..." required />
+            </div>
+
+            <div class="field">
+              <label for="epost">E-post</label>
+              <input id="epost" name="epost" type="email" placeholder="din@email.no" />
+            </div>
+
+            <div class="field">
+              <label for="dato">Dato</label>
+              <input id="dato" name="dato" type="date" required />
+            </div>
+
+            <div class="field">
+              <label for="gjester">Antall gjester</label>
+              <input id="gjester" name="gjester" type="number" min="1" placeholder="F.eks. 40" required />
+            </div>
+
+
+            <div class="field full" id="matvalgFelt">
+              <label>Hva trenger du? <span style="text-transform:none; letter-spacing:0; font-weight:700; color:var(--muted);">Du kan velge flere</span></label>
+              <div class="choice-grid" role="group" aria-label="Velg mat kategorier">
+                <label class="choice-option"><input type="checkbox" name="matvalg[]" value="Ris typer" checked /> Ris typer</label>
+                <label class="choice-option"><input type="checkbox" name="matvalg[]" value="Gryter" /> Gryter</label>
+                <label class="choice-option"><input type="checkbox" name="matvalg[]" value="Salater" /> Salater</label>
+                <label class="choice-option"><input type="checkbox" name="matvalg[]" value="Kjøttretter" /> Kjøttretter</label>
+                <label class="choice-option"><input type="checkbox" name="matvalg[]" value="Kyllingretter" /> Kyllingretter</label>
+                <label class="choice-option"><input type="checkbox" name="matvalg[]" value="Grill & kebab" /> Grill & kebab</label>
+                <label class="choice-option"><input type="checkbox" name="matvalg[]" value="Brød & tilbehør" /> Brød & tilbehør</label>
+                <label class="choice-option"><input type="checkbox" name="matvalg[]" value="Desserter" /> Desserter</label>
+              </div>
+              <div class="choice-help">Velg alt kunden ønsker. Detaljer, allergier og spesielle retter kan skrives i meldingsfeltet.</div>
+            </div>
+
+            <div class="field full">
+              <label for="sted">Leveringssted / område</label>
+              <input id="sted" name="sted" type="text" placeholder="Adresse eller område" />
+            </div>
+
+            <div class="field full">
+              <label for="melding">Hva ønsker du?</label>
+              <textarea id="melding" name="melding" placeholder="Skriv kort om arrangementet, ønsket meny, allergier eller andre ønsker." required></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Send forespørsel</button>
+            <a class="btn btn-outline" href="tel:+4747152310">Ring oss</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontakt">
+      <div class="container contact-strip">
+        <div>
+          <h2>Trenger du raskt svar?</h2>
+          <p>Ring oss direkte, eller send forespørsel via skjemaet.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-outline" href="tel:+4747152310">Ring +47 471 52 310</a>
+          <a class="btn btn-outline" href="#tilbud">Be om tilbud</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     © 2026 Tradisjon Catering. Alle rettigheter reservert.
   </footer>
 
   <script>
-    const menyData = {
+    const menuData = {
       ris: {
         title: "Ris typer",
-        text: "Velg mellom flere smakfulle risretter. Dette kan du kombinere med kjøtt, kylling og gryter.",
-        list: [
-          "Hvit ris",
-          "Biryani",
-          "Ris med zereshk",
-          "Ris med dill"
-        ],
+        formValue: "Ris typer",
+        text: "Luftig ris er en viktig del av mange retter fra Midtøsten. Vi lager ris som passer perfekt sammen med gryter, kjøtt, kylling og selskapsmenyer.",
+        dishes: ["Hvit ris", "Biryani", "Ris med dill", "Ris med zereshk"],
+        
         images: [
-          "bilder/ris1.jpg",
-          "bilder/ris2.jpg",
-          "bilder/ris3.jpg"
-        ]
-      },
+  "bilder/A23.jpg",
+  "bilder/ris2.jpg",
+  "bilder/ris3.jpg"
+] 
 
+      },
       gryter: {
         title: "Gryter",
-        text: "Våre gryter er varme, fyldige og smakfulle. De passer veldig godt til større selskaper, familiefester og arrangementer.",
-        list: [
-          "Fasolia",
-          "Bamee",
-          "Tapsi",
-          "Annet gryter"
-        ],
-        images: [
-          "bilder/gryter1.jpg",
-          "bilder/gryter2.jpg",
-          "bilder/gryter3.jpg"
-        ]
+        formValue: "Gryter",
+        text: "Varme, fyldige gryter med smakfulle krydder og gode råvarer. Passer veldig godt til store selskaper, familiefester og arrangementer.",
+        dishes: ["Fasolia / bønnegryte", "Tapsi og grønnsaksgryter", "Bame", "Dolma"],
+        images: ["gryter1.jpg", "gryter2.jpg", "gryter3.jpg"]
       },
-
+      salater: {
+        title: "Salater",
+        formValue: "Salater",
+        text: "Friske salater og lette sideretter som gjør menyen komplett. Vi kan tilpasse salatene etter maten og gjestene.",
+        dishes: ["Frisk husets salat", "Yoghurt- og agurksalat", "Tabbouleh-inspirert salat", "Tilpasses etter ønsket meny"],
+        images: ["salat1.jpg", "salat2.jpg", "salat3.jpg"]
+      },
       kjott: {
-        title: "Kjøtt & tradisjonelle retter",
-        text: "Denne kategorien passer for deg som ønsker tradisjonelle retter med kjøtt, kylling og smakfulle andre retter.",
-        list: [
-          "Sauekjøtt",
-          "Kylling",
-          "Dolma"
-        ],
-        images: [
-          "bilder/kjott1.jpg",
-          "bilder/kjott2.jpg",
-          "bilder/kjott3.jpg"
-        ]
+        title: "Kjøttretter",
+        formValue: "Kjøttretter",
+        text: "Tradisjonelle kjøttretter med god smak og presentasjon. Perfekt for deg som ønsker en mettende og elegant selskapsmeny.",
+        dishes: ["Sauekjøtt", "grill", "Selskapsfat etter avtale"],
+        images: ["kjott1.jpg", "kjott2.jpg", "kjott3.jpg"]
       },
-
-      dessert: {
-        title: "Dessert og salater",
-        text: "Vi tilbyr 3 forskjellige salat typer og desserter som passer godt etter maten.",
-        list: [
-          "3 type Salater",
-          "Dessert i kopp, kaker, frukt og mye annet.",
-          "Kan tilpasses etter ønsket meny"
-        ],
-        images: [
-          "bilder/dessert1.jpg",
-          "bilder/dessert2.jpg",
-          "bilder/dessert3.jpg"
-        ]
+      kylling: {
+        title: "Kyllingretter",
+        formValue: "Kyllingretter",
+        text: "Saftige kyllingretter med krydder fra Midtøsten. Kan serveres med ris, salat, brød og varme sauser.",
+        dishes: ["Kylling lår", "Kyllinggryte",],
+        images: ["kylling1.jpg", "kylling2.jpg", "kylling3.jpg"]
+      },
+      grill: {
+        title: "Grill & kebab",
+        formValue: "Grill & kebab",
+        text: "Grillretter og kebab med god stekeskorpe, saftig kjøtt og klassisk tilbehør. Godt valg til større arrangementer.",
+        dishes: ["Kebabspyd", "Grillet kjøtt", "Kyllingspyd", "Serveres med naan/brød"],
+        images: ["grill1.jpg", "grill2.jpg", "grill3.jpg"]
+      },
+      tilbehor: {
+        title: "Brød & tilbehør",
+        formValue: "Brød & tilbehør",
+        text: "Fullfør menyen med brød, sauser, dips og småretter. Vi setter sammen tilbehør som passer til hovedrettene.",
+        dishes: ["Brød", "Sauser og dips", "Sylteagurk og grønnsaker", "Tilbehør etter menyvalg"],
+        images: ["tilbehor1.jpg", "tilbehor2.jpg", "tilbehor3.jpg"]
+      },
+      desserter: {
+        title: "Desserter",
+        formValue: "Desserter",
+        text: "Søte avslutninger til selskapet. Desserter kan bestilles alene eller som en del av en komplett meny.",
+        dishes: ["Dessert i kopp", "Kaker", "Frukt og søte fat", "Kan tilpasses etter arrangement"],
+        images: ["dessert1.jpg", "dessert2.jpg", "dessert3.jpg"]
       }
     };
 
-    let bildeIndex = 0;
-    let aktiveBilder = menyData.ris.images;
+    let activeCategory = "ris";
+    let slideIndex = 0;
+    let slideTimer = null;
 
-    function velgMeny(type, knapp) {
-      const data = menyData[type];
+    const detailTitle = document.getElementById("detailTitle");
+    const detailText = document.getElementById("detailText");
+    const dishList = document.getElementById("dishList");
+    const sliderTrack = document.getElementById("sliderTrack");
+    const sliderDots = document.getElementById("sliderDots");
+    const sliderCaption = document.getElementById("sliderCaption");
+    const matvalgCheckboxes = document.querySelectorAll('input[name="matvalg[]"]');
 
-      document.getElementById("detailsTitle").textContent = data.title;
-      document.getElementById("detailsText").textContent = data.text;
+    function imageMarkup(src, alt) {
+      return `<img class="slide-img" src="${src}" alt="${alt}" onerror="this.onerror=null; this.src='image.png';">`;
+    }
 
-      const list = document.getElementById("detailsList");
-      list.innerHTML = "";
+    function renderSlider() {
+      const data = menuData[activeCategory];
+      sliderTrack.innerHTML = data.images.map((src, index) => imageMarkup(src, `${data.title} bilde ${index + 1}`)).join("");
+      sliderDots.innerHTML = data.images.map((_, index) => `<span class="dot ${index === slideIndex ? "active" : ""}"></span>`).join("");
+      sliderCaption.textContent = data.title;
+      moveSlider();
+    }
 
-      data.list.forEach(function(item) {
-        const li = document.createElement("li");
-        li.textContent = item;
-        list.appendChild(li);
+    function moveSlider() {
+      const data = menuData[activeCategory];
+      if (slideIndex >= data.images.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = data.images.length - 1;
+      sliderTrack.style.transform = `translateX(-${slideIndex * 100}%)`;
+      [...sliderDots.children].forEach((dot, index) => dot.classList.toggle("active", index === slideIndex));
+    }
+
+    function nextSlide() {
+      slideIndex += 1;
+      moveSlider();
+      restartTimer();
+    }
+
+    function prevSlide() {
+      slideIndex -= 1;
+      moveSlider();
+      restartTimer();
+    }
+
+    function restartTimer() {
+      clearInterval(slideTimer);
+      slideTimer = setInterval(() => {
+        slideIndex += 1;
+        moveSlider();
+      }, 3600);
+    }
+
+    function selectCategory(category, shouldScroll = true) {
+      activeCategory = category;
+      const data = menuData[category];
+      slideIndex = 0;
+
+      detailTitle.textContent = data.title;
+      detailText.textContent = data.text;
+      dishList.innerHTML = data.dishes.map(item => `<li>${item}</li>`).join("");
+      document.querySelectorAll(".category-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.category === category);
       });
 
-      aktiveBilder = data.images;
-      bildeIndex = 0;
-      oppdaterSlider();
+      renderSlider();
+      restartTimer();
 
-      document.querySelectorAll(".menu-card").forEach(function(card) {
-        card.classList.remove("active");
-      });
+      if (shouldScroll) {
+        document.getElementById("menyDetaljer").scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
 
-      knapp.classList.add("active");
-
-      document.getElementById("detaljer").scrollIntoView({
-        behavior: "smooth"
+    function checkChoice(value) {
+      matvalgCheckboxes.forEach(box => {
+        if (box.value === value) box.checked = true;
       });
     }
 
-    function oppdaterSlider() {
-      const sliderTrack = document.getElementById("sliderTrack");
-
-      sliderTrack.innerHTML = `
-        <img src="${aktiveBilder[0]}" alt="Catering bilde 1">
-        <img src="${aktiveBilder[1]}" alt="Catering bilde 2">
-        <img src="${aktiveBilder[2]}" alt="Catering bilde 3">
-      `;
-
-      sliderTrack.style.transform = `translateX(-${bildeIndex * 100}%)`;
-      oppdaterDots();
+    function anyChoiceSelected() {
+      return [...matvalgCheckboxes].some(box => box.checked);
     }
 
-    function nesteBilde() {
-      bildeIndex++;
+    function goToOffer() {
+      const data = menuData[activeCategory];
+      checkChoice(data.formValue);
+      scrollToSection("tilbud");
+      setTimeout(() => document.getElementById("navn").focus(), 650);
+    }
 
-      if (bildeIndex >= aktiveBilder.length) {
-        bildeIndex = 0;
+    document.getElementById("categoryGrid").addEventListener("click", (event) => {
+      const button = event.target.closest(".category-btn");
+      if (!button) return;
+      selectCategory(button.dataset.category);
+    });
+
+
+    function scrollToSection(id) {
+      const target = document.getElementById(id);
+      if (!target) return;
+      const headerHeight = document.querySelector(".topbar").offsetHeight || 0;
+      const targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight - 14;
+      window.scrollTo({ top: Math.max(targetTop, 0), behavior: "smooth" });
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", event => {
+        const id = link.getAttribute("href").slice(1);
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (!target) return;
+        event.preventDefault();
+        scrollToSection(id);
+      });
+    });
+
+    document.getElementById("quoteForm").addEventListener("submit", event => {
+      const statusBox = document.getElementById("formStatus");
+      if (!anyChoiceSelected()) {
+        event.preventDefault();
+        statusBox.className = "form-status error";
+        statusBox.textContent = "Velg minst én matkategori før du sender forespørselen.";
+        document.getElementById("matvalgFelt").scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    });
+
+    function showStatusFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const status = params.get("status");
+      const statusBox = document.getElementById("formStatus");
+      if (!status || !statusBox) return;
+
+      if (status === "sendt") {
+        statusBox.className = "form-status success";
+        statusBox.textContent = "Takk! Forespørselen er sendt. Vi tar kontakt så snart som mulig.";
       }
 
-      document.getElementById("sliderTrack").style.transform =
-        `translateX(-${bildeIndex * 100}%)`;
-
-      oppdaterDots();
-    }
-
-    function forrigeBilde() {
-      bildeIndex--;
-
-      if (bildeIndex < 0) {
-        bildeIndex = aktiveBilder.length - 1;
+      if (status === "feil") {
+        statusBox.className = "form-status error";
+        statusBox.textContent = "Noe gikk galt med sendingen. Ring oss gjerne, eller prøv igjen.";
       }
-
-      document.getElementById("sliderTrack").style.transform =
-        `translateX(-${bildeIndex * 100}%)`;
-
-      oppdaterDots();
     }
 
-    function oppdaterDots() {
-      const dots = document.querySelectorAll(".dot");
-
-      dots.forEach(function(dot, index) {
-        dot.classList.toggle("active", index === bildeIndex);
-      });
-    }
-
-    setInterval(nesteBilde, 3500);
+    selectCategory("ris", false);
+    showStatusFromUrl();
+    restartTimer();
   </script>
-
 </body>
 </html>
