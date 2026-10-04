@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Catering i Asker – Halal catering til selskaper | Tradisjon Catering</title>
+
+  <meta
+    name="description"
+    content="Tradisjon Catering tilbyr halal catering i Asker til bursdag, bryllup, dåp, konfirmasjon, firmaarrangement og andre selskaper. Se meny og bestill catering i Asker."
+  >
+
+  <meta
+    name="keywords"
+    content="catering Asker, halal catering Asker, catering i Asker, selskapsmat Asker, mat til selskap Asker, catering Akershus"
+  >
+
+  <link
+    rel="canonical"
+    href="https://tradisjoncatering.no/catering-asker.html"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Catering i Asker – Tradisjon Catering">
+  <meta
+    property="og:description"
+    content="Halal catering i Asker til selskaper, arrangementer og private feiringer."
+  >
+  <meta
+    property="og:url"
+    content="https://tradisjoncatering.no/catering-asker.html"
+  >
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --card: #ffffff;
+      --text: #27231f;
+      --muted: #756e66;
+      --accent: #8c5a3c;
+      --accent-dark: #6f432b;
+      --line: #e7e0d7;
+      --soft: #eee7de;
+      --radius: 24px;
+      --shadow: 0 18px 45px rgba(40, 29, 20, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      padding: 22px 0;
+      color: white;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.28);
+      display: grid;
+      place-items: center;
+      font-family: "Fraunces", serif;
+      font-size: 22px;
+      backdrop-filter: blur(12px);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .logo-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      opacity: .75;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      opacity: .9;
+      transition: opacity .2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .nav-cta {
+      padding: 11px 17px;
+      border-radius: 999px;
+      background: white;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 680px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      color: white;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(22, 17, 13, .78),
+          rgba(22, 17, 13, .38)
+        ),
+        url("forside.jpeg") center/cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.28)
+      );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding-top: 60px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.13);
+      border: 1px solid rgba(255,255,255,.22);
+      backdrop-filter: blur(12px);
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: .98;
+      letter-spacing: -2px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 18px;
+      color: rgba(255,255,255,.88);
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 21px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--text);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+      color: white;
+    }
+
+    /* LOCAL LINKS */
+
+    .local-strip {
+      background: white;
+      border-bottom: 1px solid var(--line);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .local-inner {
+      display: flex;
+      gap: 8px;
+      padding: 12px 0;
+    }
+
+    .local-link {
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      transition: .2s ease;
+    }
+
+    .local-link:hover {
+      background: var(--soft);
+      color: var(--text);
+    }
+
+    .local-link.active {
+      background: var(--text);
+      color: white;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 42px;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin-bottom: 17px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* INTRO */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .intro-text p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-card h3 {
+      font-family: "Fraunces", serif;
+      font-size: 27px;
+      margin-bottom: 14px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* MENU */
+
+    .menu-section {
+      background: #efe9e0;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 30px rgba(40,29,20,.05);
+    }
+
+    .menu-card-head {
+      padding: 25px 25px 20px;
+    }
+
+    .menu-card-head h3 {
+      font-family: "Fraunces", serif;
+      font-size: 29px;
+      margin-bottom: 6px;
+    }
+
+    .menu-card-head p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .menu-gallery {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-slides {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .menu-slides::-webkit-scrollbar {
+      display: none;
+    }
+
+    .menu-slide {
+      position: relative;
+      min-width: 100%;
+      aspect-ratio: 1.2 / 1;
+      overflow: hidden;
+      scroll-snap-align: start;
+      margin: 0;
+    }
+
+    .menu-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .menu-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 65px 22px 20px;
+      color: white;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(20,16,13,.88)
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 48%;
+    }
+
+    .menu-caption strong {
+      font-family: "Fraunces", serif;
+      font-size: 25px;
+      line-height: 1.1;
+    }
+
+    .menu-caption span {
+      font-size: 13px;
+      line-height: 1.45;
+      color: rgba(255,255,255,.86);
+      margin-top: 5px;
+    }
+
+    .menu-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 13px;
+    }
+
+    .menu-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #d5ccc1;
+    }
+
+    .menu-dot.active {
+      background: var(--accent);
+      width: 20px;
+      border-radius: 999px;
+    }
+
+    /* OCCASIONS */
+
+    .occasion-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .occasion {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 25px;
+    }
+
+    .occasion-number {
+      font-family: "Fraunces", serif;
+      font-size: 28px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .occasion h3 {
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .occasion p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* AREAS */
+
+    .areas {
+      background: white;
+    }
+
+    .area-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .area {
+      padding: 11px 16px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      border-radius: 999px;
+      font-size: 14px;
+    }
+
+    /* FAQ */
+
+    .faq {
+      max-width: 800px;
+    }
+
+    details {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 20px 22px;
+      font-weight: 700;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      padding: 0 22px 21px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #211c18;
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact-intro {
+      color: rgba(255,255,255,.72);
+      max-width: 500px;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-info a {
+      color: white;
+      font-weight: 600;
+    }
+
+    .contact-form {
+      background: white;
+      color: var(--text);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 13px 14px;
+      font: inherit;
+      outline: none;
+      background: #faf8f5;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      background: var(--text);
+      color: white;
+      padding: 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-family: inherit;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #181512;
+      color: white;
+      padding: 50px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 35px;
+    }
+
+    footer h3 {
+      font-family: "Fraunces", serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: rgba(255,255,255,.58);
+      font-size: 14px;
+      max-width: 380px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px;
+      font-size: 14px;
+      color: rgba(255,255,255,.7);
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      color: rgba(255,255,255,.45);
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 620px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .intro-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .occasion-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .occasion-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-caption strong {
+        font-size: 22px;
+      }
+
+      .menu-caption span {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav class="nav">
+
+      <a href="index.html" class="logo">
+        <div class="logo-mark">T</div>
+
+        <div class="logo-text">
+          <span class="logo-title">Tradisjon Catering</span>
+          <span class="logo-sub">Halal catering</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#meny">Meny</a>
+        <a href="#anledninger">Anledninger</a>
+        <a href="#omraader">Områder</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt" class="nav-cta">Bestill catering</a>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Halal catering i Asker
+        </div>
+
+        <h1>
+          Catering i Asker.
+        </h1>
+
+        <p>
+          Tradisjon Catering tilbyr smakfull halal catering i Asker
+          til selskaper, bursdager, bryllup, dåp, konfirmasjoner,
+          firmaarrangementer og andre anledninger.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#kontakt" class="btn btn-primary">
+            Bestill catering
+          </a>
+
+          <a href="#meny" class="btn btn-secondary">
+            Se meny
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- LOCAL LINKS -->
+
+  <div class="local-strip">
+
+    <div class="container">
+
+      <div class="local-inner">
+
+        <a class="local-link" href="catering-halden.html">
+          Halden
+        </a>
+
+        <a class="local-link" href="catering-sarpsborg.html">
+          Sarpsborg
+        </a>
+
+        <a class="local-link" href="catering-fredrikstad.html">
+          Fredrikstad
+        </a>
+
+        <a class="local-link" href="catering-moss.html">
+          Moss
+        </a>
+
+        <a class="local-link" href="catering-oslo.html">
+          Oslo
+        </a>
+
+        <a class="local-link" href="catering-lillestrom.html">
+          Lillestrøm
+        </a>
+
+        <a class="local-link" href="catering-ski.html">
+          Ski
+        </a>
+
+        <a class="local-link" href="catering-vestby.html">
+          Vestby
+        </a>
+
+        <a class="local-link" href="catering-vinterbro.html">
+          Vinterbro
+        </a>
+
+        <a class="local-link" href="catering-viken.html">
+          Viken
+        </a>
+
+        <a class="local-link active" href="catering-asker.html">
+          Asker
+        </a>
+
+        <a class="local-link" href="catering-akershus.html">
+          Akershus
+        </a>
+
+        <a class="local-link" href="catering-drammen.html">
+          Drammen
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- INTRO -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="intro-grid">
+
+        <div class="intro-text">
+
+          <div class="section-label">
+            Catering Asker
+          </div>
+
+          <h2>
+            God mat til viktige øyeblikk.
+          </h2>
+
+          <p>
+            Skal du arrangere selskap i Asker og trenger mat til
+            mange gjester? Tradisjon Catering gjør det enkelt å
+            bestille smakfull halal catering til både små og store
+            arrangementer.
+          </p>
+
+          <p>
+            Vi tilbyr tradisjonelle retter med gode råvarer,
+            smakfulle gryter, ris, kjøtt, kylling, salater,
+            tilbehør og desserter.
+          </p>
+
+          <p>
+            Enten du planlegger bursdag, bryllup, konfirmasjon,
+            dåp, firmafest eller et annet arrangement i Asker,
+            kan vi hjelpe deg med maten.
+          </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <h3>
+            Halal catering i Asker
+          </h3>
+
+          <p>
+            Vi legger vekt på god smak, gode råvarer og mat som
+            passer til selskap. Menyen kan tilpasses etter
+            arrangement, antall gjester og ønsker.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MENU -->
+
+  <section class="menu-section" id="meny">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          Meny
+        </div>
+
+        <h2>
+          Tradisjonelle smaker.
+        </h2>
+
+        <p>
+          Se noen av rettene vi tilbyr til catering i Asker.
+          Dra sidelengs på bildene for å se flere retter.
+        </p>
+
+      </div>
+
+
+      <div class="menu-grid" id="menuGrid"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- OCCASIONS -->
+
+  <section id="anledninger">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          Anledninger
+        </div>
+
+        <h2>
+          Mat til enhver anledning.
+        </h2>
+
+        <p>
+          Vi leverer catering i Asker til både private selskaper
+          og arrangementer.
+        </p>
+
+      </div>
+
+
+      <div class="occasion-grid">
+
+        <div class="occasion">
+          <div class="occasion-number">01</div>
+          <h3>Bursdag</h3>
+          <p>
+            Gjør bursdagen enklere med god mat til gjestene.
+          </p>
+        </div>
+
+        <div class="occasion">
+          <div class="occasion-number">02</div>
+          <h3>Bryllup</h3>
+          <p>
+            Catering til bryllup og større selskaper.
+          </p>
+        </div>
+
+        <div class="occasion">
+          <div class="occasion-number">03</div>
+          <h3>Konfirmasjon</h3>
+          <p>
+            Tradisjonell og smakfull mat til konfirmasjonen.
+          </p>
+        </div>
+
+        <div class="occasion">
+          <div class="occasion-number">04</div>
+          <h3>Firmaarrangement</h3>
+          <p>
+            Mat til møter, firmafester og arrangementer.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- AREAS -->
+
+  <section class="areas" id="omraader">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          Leveringsområder
+        </div>
+
+        <h2>
+          Catering i og rundt Asker.
+        </h2>
+
+        <p>
+          Vi tilbyr catering i Asker og flere områder i Oslo,
+          Akershus og Viken.
+        </p>
+
+      </div>
+
+
+      <div class="area-grid">
+
+        <span class="area">Asker</span>
+        <span class="area">Akershus</span>
+        <span class="area">Viken</span>
+        <span class="area">Oslo</span>
+        <span class="area">Lillestrøm</span>
+        <span class="area">Ski</span>
+        <span class="area">Vestby</span>
+        <span class="area">Vinterbro</span>
+        <span class="area">Drammen</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- LOCAL PAGES -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          Lokale sider
+        </div>
+
+        <h2>
+          Finn catering nær deg.
+        </h2>
+
+        <p>
+          Se våre lokale cateringsider for flere områder.
+        </p>
+
+      </div>
+
+
+      <div class="area-grid">
+
+        <a class="area" href="catering-halden.html">
+          Catering Halden
+        </a>
+
+        <a class="area" href="catering-sarpsborg.html">
+          Catering Sarpsborg
+        </a>
+
+        <a class="area" href="catering-fredrikstad.html">
+          Catering Fredrikstad
+        </a>
+
+        <a class="area" href="catering-moss.html">
+          Catering Moss
+        </a>
+
+        <a class="area" href="catering-oslo.html">
+          Catering Oslo
+        </a>
+
+        <a class="area" href="catering-lillestrom.html">
+          Catering Lillestrøm
+        </a>
+
+        <a class="area" href="catering-ski.html">
+          Catering Ski
+        </a>
+
+        <a class="area" href="catering-vestby.html">
+          Catering Vestby
+        </a>
+
+        <a class="area" href="catering-vinterbro.html">
+          Catering Vinterbro
+        </a>
+
+        <a class="area" href="catering-viken.html">
+          Catering Viken
+        </a>
+
+        <a class="area" href="catering-akershus.html">
+          Catering Akershus
+        </a>
+
+        <a class="area" href="catering-drammen.html">
+          Catering Drammen
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section id="faq">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-label">
+          FAQ
+        </div>
+
+        <h2>
+          Vanlige spørsmål.
+        </h2>
+
+      </div>
+
+
+      <div class="faq">
+
+        <details>
+          <summary>
+            Tilbyr dere halal catering i Asker?
+          </summary>
+
+          <p>
+            Ja. Tradisjon Catering tilbyr halal catering i Asker
+            til både private selskaper og arrangementer.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            Hvilke arrangementer kan dere levere til?
+          </summary>
+
+          <p>
+            Vi leverer blant annet til bursdager, bryllup,
+            konfirmasjoner, dåp, firmaarrangementer og andre
+            selskaper.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            Kan menyen tilpasses?
+          </summary>
+
+          <p>
+            Ja. Menyen kan tilpasses etter arrangement,
+            antall gjester og ønsker.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            Leverer dere catering utenfor Asker?
+          </summary>
+
+          <p>
+            Ja. Vi tilbyr catering i flere områder rundt Asker,
+            blant annet Akershus, Viken og Oslo.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            Hvordan bestiller jeg catering?
+          </summary>
+
+          <p>
+            Ta kontakt gjennom skjemaet på siden, på telefon
+            eller via e-post. Fortell oss gjerne dato,
+            antall gjester og hvilken type arrangement du planlegger.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="kontakt">
+
+    <div class="container">
+
+      <div class="contact-grid">
+
+        <div>
+
+          <div class="section-label">
+            Kontakt
+          </div>
+
+          <h2>
+            Klar for å planlegge?
+          </h2>
+
+          <p class="contact-intro">
+            Send oss en forespørsel med dato, antall gjester
+            og hvilken type arrangement du planlegger.
+            Så tar vi kontakt med deg.
+          </p>
+
+
+          <div class="contact-info">
+
+            <a href="tel:+4747152310">
+              +47 471 52 310
+            </a>
+
+            <a href="mailto:tradisjoncatering@gmail.com">
+              tradisjoncatering@gmail.com
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/mpqgazyp"
+          method="POST"
+        >
+
+          <div class="form-group">
+
+            <label for="name">
+              Navn
+            </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="email">
+              E-post
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="phone">
+              Telefon
+            </label>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              Fortell oss om arrangementet
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Dato, antall gjester, type arrangement og eventuelle ønsker..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="form-submit"
+          >
+            Send forespørsel
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>
+          Tradisjon Catering
+        </h3>
+
+        <p>
+          Halal catering til selskaper og arrangementer
+          i Asker, Akershus, Viken og Oslo.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Områder
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="catering-asker.html">
+            Asker
+          </a>
+
+          <a href="catering-akershus.html">
+            Akershus
+          </a>
+
+          <a href="catering-viken.html">
+            Viken
+          </a>
+
+          <a href="catering-oslo.html">
+            Oslo
+          </a>
+
+          <a href="catering-drammen.html">
+            Drammen
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Kontakt
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="tel:+4747152310">
+            +47 471 52 310
+          </a>
+
+          <a href="mailto:tradisjoncatering@gmail.com">
+            tradisjoncatering@gmail.com
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © 2026 Tradisjon Catering. Alle rettigheter reservert.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  const menuData = {
+
+    gryter: {
+      title: "Gryter",
+      description:
+        "Smaksrike gryter som passer godt til selskaper og større serveringer.",
+
+      items: [
+
+        {
+          name: "Bame gryte",
+          description: "Med bame og krydder.",
+          image: "bildegryte1.jpeg"
+        },
+
+        {
+          name: "Lammegryte",
+          description:
+            "Mørt lam med varme krydder og gode råvarer.",
+          image: "bildegryte2.jpeg"
+        },
+
+        {
+          name: "Fasolia bønner",
+          description:
+            "Bønner i en smakfull og kremet gryte.",
+          image: "bildegryte3.jpeg"
+        }
+
+      ]
+    },
+
+
+    ris: {
+      title: "Ris",
+      description:
+        "Risretter som passer både som tilbehør og som en sentral del av måltidet.",
+
+      items: [
+
+        {
+          name: "Hvit ris",
+          description:
+            "Luftig ris som passer til mange av våre retter.",
+          image: "bilderis1.jpeg"
+        },
+
+        {
+          name: "Biryani",
+          description:
+            "Krydret risrett med aromatiske smaker.",
+          image: "bilderis2.jpeg"
+        },
+
+        {
+          name: "Ris med dill",
+          description:
+            "Aromatisk ris med frisk dill.",
+          image: "bilderis3.jpeg"
+        }
+
+      ]
+    },
+
+
+    kjott: {
+      title: "Kjøtt",
+      description:
+        "Kjøttretter med tydelige krydder, gode råvarer og tradisjonelle smaker.",
+
+      items: [
+
+        {
+          name: "Lamme kjøtt",
+          description:
+            "Mørt kjøtt tilpasset selskapsservering.",
+          image: "bildekjott1.jpeg"
+        },
+
+        {
+          name: "Kjøtt av lam i fat",
+          description:
+            "Kjøtt som passer godt på buffet.",
+          image: "bildekjott2.jpeg"
+        },
+
+        {
+          name: "Krydret kjøtt",
+          description:
+            "Saftig kjøtt med varme krydder og urter.",
+          image: "bildekjott3.jpeg"
+        }
+
+      ]
+    },
+
+
+    kylling: {
+      title: "Kylling",
+      description:
+        "Kyllingretter med krydder og smaker inspirert av Midtøsten.",
+
+      items: [
+
+        {
+          name: "Kyllingvinger",
+          description:
+            "Saftige kyllingvinger med krydder.",
+          image: "bildekylling1.jpeg"
+        },
+
+        {
+          name: "Kylling",
+          description:
+            "Kyllingkjøtt marinert med aromatiske krydder.",
+          image: "bildekylling2.jpeg"
+        },
+
+        {
+          name: "Kyllinggryte",
+          description:
+            "Saftig kylling i en fyldig gryte.",
+          image: "bildekylling3.jpeg"
+        }
+
+      ]
+    },
+
+
+    salater: {
+      title: "Salater",
+      description:
+        "Friske salater som gir farge, syre og balanse til måltidet.",
+
+      items: [
+
+        {
+          name: "Salater",
+          description:
+            "Frisk salater med grønnsaker.",
+          image: "bildesalater1.jpeg"
+        },
+
+        {
+          name: "Youghurt dip",
+          description:
+            "Frisk smak av yoghurt til maten.",
+          image: "bildesalater2.jpeg"
+        },
+
+        {
+          name: "Turshiat",
+          description:
+            "I flere farger.",
+          image: "bildesalater3.jpeg"
+        }
+
+      ]
+    },
+
+
+    tilbehor: {
+      title: "Tilbehør",
+      description:
+        "Små detaljer som gjør hele måltidet komplett.",
+
+      items: [
+
+        {
+          name: "Frukt",
+          description:
+            "Frisk frukt som passer godt til buffet og selskaper.",
+          image: "bildefrukt1.jpeg"
+        },
+
+        {
+          name: "Fruktfat",
+          description:
+            "Et fargerikt utvalg av frisk frukt.",
+          image: "bildefrukt2.jpeg"
+        },
+
+        {
+          name: "Frisk frukt",
+          description:
+            "Friske råvarer som gir en lett og naturlig avslutning.",
+          image: "bildefrukt3.jpeg"
+        }
+
+      ]
+    },
+
+
+    dessert: {
+      title: "Dessert",
+      description:
+        "Søte avslutninger inspirert av tradisjoner fra regionen.",
+
+      items: [
+
+        {
+          name: "Dessert i kopp",
+          description:
+            "Kake og krem i kopp.",
+          image: "bildedeser1.jpeg"
+        },
+
+        {
+          name: "Halal gele",
+          description:
+            "Vegansk gele i kopp.",
+          image: "bildedeser2.jpeg"
+        },
+
+        {
+          name: "Baklava",
+          description:
+            "Sprø lag med nøtter og søt sirup.",
+          image: "bildedeser3.jpeg"
+        }
+
+      ]
+    }
+
+  };
+
+
+  const menuGrid = document.getElementById("menuGrid");
+
+
+  function renderMenu() {
+
+    menuGrid.innerHTML = Object.entries(menuData)
+      .map(([key, menu]) => {
+
+        return `
+
+          <article class="menu-card">
+
+            <div class="menu-card-head">
+
+              <h3>
+                ${menu.title}
+              </h3>
+
+              <p>
+                ${menu.description}
+              </p>
+
+            </div>
+
+
+            <div class="menu-gallery">
+
+              <div class="menu-slides">
+
+                ${menu.items.map((item, index) => `
+
+                  <figure class="menu-slide">
+
+                    <img
+                      src="${item.image}"
+                      alt="${item.name} – ${menu.title} catering fra Tradisjon Catering i Asker"
+                      loading="${index === 0 ? "eager" : "lazy"}"
+                    >
+
+                    <figcaption class="menu-caption">
+
+                      <strong>
+                        ${item.name}
+                      </strong>
+
+                      <span>
+                        ${item.description}
+                      </span>
+
+                    </figcaption>
+
+                  </figure>
+
+                `).join("")}
+
+              </div>
+
+
+              <div class="menu-dots">
+
+                ${menu.items.map((_, index) => `
+
+                  <span
+                    class="menu-dot ${index === 0 ? "active" : ""}"
+                  ></span>
+
+                `).join("")}
+
+              </div>
+
+            </div>
+
+          </article>
+
+        `;
+
+      })
+      .join("");
+
+
+    document.querySelectorAll(".menu-slides").forEach(slider => {
+
+      const dots =
+        slider.parentElement.querySelectorAll(".menu-dot");
+
+      slider.addEventListener("scroll", () => {
+
+        const index =
+          Math.round(
+            slider.scrollLeft / slider.clientWidth
+          );
+
+        dots.forEach((dot, i) => {
+
+          dot.classList.toggle(
+            "active",
+            i === index
+          );
+
+        });
+
+      });
+
+    });
+
+  }
+
+
+  renderMenu();
+
+</script>
+
+</body>
+</html>
