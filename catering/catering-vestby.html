@@ -1912,185 +1912,137 @@
 
 
 
-<style id="premium-offer-hero">
-/* ULTRA KOMPAKT TILBUD */
 
-.hero {
-  position: relative;
-  overflow: visible;
-}
 
-.hero .offer-promo {
-  position: absolute !important;
-  z-index: 10;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-  width: min(420px, calc(100% - 24px));
-  margin: 0 !important;
-  padding: 0 !important;
+
+<style id="offer-popup-style">
+
+.offer-popup {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  width: min(390px, calc(100% - 32px));
+  padding: 24px;
   background: linear-gradient(
     135deg,
-    rgba(35,18,12,0.98),
-    rgba(117,31,22,0.97)
+    #21160f,
+    #8f2819
   );
-  border: 1px solid rgba(232,185,104,0.7);
-  border-radius: 9px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
-  overflow: hidden;
-  backdrop-filter: blur(8px);
+  color: white;
+  border: 1px solid rgba(232,185,104,0.75);
+  border-radius: 20px;
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(255,255,255,0.04) inset;
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
-.hero .offer-promo-inner {
-  position: relative;
-  z-index: 2;
-  min-height: 36px;
-  padding: 6px 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 7px;
+.offer-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
-.hero .offer-promo-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1px;
-  min-width: 0;
+.offer-popup-badge {
+  color: var(--gold-light);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
-.hero .offer-promo-badge {
+.offer-popup h3 {
+  font-family: var(--serif);
+  font-size: 30px;
+  line-height: 1;
+  margin: 0 0 8px;
+}
+
+.offer-popup p {
+  margin: 0 0 16px;
+  color: rgba(255,255,255,0.76);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.offer-popup-price {
+  font-family: var(--serif);
+  color: var(--gold-light);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.offer-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.offer-popup-close:hover {
+  background: rgba(255,255,255,0.16);
+}
+
+.offer-popup-button {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  color: var(--gold-light);
-  font-size: 5px;
-  font-weight: 800;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.hero .offer-promo-badge::before {
-  content: "";
-  width: 9px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.hero .offer-promo-text strong {
-  color: white;
-  font-family: var(--serif);
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 600;
-}
-
-.hero .offer-promo-text > span:last-child {
-  color: rgba(255,255,255,0.65);
-  font-size: 6px;
-  line-height: 1.2;
-}
-
-.hero .offer-promo .btn {
-  flex-shrink: 0;
-  min-width: 75px;
-  min-height: 23px;
-  padding: 4px 7px;
-  border-radius: 6px;
+  justify-content: center;
+  width: 100%;
+  min-height: 45px;
+  padding: 12px 18px;
+  border-radius: 11px;
   background: linear-gradient(
     135deg,
     var(--gold-light),
     var(--gold)
   );
   color: var(--ink);
-  border: 0;
-  font-size: 6px;
+  font-size: 13px;
   font-weight: 800;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: 0.25s ease;
 }
 
-.hero .offer-promo-inner::after {
-  content: "";
-  position: absolute;
-  left: 8px;
-  bottom: 0;
-  width: 35px;
-  height: 1px;
-  background: var(--gold);
+.offer-popup-button:hover {
+  transform: translateY(-2px);
 }
 
-/* MOBIL */
+@media (max-width: 600px) {
 
-@media (max-width: 760px) {
-
-  .hero {
-    min-height: 650px;
-    padding-bottom: 58px;
-  }
-
-  .hero .offer-promo {
-    left: 9px;
-    right: 9px;
-    bottom: 9px;
+  .offer-popup {
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
     width: auto;
-    transform: none;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 17px;
   }
 
-  .hero .offer-promo-inner {
-    min-height: 31px;
-    padding: 5px 7px;
-    gap: 5px;
+  .offer-popup h3 {
+    font-size: 26px;
   }
 
-  .hero .offer-promo-text strong {
-    font-size: 12px;
-  }
-
-  .hero .offer-promo-text > span:last-child {
-    font-size: 5px;
-  }
-
-  .hero .offer-promo .btn {
-    min-width: 65px;
-    min-height: 20px;
-    padding: 3px 5px;
-    font-size: 5px;
+  .offer-popup-price {
+    font-size: 21px;
   }
 }
 
-@media (max-width: 420px) {
-
-  .hero {
-    min-height: 660px;
-    padding-bottom: 54px;
-  }
-
-  .hero .offer-promo {
-    left: 7px;
-    right: 7px;
-    bottom: 7px;
-  }
-
-  .hero .offer-promo-inner {
-    padding: 4px 6px;
-  }
-
-  .hero .offer-promo-text strong {
-    font-size: 11px;
-  }
-
-  .hero .offer-promo-text > span:last-child {
-    font-size: 4px;
-  }
-
-  .hero .offer-promo .btn {
-    min-width: 58px;
-    min-height: 18px;
-    font-size: 4px;
-  }
-}
 </style>
 
 </head>
@@ -2173,16 +2125,7 @@
 
     <section class="hero">
 
-<div class="offer-promo" style="margin:20px auto;max-width:1180px;">
-  <div class="offer-promo-inner">
-    <div class="offer-promo-text">
-      <span class="offer-promo-badge">ÅRETS TILBUD</span>
-      <strong>250 kr per person</strong>
-      <span>3 typer ris · 2 typer gryter · kylling · 3 typer salater</span>
-    </div>
-    <a href="index.html#tilbud" class="btn btn-gold">Se tilbudet →</a>
-  </div>
-</div>
+
 
 
 
@@ -4126,6 +4069,62 @@
       new Date().getFullYear();
 
   </script>
+
+
+<div class="offer-popup" id="offerPopup">
+  <button
+    class="offer-popup-close"
+    id="offerPopupClose"
+    aria-label="Lukk tilbud"
+  >
+    ×
+  </button>
+
+  <div class="offer-popup-badge">
+    Årets cateringtilbud
+  </div>
+
+  <div class="offer-popup-price">
+    250 kr per person
+  </div>
+
+  <h3>
+    Gjør selskapet ekstra godt
+  </h3>
+
+  <p>
+    3 typer ris · 2 typer gryter · kylling · 3 typer salater
+  </p>
+
+  <a
+    href="index.html#tilbud"
+    class="offer-popup-button"
+  >
+    Se tilbudet →
+  </a>
+</div>
+
+
+<script id="offer-popup-script">
+document.addEventListener("DOMContentLoaded", function () {
+
+  const popup = document.getElementById("offerPopup");
+  const closeButton = document.getElementById("offerPopupClose");
+
+  if (!popup) return;
+
+  setTimeout(function () {
+    popup.classList.add("show");
+  }, 10000);
+
+  if (closeButton) {
+    closeButton.addEventListener("click", function () {
+      popup.classList.remove("show");
+    });
+  }
+
+});
+</script>
 
 </body>
 </html>
