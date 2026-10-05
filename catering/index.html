@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="no">
 <head>
@@ -1523,6 +1523,311 @@
 
 
     /* =========================================
+       SPECIAL OFFER
+    ========================================= */
+
+    .offer-promo {
+      background: var(--red);
+      color: var(--cream);
+      padding: 22px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer-promo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.08) 45%, transparent 60%);
+      transform: translateX(-100%);
+      animation: offerShine 4s infinite;
+    }
+
+    @keyframes offerShine {
+      0%, 55% { transform: translateX(-100%); }
+      75%, 100% { transform: translateX(100%); }
+    }
+
+    .offer-promo-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .offer-promo-text {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .offer-promo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--cream);
+      color: var(--red);
+      font-size: 23px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.16);
+    }
+
+    .offer-promo-text strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 25px;
+      line-height: 1.1;
+    }
+
+    .offer-promo-text span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(244,236,221,.82);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .offer-promo .btn {
+      flex-shrink: 0;
+      background: var(--cream);
+      color: var(--red-dark);
+      border-color: var(--cream);
+      box-shadow: 0 8px 25px rgba(0,0,0,.16);
+    }
+
+    .offer-promo .btn:hover {
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .special-offer-section {
+      background: var(--cream);
+      padding: 90px 0;
+      scroll-margin-top: 82px;
+    }
+
+    .offer-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .offer-card,
+    .offer-form-card {
+      border: 1px solid rgba(42,29,20,.13);
+      background: var(--cream-light);
+    }
+
+    .offer-card {
+      padding: 42px;
+      background: var(--red);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer-card::after {
+      content: "250";
+      position: absolute;
+      right: -30px;
+      bottom: -60px;
+      color: rgba(244,236,221,.06);
+      font-family: var(--serif);
+      font-size: 220px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .offer-eyebrow {
+      color: var(--gold-light);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .offer-card h2 {
+      margin-top: 15px;
+      max-width: 520px;
+      font-family: var(--serif);
+      font-size: clamp(38px, 5vw, 60px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -.025em;
+    }
+
+    .offer-price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 25px 0 22px;
+    }
+
+    .offer-price strong {
+      font-family: var(--serif);
+      font-size: 58px;
+      line-height: 1;
+      color: var(--cream);
+    }
+
+    .offer-price span {
+      color: rgba(244,236,221,.78);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .offer-card > p {
+      max-width: 520px;
+      color: rgba(244,236,221,.8);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .offer-includes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-top: 28px;
+    }
+
+    .offer-includes div {
+      padding: 13px 14px;
+      border: 1px solid rgba(244,236,221,.18);
+      background: rgba(22,15,10,.13);
+      color: var(--cream);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .offer-deadline {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(244,236,221,.2);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .offer-form-card {
+      padding: 38px;
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .offer-form-heading small {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .offer-form-heading h3 {
+      margin-top: 10px;
+      font-family: var(--serif);
+      font-size: 34px;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+    .offer-form-heading p {
+      margin-top: 9px;
+      color: rgba(244,236,221,.6);
+      font-size: 13px;
+    }
+
+    .offer-calculator {
+      margin: 25px 0 28px;
+      padding: 22px;
+      background: var(--ink-light);
+      border: 1px solid var(--border-light);
+    }
+
+    .offer-calculator-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+    }
+
+    .offer-calculator label {
+      display: block;
+      color: rgba(244,236,221,.65);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .offer-person-count {
+      margin-top: 4px;
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .offer-total-label {
+      color: rgba(244,236,221,.5);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    .offer-total {
+      margin-top: 3px;
+      color: var(--cream);
+      font-family: var(--serif);
+      font-size: 31px;
+      line-height: 1;
+      text-align: right;
+    }
+
+    .offer-range {
+      width: 100%;
+      margin-top: 22px;
+      accent-color: var(--gold);
+      cursor: pointer;
+    }
+
+    .offer-range-scale {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+      color: rgba(244,236,221,.4);
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .offer-form .form-group input,
+    .offer-form .form-group textarea,
+    .offer-form .form-group select {
+      background: rgba(244,236,221,.04);
+    }
+
+    .offer-form .btn {
+      width: 100%;
+      min-height: 54px;
+      font-size: 11px;
+    }
+
+    .offer-note {
+      margin-top: 13px;
+      color: rgba(244,236,221,.4);
+      font-size: 10px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* =========================================
        RESPONSIVE
     ========================================= */
 
@@ -1618,7 +1923,75 @@
     }
 
 
+    @media (max-width: 900px) {
+
+      .offer-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-promo-inner {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .offer-promo .btn {
+        width: 100%;
+      }
+
+    }
+
     @media (max-width: 650px) {
+      .offer-promo {
+        padding: 18px 0;
+      }
+
+      .offer-promo-text {
+        align-items: flex-start;
+      }
+
+      .offer-promo-badge {
+        min-width: 42px;
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+      }
+
+      .offer-promo-text strong {
+        font-size: 20px;
+      }
+
+      .offer-promo-text span {
+        font-size: 10px;
+      }
+
+      .special-offer-section {
+        padding: 65px 0;
+      }
+
+      .offer-card,
+      .offer-form-card {
+        padding: 26px;
+      }
+
+      .offer-includes {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-calculator {
+        padding: 18px;
+      }
+
+      .offer-calculator-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .offer-total-label,
+      .offer-total {
+        text-align: left;
+      }
+
+
 
       .container {
         width: min(
@@ -1973,6 +2346,199 @@
       </div>
 
     </div>
+
+
+
+    <!-- =========================================
+         SPECIAL OFFER PROMO
+    ========================================= -->
+
+    <div class="offer-promo">
+
+      <div class="container offer-promo-inner">
+
+        <div class="offer-promo-text">
+          <span class="offer-promo-badge">🔥</span>
+          <div>
+            <strong>Årets cateringtilbud · 250 kr per person</strong>
+            <span>3 typer ris · 2 typer gryter · kylling · 3 typer salater</span>
+          </div>
+        </div>
+
+        <a href="#tilbud" class="btn">
+          Se tilbudet →
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         SPECIAL OFFER
+    ========================================= -->
+
+    <section id="tilbud" class="special-offer-section">
+
+      <div class="container">
+
+        <div class="offer-layout">
+
+          <div class="offer-card">
+
+            <div class="offer-eyebrow">
+              🔥 Begrenset tilbud
+            </div>
+
+            <h2>
+              Selskapsmeny til kun 250 kr per person.
+            </h2>
+
+            <div class="offer-price">
+              <strong>250 kr</strong>
+              <span>per person</span>
+            </div>
+
+            <p>
+              Gjør selskapet enkelt. Du får en komplett selskapsmeny med flere retter samlet til én fast pris. Velg antall personer og se totalprisen med én gang.
+            </p>
+
+            <div class="offer-includes">
+              <div>🍚 3 typer ris</div>
+              <div>🍲 2 typer gryter</div>
+              <div>🍗 Kylling</div>
+              <div>🥗 3 typer salater</div>
+            </div>
+
+            <div class="offer-deadline">
+              Gjelder nye bestillinger frem til nyttårsaften.
+            </div>
+
+          </div>
+
+
+          <div class="offer-form-card">
+
+            <div class="offer-form-heading">
+              <small>Bestill tilbudet</small>
+              <h3>Hvor mange skal spise?</h3>
+              <p>Velg antall personer, fyll ut skjemaet og send forespørselen.</p>
+            </div>
+
+            <div class="offer-calculator">
+
+              <div class="offer-calculator-top">
+                <div>
+                  <label for="offerGuests">Antall personer</label>
+                  <div class="offer-person-count"><span id="offerGuestValue">40</span> personer</div>
+                </div>
+
+                <div>
+                  <div class="offer-total-label">Totalpris</div>
+                  <div class="offer-total" id="offerTotal">10 000 kr</div>
+                </div>
+              </div>
+
+              <input
+                type="range"
+                id="offerGuests"
+                name="tilbud_antall_personer_slider"
+                min="1"
+                max="300"
+                value="40"
+                step="1"
+                class="offer-range"
+                aria-label="Velg antall personer"
+              >
+
+              <div class="offer-range-scale">
+                <span>1 person</span>
+                <span>300 personer</span>
+              </div>
+
+            </div>
+
+
+            <form
+              class="offer-form"
+              id="offerForm"
+              action="https://formspree.io/f/mpqgazyp"
+              method="POST"
+            >
+
+              <input type="hidden" name="type" value="SPECIALTILBUD – 250 KR PER PERSON">
+              <input type="hidden" id="offerHiddenGuests" name="antall_personer" value="40">
+              <input type="hidden" id="offerHiddenTotal" name="beregnet_totalpris" value="10000 kr">
+              <input type="hidden" name="tilbud_meny" value="3 typer ris, 2 typer gryter, kylling og 3 typer salater">
+              <input type="hidden" name="tilbud_gjelder" value="Nye bestillinger frem til nyttårsaften">
+
+              <div class="form-grid">
+
+                <div class="form-group">
+                  <label for="offerName">Navn</label>
+                  <input type="text" id="offerName" name="navn" placeholder="Ditt navn" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="offerPhone">Telefon</label>
+                  <input type="tel" id="offerPhone" name="telefon" placeholder="Telefonnummer" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="offerEmail">E-post</label>
+                  <input type="email" id="offerEmail" name="epost" placeholder="din@email.no" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="offerDate">Dato for arrangement</label>
+                  <input type="date" id="offerDate" name="dato" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="offerOccasion">Anledning</label>
+                  <select id="offerOccasion" name="anledning" required>
+                    <option value="">Velg anledning</option>
+                    <option value="Bryllup">Bryllup</option>
+                    <option value="Bursdag">Bursdag</option>
+                    <option value="Familieselskap">Familieselskap</option>
+                    <option value="Bedriftsarrangement">Bedriftsarrangement</option>
+                    <option value="Idrettsarrangement">Idrettsarrangement</option>
+                    <option value="Annet">Annet</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="offerPlace">Sted / område</label>
+                  <input type="text" id="offerPlace" name="sted_omrade" placeholder="F.eks. Oslo, Halden eller Moss" required>
+                </div>
+
+                <div class="form-group full">
+                  <label for="offerMessage">Melding</label>
+                  <textarea id="offerMessage" name="melding" placeholder="Fortell gjerne litt om arrangementet, tidspunkt og andre ønsker..."></textarea>
+                </div>
+
+              </div>
+
+              <button type="submit" class="btn btn-gold">
+                Jeg vil ha tilbudet →
+              </button>
+
+              <div class="form-status" id="offerFormStatus" aria-live="polite"></div>
+
+              <div class="offer-note">
+                Ved å sende inn forespørselen ber du om dette spesialtilbudet. Vi kontakter deg for å bekrefte detaljer og tilgjengelighet.
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
 
@@ -2670,7 +3236,6 @@
   Lillestrøm, Moss, Fredrikstad, Sarpsborg,
   Halden, Drammen og flere områder på Østlandet.
 </div>
-
           </details>
 
 
@@ -2746,7 +3311,7 @@
     ========================================= -->
 
     <section
-      id="tilbud"
+      id="kontakt"
       class="contact-section"
     >
 
@@ -3042,7 +3607,7 @@
             FAQ
           </a>
 
-          <a href="#tilbud">
+          <a href="#kontakt">
             Kontakt
           </a>
 
@@ -3522,6 +4087,137 @@
 
 
     /* =========================================
+       SPECIAL OFFER CALCULATOR
+    ========================================= */
+
+    const OFFER_PRICE_PER_PERSON = 250;
+
+    const offerGuests =
+      document.getElementById("offerGuests");
+
+    const offerGuestValue =
+      document.getElementById("offerGuestValue");
+
+    const offerTotal =
+      document.getElementById("offerTotal");
+
+    const offerHiddenGuests =
+      document.getElementById("offerHiddenGuests");
+
+    const offerHiddenTotal =
+      document.getElementById("offerHiddenTotal");
+
+
+    function formatNOK(value) {
+      return new Intl.NumberFormat("nb-NO")
+        .format(value) + " kr";
+    }
+
+
+    function updateOfferPrice() {
+
+      const guests =
+        Number(offerGuests.value);
+
+      const total =
+        guests * OFFER_PRICE_PER_PERSON;
+
+      offerGuestValue.textContent = guests;
+      offerTotal.textContent = formatNOK(total);
+      offerHiddenGuests.value = guests;
+      offerHiddenTotal.value = formatNOK(total);
+
+    }
+
+
+    offerGuests.addEventListener(
+      "input",
+      updateOfferPrice
+    );
+
+    updateOfferPrice();
+
+
+    /* =========================================
+       SPECIAL OFFER FORM
+    ========================================= */
+
+    const offerForm =
+      document.getElementById("offerForm");
+
+    const offerFormStatus =
+      document.getElementById("offerFormStatus");
+
+
+    offerForm.addEventListener(
+      "submit",
+      async function(event) {
+
+        event.preventDefault();
+
+        updateOfferPrice();
+
+        const submitButton =
+          offerForm.querySelector(
+            'button[type="submit"]'
+          );
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Sender tilbudsforespørsel...";
+
+        offerFormStatus.className = "form-status";
+        offerFormStatus.textContent = "";
+
+        try {
+
+          const response =
+            await fetch(
+              offerForm.action,
+              {
+                method: "POST",
+                body: new FormData(offerForm),
+                headers: {
+                  "Accept": "application/json"
+                }
+              }
+            );
+
+          if (!response.ok) {
+            throw new Error("Kunne ikke sende");
+          }
+
+          const guests = Number(offerGuests.value);
+          const total = guests * OFFER_PRICE_PER_PERSON;
+
+          offerForm.reset();
+          offerGuests.value = guests;
+          updateOfferPrice();
+
+          offerFormStatus.className =
+            "form-status success";
+
+          offerFormStatus.textContent =
+            "Takk! Tilbudsforespørselen er sendt. Vi tar kontakt så snart som mulig.";
+
+        } catch (error) {
+
+          offerFormStatus.className =
+            "form-status error";
+
+          offerFormStatus.textContent =
+            "Noe gikk galt. Prøv igjen eller kontakt oss direkte på telefon eller e-post.";
+
+        }
+
+        submitButton.disabled = false;
+        submitButton.textContent = "Jeg vil ha tilbudet →";
+
+      }
+    );
+
+
+
+    /* =========================================
        FORM
     ========================================= */
 
@@ -3635,4 +4331,3 @@
 
 </body>
 </html>
-```
