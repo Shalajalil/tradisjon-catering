@@ -1711,8 +1711,11 @@
 
 
 
+
+
+
 <style id="premium-offer-hero">
-/* KOMPAKT TILBUDSBANNER */
+/* ULTRA KOMPAKT TILBUD */
 
 .hero {
   position: relative;
@@ -1723,9 +1726,9 @@
   position: absolute !important;
   z-index: 10;
   left: 50%;
-  bottom: 22px;
+  bottom: 16px;
   transform: translateX(-50%);
-  width: min(600px, calc(100% - 32px));
+  width: min(420px, calc(100% - 24px));
   margin: 0 !important;
   padding: 0 !important;
   background: linear-gradient(
@@ -1733,46 +1736,46 @@
     rgba(35,18,12,0.98),
     rgba(117,31,22,0.97)
   );
-  border: 1px solid rgba(232,185,104,0.72);
-  border-radius: 13px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.38);
+  border: 1px solid rgba(232,185,104,0.7);
+  border-radius: 9px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
   overflow: hidden;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 }
 
 .hero .offer-promo-inner {
   position: relative;
   z-index: 2;
-  min-height: 54px;
-  padding: 9px 12px;
+  min-height: 36px;
+  padding: 6px 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 7px;
 }
 
 .hero .offer-promo-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2px;
+  gap: 1px;
   min-width: 0;
 }
 
 .hero .offer-promo-badge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   color: var(--gold-light);
-  font-size: 7px;
+  font-size: 5px;
   font-weight: 800;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
 .hero .offer-promo-badge::before {
   content: "";
-  width: 13px;
+  width: 9px;
   height: 1px;
   background: var(--gold);
 }
@@ -1780,24 +1783,23 @@
 .hero .offer-promo-text strong {
   color: white;
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1;
   font-weight: 600;
-  letter-spacing: -0.02em;
 }
 
 .hero .offer-promo-text > span:last-child {
-  color: rgba(255,255,255,0.68);
-  font-size: 9px;
-  line-height: 1.25;
+  color: rgba(255,255,255,0.65);
+  font-size: 6px;
+  line-height: 1.2;
 }
 
 .hero .offer-promo .btn {
   flex-shrink: 0;
-  min-width: 105px;
-  min-height: 32px;
-  padding: 7px 11px;
-  border-radius: 8px;
+  min-width: 75px;
+  min-height: 23px;
+  padding: 4px 7px;
+  border-radius: 6px;
   background: linear-gradient(
     135deg,
     var(--gold-light),
@@ -1805,28 +1807,19 @@
   );
   color: var(--ink);
   border: 0;
-  font-size: 9px;
+  font-size: 6px;
   font-weight: 800;
-  box-shadow: 0 5px 13px rgba(0,0,0,0.22);
-  transition: 0.25s ease;
-}
-
-.hero .offer-promo .btn:hover {
-  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
 .hero .offer-promo-inner::after {
   content: "";
   position: absolute;
-  left: 12px;
+  left: 8px;
   bottom: 0;
-  width: 55px;
+  width: 35px;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    var(--gold),
-    transparent
-  );
+  background: var(--gold);
 }
 
 /* MOBIL */
@@ -1834,70 +1827,70 @@
 @media (max-width: 760px) {
 
   .hero {
-    min-height: 680px;
-    padding-bottom: 88px;
+    min-height: 650px;
+    padding-bottom: 58px;
   }
 
   .hero .offer-promo {
-    left: 12px;
-    right: 12px;
-    bottom: 14px;
+    left: 9px;
+    right: 9px;
+    bottom: 9px;
     width: auto;
     transform: none;
-    border-radius: 11px;
+    border-radius: 8px;
   }
 
   .hero .offer-promo-inner {
-    min-height: 48px;
-    padding: 8px 10px;
-    gap: 8px;
+    min-height: 31px;
+    padding: 5px 7px;
+    gap: 5px;
   }
 
   .hero .offer-promo-text strong {
-    font-size: 17px;
+    font-size: 12px;
   }
 
   .hero .offer-promo-text > span:last-child {
-    font-size: 8px;
+    font-size: 5px;
   }
 
   .hero .offer-promo .btn {
-    min-width: 88px;
-    min-height: 29px;
-    padding: 6px 8px;
-    font-size: 8px;
+    min-width: 65px;
+    min-height: 20px;
+    padding: 3px 5px;
+    font-size: 5px;
   }
 }
 
 @media (max-width: 420px) {
 
   .hero {
-    min-height: 690px;
-    padding-bottom: 82px;
+    min-height: 660px;
+    padding-bottom: 54px;
   }
 
   .hero .offer-promo {
-    left: 9px;
-    right: 9px;
-    bottom: 10px;
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
   }
 
   .hero .offer-promo-inner {
-    padding: 7px 9px;
+    padding: 4px 6px;
   }
 
   .hero .offer-promo-text strong {
-    font-size: 16px;
+    font-size: 11px;
   }
 
   .hero .offer-promo-text > span:last-child {
-    font-size: 7px;
+    font-size: 4px;
   }
 
   .hero .offer-promo .btn {
-    min-width: 82px;
-    min-height: 27px;
-    font-size: 7px;
+    min-width: 58px;
+    min-height: 18px;
+    font-size: 4px;
   }
 }
 </style>
