@@ -1746,6 +1746,236 @@
   
 </style>
 
+
+
+<style id="premium-offer-hero">
+/* =========================================
+   PREMIUM TILBUD OVER HERO-BILDET
+========================================= */
+
+.hero {
+  position: relative;
+  overflow: visible;
+}
+
+.hero .offer-promo {
+  position: absolute !important;
+  z-index: 10;
+  left: 50%;
+  bottom: 34px;
+  transform: translateX(-50%);
+  width: min(920px, calc(100% - 40px));
+  margin: 0 !important;
+  padding: 0 !important;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(35, 18, 12, 0.98),
+      rgba(117, 31, 22, 0.97)
+    );
+  border: 1px solid rgba(232, 185, 104, 0.75);
+  border-radius: 24px;
+  box-shadow:
+    0 24px 70px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(255,255,255,0.04) inset;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+}
+
+.hero .offer-promo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(232,185,104,0.16),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(255,255,255,0.06),
+      transparent 30%
+    );
+}
+
+.hero .offer-promo-inner {
+  position: relative;
+  z-index: 2;
+  min-height: 128px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.hero .offer-promo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  min-width: 0;
+}
+
+.hero .offer-promo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero .offer-promo-badge::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero .offer-promo-text strong {
+  color: white;
+  font-family: var(--serif);
+  font-size: clamp(27px, 3vw, 39px);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.hero .offer-promo-text > span:last-child {
+  color: rgba(255,255,255,0.72);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.hero .offer-promo .btn {
+  flex-shrink: 0;
+  min-width: 175px;
+  min-height: 52px;
+  padding: 14px 24px;
+  border-radius: 13px;
+  background: linear-gradient(
+    135deg,
+    var(--gold-light),
+    var(--gold)
+  );
+  color: var(--ink);
+  border: 1px solid rgba(255,255,255,0.16);
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.25),
+    0 0 0 1px rgba(22,15,10,0.08) inset;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.hero .offer-promo .btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(
+    135deg,
+    #f1c87b,
+    var(--gold-light)
+  );
+  box-shadow:
+    0 13px 30px rgba(0,0,0,0.35),
+    0 0 22px rgba(232,185,104,0.18);
+}
+
+/* liten dekorativ gullinje */
+.hero .offer-promo-inner::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  bottom: 0;
+  width: 110px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    transparent
+  );
+}
+
+/* =========================================
+   MOBIL
+========================================= */
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 720px;
+    padding-bottom: 175px;
+  }
+
+  .hero .offer-promo {
+    left: 16px;
+    right: 16px;
+    bottom: 24px;
+    transform: none;
+    width: auto;
+    border-radius: 20px;
+  }
+
+  .hero .offer-promo-inner {
+    min-height: auto;
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .hero .offer-promo-text strong {
+    font-size: 29px;
+  }
+
+  .hero .offer-promo-text > span:last-child {
+    font-size: 13px;
+  }
+
+  .hero .offer-promo .btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero .offer-promo-inner::after {
+    left: 19px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    min-height: 760px;
+    padding-bottom: 185px;
+  }
+
+  .hero .offer-promo {
+    bottom: 18px;
+    left: 12px;
+    right: 12px;
+  }
+
+  .hero .offer-promo-inner {
+    padding: 17px;
+  }
+
+  .hero .offer-promo-text strong {
+    font-size: 26px;
+  }
+
+  .hero .offer-promo-text > span:last-child {
+    font-size: 12px;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -1834,6 +2064,13 @@
 
 
   <main>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
 <div class="offer-promo" style="margin:20px auto;max-width:1180px;">
   <div class="offer-promo-inner">
     <div class="offer-promo-text">
@@ -1845,10 +2082,6 @@
   </div>
 </div>
 
-
-    <!-- HERO -->
-
-    <section class="hero">
 
       <div class="hero-inner">
 
