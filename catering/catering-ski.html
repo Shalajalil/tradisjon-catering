@@ -1,1236 +1,26 @@
-```html
 <!DOCTYPE html>
+
+<!DOCTYPE html>
+
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Catering i Ski – Halal catering til selskaper | Tradisjon Catering</title>
-
-  <meta
-    name="description"
-    content="Tradisjon Catering tilbyr halal catering i Ski til bryllup, bursdager, familieselskaper, bedrifter og arrangementer. Selskapsmat i Ski og nærliggende områder med kurdiske, persiske, arabiske og tyrkiske smaker."
-  >
-
-  <meta name="theme-color" content="#f4efe7">
-
-  <meta
-    name="robots"
-    content="index, follow"
-  >
-
-  <link
-    rel="canonical"
-    href="https://tradisjoncatering.no/catering-ski.html"
-  >
-
-  <meta
-    property="og:title"
-    content="Catering i Ski – Halal catering | Tradisjon Catering"
-  >
-
-  <meta
-    property="og:description"
-    content="Halal catering i Ski til bryllup, selskaper, bedrifter og arrangementer. Tradisjonelle smaker med et moderne uttrykk."
-  >
-
-  <meta
-    property="og:url"
-    content="https://tradisjoncatering.no/catering-ski.html"
-  >
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <style>
-    :root {
-      --bg: #f4efe7;
-      --paper: #fbf8f2;
-      --ink: #201c18;
-      --muted: #6e665d;
-      --line: rgba(32, 28, 24, 0.12);
-      --accent: #8f3f2f;
-      --accent-dark: #6f2f24;
-      --gold: #b28a54;
-      --white: #ffffff;
-      --shadow: 0 20px 60px rgba(32, 28, 24, 0.10);
-      --radius: 28px;
-      --serif: "Fraunces", Georgia, serif;
-      --sans: "Karla", Arial, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--sans);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    button {
-      cursor: pointer;
-    }
-
-    .container {
-      width: min(1160px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    /* HEADER */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(244, 239, 231, 0.92);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(32, 28, 24, 0.08);
-    }
-
-    .nav {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
-    }
-
-    .brand-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: var(--ink);
-      color: var(--bg);
-      display: grid;
-      place-items: center;
-      font-family: var(--serif);
-      font-size: 23px;
-      font-weight: 600;
-    }
-
-    .brand-text strong {
-      display: block;
-      font-family: var(--serif);
-      font-size: 19px;
-      line-height: 1.1;
-    }
-
-    .brand-text span {
-      display: block;
-      margin-top: 3px;
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: .04em;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 27px;
-      margin-left: auto;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 600;
-      color: #403a34;
-      transition: color .2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    .nav-cta {
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #fff !important;
-      transition: transform .2s ease, background .2s ease;
-    }
-
-    .nav-cta:hover {
-      background: var(--accent-dark) !important;
-      transform: translateY(-1px);
-    }
-
-    .menu-toggle {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--line);
-      background: transparent;
-      border-radius: 14px;
-      font-size: 21px;
-    }
-
-    /* HERO */
-
-    .hero {
-      position: relative;
-      min-height: 680px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(20, 17, 14, .86) 0%,
-          rgba(20, 17, 14, .67) 48%,
-          rgba(20, 17, 14, .22) 100%
-        ),
-        url("forside.jpeg")
-        center/cover no-repeat;
-    }
-
-    .hero-inner {
-      padding: 95px 0;
-      color: #fff;
-      max-width: 760px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .09em;
-      text-transform: uppercase;
-      color: #ead7bd;
-      margin-bottom: 18px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 28px;
-      height: 1px;
-      background: #d5ad79;
-    }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(54px, 7vw, 86px);
-      line-height: .98;
-      font-weight: 600;
-      letter-spacing: -.045em;
-      margin-bottom: 26px;
-    }
-
-    .hero h1 span {
-      color: #dfb477;
-    }
-
-    .hero p {
-      max-width: 670px;
-      font-size: 20px;
-      line-height: 1.65;
-      color: rgba(255,255,255,.88);
-      margin-bottom: 34px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 0 22px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      font-size: 15px;
-      transition: transform .2s ease, background .2s ease, border .2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: #fff;
-      color: var(--ink);
-    }
-
-    .btn-primary:hover {
-      background: #f1e9dd;
-    }
-
-    .btn-secondary {
-      border-color: rgba(255,255,255,.35);
-      color: #fff;
-      background: rgba(255,255,255,.08);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,.16);
-    }
-
-    /* LOCAL STRIP */
-
-    .local-strip {
-      border-bottom: 1px solid var(--line);
-      background: var(--paper);
-    }
-
-    .local-strip-inner {
-      min-height: 70px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .local-strip-inner::-webkit-scrollbar {
-      display: none;
-    }
-
-    .local-label {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
-      white-space: nowrap;
-      margin-right: 5px;
-    }
-
-    .local-link {
-      white-space: nowrap;
-      padding: 9px 15px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      font-size: 13px;
-      font-weight: 600;
-      transition: .2s ease;
-    }
-
-    .local-link:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .local-link.active {
-      background: var(--ink);
-      color: #fff;
-      border-color: var(--ink);
-    }
-
-    /* GENERAL */
-
-    section {
-      padding: 110px 0;
-    }
-
-    .section-head {
-      max-width: 730px;
-      margin-bottom: 55px;
-    }
-
-    .section-kicker {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-
-    .section-head h2 {
-      font-family: var(--serif);
-      font-size: clamp(38px, 5vw, 60px);
-      line-height: 1.05;
-      letter-spacing: -.035em;
-      margin-bottom: 18px;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    /* INTRO */
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .intro-copy h2 {
-      font-family: var(--serif);
-      font-size: clamp(40px, 5vw, 60px);
-      line-height: 1.05;
-      letter-spacing: -.04em;
-      margin-bottom: 22px;
-    }
-
-    .intro-copy p {
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.8;
-      margin-bottom: 18px;
-    }
-
-    .intro-image {
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      aspect-ratio: 4 / 5;
-    }
-
-    .intro-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* PHILOSOPHY */
-
-    .philosophy {
-      background: var(--ink);
-      color: #fff;
-    }
-
-    .philosophy .section-kicker {
-      color: #d5ad79;
-    }
-
-    .philosophy-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .philosophy h2 {
-      font-family: var(--serif);
-      font-size: clamp(40px, 5vw, 64px);
-      line-height: 1.04;
-      letter-spacing: -.04em;
-    }
-
-    .philosophy-text {
-      color: rgba(255,255,255,.7);
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    .philosophy-items {
-      margin-top: 30px;
-      display: grid;
-      gap: 17px;
-    }
-
-    .philosophy-item {
-      padding: 20px 0;
-      border-top: 1px solid rgba(255,255,255,.14);
-      display: grid;
-      grid-template-columns: 45px 1fr;
-      gap: 15px;
-    }
-
-    .philosophy-number {
-      color: #d5ad79;
-      font-family: var(--serif);
-      font-size: 21px;
-    }
-
-    .philosophy-item strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 17px;
-    }
-
-    .philosophy-item span {
-      color: rgba(255,255,255,.62);
-      font-size: 15px;
-    }
-
-    /* MENU */
-
-    .menu-section {
-      background: var(--paper);
-    }
-
-    .menu-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-bottom: 30px;
-    }
-
-    .menu-tab {
-      border: 1px solid var(--line);
-      background: transparent;
-      padding: 11px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      color: var(--muted);
-      transition: .2s ease;
-    }
-
-    .menu-tab:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .menu-tab.active {
-      background: var(--ink);
-      border-color: var(--ink);
-      color: #fff;
-    }
-
-    .menu-description {
-      color: var(--muted);
-      margin-bottom: 22px;
-      max-width: 650px;
-    }
-
-    .menu-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .menu-card {
-      background: #fff;
-      border-radius: 22px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-    }
-
-    .menu-card-image {
-      height: 260px;
-      overflow: hidden;
-    }
-
-    .menu-card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .5s ease;
-    }
-
-    .menu-card:hover img {
-      transform: scale(1.04);
-    }
-
-    .menu-card-body {
-      padding: 19px;
-    }
-
-    .menu-card-body strong {
-      font-family: var(--serif);
-      font-size: 21px;
-    }
-
-    .menu-card-body span {
-      display: block;
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 4px;
-    }
-
-    .gallery-dots {
-      display: none;
-    }
-
-    /* OCCASIONS */
-
-    .occasion-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .occasion-card {
-      min-height: 250px;
-      padding: 28px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    .occasion-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .occasion-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 15px;
-      background: #e9dfd0;
-      display: grid;
-      place-items: center;
-      margin-bottom: auto;
-      font-size: 20px;
-    }
-
-    .occasion-card h3 {
-      font-family: var(--serif);
-      font-size: 26px;
-      margin-bottom: 8px;
-    }
-
-    .occasion-card p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* AREAS */
-
-    .areas-section {
-      background: #e9e0d4;
-    }
-
-    .areas-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .area-card {
-      background: rgba(255,255,255,.58);
-      border: 1px solid rgba(32,28,24,.1);
-      border-radius: 24px;
-      padding: 28px;
-    }
-
-    .area-card h3 {
-      font-family: var(--serif);
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .area-card p {
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .area-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 17px;
-    }
-
-    .area-pill {
-      background: #fff;
-      border: 1px solid var(--line);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    /* LOCAL PAGES */
-
-    .local-pages-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-
-    .local-page-link {
-      padding: 18px 20px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 700;
-      transition: .2s ease;
-    }
-
-    .local-page-link span {
-      color: var(--muted);
-      transition: .2s ease;
-    }
-
-    .local-page-link:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .local-page-link:hover span {
-      color: var(--accent);
-      transform: translateX(3px);
-    }
-
-    .local-page-link.active {
-      background: var(--ink);
-      color: #fff;
-      border-color: var(--ink);
-    }
-
-    .local-page-link.active span {
-      color: #d5ad79;
-    }
-
-    /* FAQ */
-
-    .faq-section {
-      background: var(--paper);
-    }
-
-    .faq-list {
-      max-width: 850px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      border-top: 1px solid var(--line);
-    }
-
-    .faq-item:last-child {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .faq-question {
-      width: 100%;
-      background: transparent;
-      border: 0;
-      padding: 24px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      text-align: left;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--ink);
-    }
-
-    .faq-question span {
-      width: 30px;
-      height: 30px;
-      flex-shrink: 0;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-size: 20px;
-      font-weight: 400;
-      transition: transform .25s ease;
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .3s ease;
-    }
-
-    .faq-answer p {
-      color: var(--muted);
-      padding: 0 45px 24px 0;
-      line-height: 1.8;
-    }
-
-    .faq-item.open .faq-question span {
-      transform: rotate(45deg);
-    }
-
-    /* CONTACT */
-
-    .contact-section {
-      padding-bottom: 120px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 70px;
-      align-items: start;
-    }
-
-    .contact-copy h2 {
-      font-family: var(--serif);
-      font-size: clamp(42px, 5vw, 64px);
-      line-height: 1.02;
-      letter-spacing: -.04em;
-      margin-bottom: 20px;
-    }
-
-    .contact-copy > p {
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.7;
-      margin-bottom: 28px;
-    }
-
-    .contact-details {
-      display: grid;
-      gap: 15px;
-    }
-
-    .contact-detail {
-      padding: 17px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .contact-detail strong {
-      display: block;
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 3px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-
-    .contact-detail a {
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .contact-form {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      padding: 32px;
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 7px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: 13px;
-      padding: 13px 14px;
-      outline: none;
-      color: var(--ink);
-      transition: border .2s ease, box-shadow .2s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(143,63,47,.08);
-    }
-
-    .form-group textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .form-submit {
-      width: 100%;
-      border: 0;
-      background: var(--accent);
-      color: #fff;
-      min-height: 52px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: .2s ease;
-    }
-
-    .form-submit:hover {
-      background: var(--accent-dark);
-    }
-
-    .form-submit:disabled {
-      opacity: .65;
-      cursor: wait;
-    }
-
-    .form-status {
-      margin-top: 13px;
-      font-size: 14px;
-      color: var(--muted);
-      min-height: 22px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: var(--ink);
-      color: #fff;
-      padding: 65px 0 30px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr .7fr .8fr;
-      gap: 60px;
-      padding-bottom: 55px;
-    }
-
-    .footer-brand {
-      max-width: 390px;
-    }
-
-    .footer-brand .brand-icon {
-      background: #fff;
-      color: var(--ink);
-      margin-bottom: 18px;
-    }
-
-    .footer-brand h3 {
-      font-family: var(--serif);
-      font-size: 25px;
-      margin-bottom: 10px;
-    }
-
-    .footer-brand p {
-      color: rgba(255,255,255,.6);
-      line-height: 1.7;
-    }
-
-    .footer-column h4 {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: #d5ad79;
-      margin-bottom: 17px;
-    }
-
-    .footer-column a {
-      display: block;
-      color: rgba(255,255,255,.7);
-      font-size: 14px;
-      margin-bottom: 9px;
-      transition: color .2s ease;
-    }
-
-    .footer-column a:hover {
-      color: #fff;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.12);
-      padding-top: 22px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      color: rgba(255,255,255,.45);
-      font-size: 13px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 900px) {
-
-      .nav-links {
-        position: absolute;
-        top: 82px;
-        left: 20px;
-        right: 20px;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 4px;
-        padding: 14px;
-        background: rgba(251,248,242,.98);
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        box-shadow: var(--shadow);
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 13px 14px;
-        border-radius: 12px;
-      }
-
-      .nav-links a:hover {
-        background: #eee7dc;
-      }
-
-      .nav-cta {
-        text-align: center;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .hero {
-        min-height: 620px;
-      }
-
-      .intro-grid,
-      .philosophy-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .occasion-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .local-pages-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .menu-gallery {
-        grid-template-columns: repeat(3, minmax(280px, 1fr));
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-      }
-
-      .menu-gallery::-webkit-scrollbar {
-        display: none;
-      }
-
-      .menu-card {
-        scroll-snap-align: start;
-      }
-
-      .gallery-dots {
-        display: flex;
-        justify-content: center;
-        gap: 7px;
-        margin-top: 18px;
-      }
-
-      .gallery-dot {
-        width: 7px;
-        height: 7px;
-        border: 0;
-        border-radius: 50%;
-        background: #c7beb3;
-        padding: 0;
-      }
-
-      .gallery-dot.active {
-        background: var(--accent);
-        transform: scale(1.25);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      .container {
-        width: min(100% - 28px, 1160px);
-      }
-
-      .nav {
-        min-height: 72px;
-      }
-
-      .nav-links {
-        top: 72px;
-        left: 14px;
-        right: 14px;
-      }
-
-      .brand-text strong {
-        font-size: 17px;
-      }
-
-      .brand-text span {
-        font-size: 11px;
-      }
-
-      .brand-icon {
-        width: 40px;
-        height: 40px;
-      }
-
-      .hero {
-        min-height: 650px;
-        background-position: 60% center;
-      }
-
-      .hero-inner {
-        padding: 70px 0;
-      }
-
-      .hero h1 {
-        font-size: 55px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      section {
-        padding: 78px 0;
-      }
-
-      .section-head {
-        margin-bottom: 35px;
-      }
-
-      .section-head h2 {
-        font-size: 41px;
-      }
-
-      .intro-copy h2,
-      .philosophy h2,
-      .contact-copy h2 {
-        font-size: 42px;
-      }
-
-      .intro-image {
-        aspect-ratio: 1 / 1.05;
-      }
-
-      .philosophy-grid {
-        gap: 35px;
-      }
-
-      .menu-tabs {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scrollbar-width: none;
-        padding-bottom: 5px;
-      }
-
-      .menu-tabs::-webkit-scrollbar {
-        display: none;
-      }
-
-      .menu-tab {
-        white-space: nowrap;
-      }
-
-      .menu-gallery {
-        grid-template-columns: repeat(3, 86vw);
-      }
-
-      .menu-card-image {
-        height: 310px;
-      }
-
-      .occasion-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .occasion-card {
-        min-height: 210px;
-      }
-
-      .areas-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .local-pages-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
-      .contact-form {
-        padding: 22px;
-        border-radius: 22px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-      }
-    }
-  </style>
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catering i Ski – Halal catering til selskaper | Tradisjon Catering</title>
+<meta content="Tradisjon Catering tilbyr halal catering i Ski til bryllup, bursdager, familieselskaper, bedrifter og arrangementer. Selskapsmat i Ski og nærliggende områder med kurdiske, persiske, arabiske og tyrkiske smaker." name="description"/>
+<meta content="#24080d" name="theme-color"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Karla:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://tradisjoncatering.no/catering-ski.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="nb_NO" property="og:locale"/>
+<meta content="Catering i Ski – Halal catering | Tradisjon Catering" property="og:title"/>
+<meta content="Halal catering i Ski til bryllup, selskaper, bedrifter og arrangementer. Tradisjonelle smaker med et moderne uttrykk." property="og:description"/>
+<meta content="https://tradisjoncatering.no/catering-ski.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="index-design.css" rel="stylesheet"/>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Caterer",
@@ -1245,2059 +35,657 @@
     }
   }
   </script>
-
-<style id="offer-page-css">
-.offer-promo {
-      background: var(--red);
-      color: var(--cream);
-      padding: 22px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .offer-promo::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.08) 45%, transparent 60%);
-      transform: translateX(-100%);
-      animation: offerShine 4s infinite;
-    }
-
-    @keyframes offerShine {
-      0%, 55% { transform: translateX(-100%); }
-      75%, 100% { transform: translateX(100%); }
-    }
-
-    .offer-promo-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .offer-promo-text {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .offer-promo-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--cream);
-      color: var(--red);
-      font-size: 23px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.16);
-    }
-
-    .offer-promo-text strong {
-      display: block;
-      font-family: var(--serif);
-      font-size: 25px;
-      line-height: 1.1;
-    }
-
-    .offer-promo-text span {
-      display: block;
-      margin-top: 4px;
-      color: rgba(244,236,221,.82);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .offer-promo .btn {
-      flex-shrink: 0;
-      background: var(--cream);
-      color: var(--red-dark);
-      border-color: var(--cream);
-      box-shadow: 0 8px 25px rgba(0,0,0,.16);
-    }
-
-    .offer-promo .btn:hover {
-      background: #fff;
-      color: var(--ink);
-    }
-
-    .special-offer-section {
-      background: var(--cream);
-      padding: 90px 0;
-      scroll-margin-top: 82px;
-    }
-
-    .offer-layout {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .offer-card,
-    .offer-form-card {
-      border: 1px solid rgba(42,29,20,.13);
-      background: var(--cream-light);
-    }
-
-    .offer-card {
-      padding: 42px;
-      background: var(--red);
-      color: var(--cream);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .offer-card::after {
-      content: "250";
-      position: absolute;
-      right: -30px;
-      bottom: -60px;
-      color: rgba(244,236,221,.06);
-      font-family: var(--serif);
-      font-size: 220px;
-      line-height: 1;
-      pointer-events: none;
-    }
-
-    .offer-eyebrow {
-      color: var(--gold-light);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-
-    .offer-card h2 {
-      margin-top: 15px;
-      max-width: 520px;
-      font-family: var(--serif);
-      font-size: clamp(38px, 5vw, 60px);
-      font-weight: 500;
-      line-height: 1;
-      letter-spacing: -.025em;
-    }
-
-    .offer-price {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin: 25px 0 22px;
-    }
-
-    .offer-price strong {
-      font-family: var(--serif);
-      font-size: 58px;
-      line-height: 1;
-      color: var(--cream);
-    }
-
-    .offer-price span {
-      color: rgba(244,236,221,.78);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .offer-card > p {
-      max-width: 520px;
-      color: rgba(244,236,221,.8);
-      font-size: 15px;
-      line-height: 1.75;
-    }
-
-    .offer-includes {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 9px;
-      margin-top: 28px;
-    }
-
-    .offer-includes div {
-      padding: 13px 14px;
-      border: 1px solid rgba(244,236,221,.18);
-      background: rgba(22,15,10,.13);
-      color: var(--cream);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .offer-deadline {
-      margin-top: 25px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(244,236,221,.2);
-      color: var(--gold-light);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .04em;
-    }
-
-    .offer-form-card {
-      padding: 38px;
-      background: var(--ink);
-      color: var(--cream);
-    }
-
-    .offer-form-heading small {
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-
-    .offer-form-heading h3 {
-      margin-top: 10px;
-      font-family: var(--serif);
-      font-size: 34px;
-      font-weight: 500;
-      line-height: 1.1;
-    }
-
-    .offer-form-heading p {
-      margin-top: 9px;
-      color: rgba(244,236,221,.6);
-      font-size: 13px;
-    }
-
-    .offer-calculator {
-      margin: 25px 0 28px;
-      padding: 22px;
-      background: var(--ink-light);
-      border: 1px solid var(--border-light);
-    }
-
-    .offer-calculator-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: end;
-    }
-
-    .offer-calculator label {
-      display: block;
-      color: rgba(244,236,221,.65);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    .offer-person-count {
-      margin-top: 4px;
-      color: var(--gold-light);
-      font-family: var(--serif);
-      font-size: 32px;
-      line-height: 1;
-    }
-
-    .offer-total-label {
-      color: rgba(244,236,221,.5);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .1em;
-      text-align: right;
-      text-transform: uppercase;
-    }
-
-    .offer-total {
-      margin-top: 3px;
-      color: var(--cream);
-      font-family: var(--serif);
-      font-size: 31px;
-      line-height: 1;
-      text-align: right;
-    }
-
-    .offer-range {
-      width: 100%;
-      margin-top: 22px;
-      accent-color: var(--gold);
-      cursor: pointer;
-    }
-
-    .offer-range-scale {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 5px;
-      color: rgba(244,236,221,.4);
-      font-size: 9px;
-      font-weight: 700;
-    }
-
-    .offer-form .form-group input,
-    .offer-form .form-group textarea,
-    .offer-form .form-group select {
-      background: rgba(244,236,221,.04);
-    }
-
-    .offer-form .btn {
-      width: 100%;
-      min-height: 54px;
-      font-size: 11px;
-    }
-
-    .offer-note {
-      margin-top: 13px;
-      color: rgba(244,236,221,.4);
-      font-size: 10px;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    /* =========================================
-       RESPONSIVE
-    ========================================= */
-
-    @media (max-width: 900px) {
-
-      .nav-links {
-        display: none;
-
-        position: absolute;
-
-        top: 82px;
-        left: 0;
-        right: 0;
-
-        padding: 25px 20px;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 0;
-
-        background: var(--ink);
-
-        border-bottom: 1px solid var(--border-light);
-      }
-
-
-      .nav-links.mobile-open {
-        display: flex;
-      }
-
-
-      .nav-links a {
-        padding: 14px 0;
-
-        border-bottom: 1px solid var(--border-light);
-      }
-
-
-      .mobile-menu-btn {
-        display: block;
-      }
-
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-
-      .hero-image {
-        min-height: 420px;
-      }
-
-
-      .hero-image img {
-        height: 420px;
-      }
-
-
-      .philosophy-grid,
-      .areas-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-
-      .menu-box {
-        grid-template-columns: 1fr;
-
-        padding: 30px;
-
-        gap: 35px;
-      }
-
-
-      .menu-gallery {
-        order: 2;
-      }
-
-
-      .menu-content {
-        order: 1;
-      }
-
-
-      .local-pages-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-    }
-
-
-    @media (max-width: 900px) {
-
-      .offer-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-promo-inner {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .offer-promo .btn {
-        width: 100%;
-      }
-
-    }
-
-    @media (max-width: 650px) {
-      .offer-promo {
-        padding: 18px 0;
-      }
-
-      .offer-promo-text {
-        align-items: flex-start;
-      }
-
-      .offer-promo-badge {
-        min-width: 42px;
-        width: 42px;
-        height: 42px;
-        font-size: 20px;
-      }
-
-      .offer-promo-text strong {
-        font-size: 20px;
-      }
-
-      .offer-promo-text span {
-        font-size: 10px;
-      }
-
-      .special-offer-section {
-        padding: 65px 0;
-      }
-
-      .offer-card,
-      .offer-form-card {
-        padding: 26px;
-      }
-
-      .offer-includes {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-calculator {
-        padding: 18px;
-      }
-
-      .offer-calculator-top {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .offer-total-label,
-      .offer-total {
-        text-align: left;
-      }
-
-
-
-      .container {
-        width: min(
-          calc(100% - 28px),
-          var(--max-width)
-        );
-      }
-
-
-      section {
-        padding: 75px 0;
-      }
-
-
-      .hero {
-        padding: 60px 0 70px;
-      }
-
-
-      .hero h1 {
-        font-size: 50px;
-      }
-
-
-      .hero-text {
-        font-size: 15px;
-      }
-
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-
-      .hero-buttons .btn {
-        width: 100%;
-      }
-
-
-      .local-strip-inner {
-        flex-direction: column;
-        gap: 5px;
-      }
-
-
-      .occasion-grid {
-        grid-template-columns: 1fr;
-      }
-
-
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-
-      .form-group.full {
-        grid-column: auto;
-      }
-
-
-      .contact-form {
-        padding: 25px;
-      }
-
-
-      .footer-top,
-      .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-
-      .menu-tabs {
-        justify-content: flex-start;
-
-        overflow-x: auto;
-
-        flex-wrap: nowrap;
-
-        padding-bottom: 5px;
-
-        scrollbar-width: none;
-      }
-
-
-      .menu-tabs::-webkit-scrollbar {
-        display: none;
-      }
-
-
-      .menu-tab {
-        flex: 0 0 auto;
-      }
-
-
-      .menu-box {
-        padding: 24px;
-      }
-
-
-      .menu-content h3 {
-        font-size: 37px;
-      }
-
-
-      .menu-gallery-item {
-        height: 380px;
-      }
-
-
-      .gallery-hint {
-        font-size: 8px;
-      }
-
-
-      .philosophy-image {
-        height: 420px;
-      }
-
-
-      .areas-image {
-        height: 330px;
-      }
-
-
-      .local-pages-grid {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-  
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style id="offer-popup-style">
-
-.offer-popup {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  z-index: 9999;
-  width: min(390px, calc(100% - 32px));
-  padding: 24px;
-  background: linear-gradient(
-    135deg,
-    #21160f,
-    #8f2819
-  );
-  color: white;
-  border: 1px solid rgba(232,185,104,0.75);
-  border-radius: 20px;
-  box-shadow:
-    0 25px 70px rgba(0,0,0,0.45),
-    0 0 0 1px rgba(255,255,255,0.04) inset;
-  opacity: 0;
-  transform: translateY(30px);
-  pointer-events: none;
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
-}
-
-.offer-popup.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.offer-popup-badge {
-  color: var(--gold-light);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.offer-popup h3 {
-  font-family: var(--serif);
-  font-size: 30px;
-  line-height: 1;
-  margin: 0 0 8px;
-}
-
-.offer-popup p {
-  margin: 0 0 16px;
-  color: rgba(255,255,255,0.76);
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-.offer-popup-price {
-  font-family: var(--serif);
-  color: var(--gold-light);
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.offer-popup-close {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  width: 30px;
-  height: 30px;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  color: white;
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.offer-popup-close:hover {
-  background: rgba(255,255,255,0.16);
-}
-
-.offer-popup-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 45px;
-  padding: 12px 18px;
-  border-radius: 11px;
-  background: linear-gradient(
-    135deg,
-    var(--gold-light),
-    var(--gold)
-  );
-  color: var(--ink);
-  font-size: 13px;
-  font-weight: 800;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-
-.offer-popup-button:hover {
-  transform: translateY(-2px);
-}
-
-@media (max-width: 600px) {
-
-  .offer-popup {
-    right: 12px;
-    left: 12px;
-    bottom: 12px;
-    width: auto;
-    padding: 20px;
-    border-radius: 17px;
-  }
-
-  .offer-popup h3 {
-    font-size: 26px;
-  }
-
-  .offer-popup-price {
-    font-size: 21px;
-  }
-}
-
-</style>
-
-</head>
-
-<body>
-
-  <header>
-    <div class="container nav">
-
-      <a href="index.html" class="brand" aria-label="Tradisjon Catering">
-        <div class="brand-icon">B</div>
-
-        <div class="brand-text">
-          <strong>Tradisjon Catering</strong>
-          <span>Mat med historie</span>
-        </div>
-      </a>
-
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html#meny">Meny</a>
-        <a href="index.html#anledninger">Anledninger</a>
-        <a href="index.html#om">Om oss</a>
-        <a href="index.html#omrader">Områder</a>
-        <a href="#kontakt" class="nav-cta">Be om tilbud</a>
-      </nav>
-
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Åpne meny"
-        aria-expanded="false"
-      >
+<link href="brand-theme.css" rel="stylesheet"/>
+<meta content="index, follow"/></head>
+<body data-city="ski" data-location="home" id="hjem">
+<!-- =========================================
+       HEADER
+  ========================================= -->
+<header>
+<div class="container nav">
+<a class="logo" href="#hjem">
+<img alt="Tradisjon Catering logo" aria-label="Slå på eller av rødt lys på logoen" aria-pressed="false" class="header-logo-image" id="headerLogoImage" role="button" src="logo.jpeg" tabindex="0"/>
+<div class="logo-text">
+<strong>
+            Tradisjon Catering
+          </strong>
+<span>
+            Mat med historie
+          </span>
+</div>
+</a>
+<nav class="nav-links" id="navLinks">
+<a href="#meny">
+          Meny
+        </a>
+<a href="#anledninger">
+          Anledninger
+        </a>
+<a href="#omrader">
+          Områder
+        </a>
+<a href="#faq">
+          FAQ
+        </a>
+<a href="#contactForm">
+          Be om tilbud
+        </a>
+</nav>
+<button aria-expanded="false" aria-label="Åpne meny" class="mobile-menu-btn" id="mobileMenuBtn" type="button">
         ☰
       </button>
-
-    </div>
-  </header>
-
-  <main>
-
-
-
-    <!-- HERO -->
-    <section class="hero">
-
-
-
-
-
-
-
-      <div class="container hero-inner">
-
-        <div class="eyebrow">
-          Halal catering i Ski
-        </div>
-
-        <h1>
-          Catering i <span>Ski.</span>
-        </h1>
-
-        <p>
-          Tradisjon Catering tilbyr halal catering i Ski
-          for bryllup, bursdager, familieselskaper, møter
-          og større arrangementer. Vi lager mat med kurdiske,
-          persiske, arabiske og tyrkiske smaker – med respekt
-          for tradisjon.
-        </p>
-
-        <div class="hero-actions">
-
-          <a href="#kontakt" class="btn btn-primary">
-            Be om tilbud
-          </a>
-
-          <a href="#meny" class="btn btn-secondary">
-            Se menyen
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- LOCAL NAVIGATION -->
-    <div class="local-strip">
-
-      <div class="container local-strip-inner">
-
-        <span class="local-label">
-          Vi tilbyr catering i:
-        </span>
-
-        <a href="catering-oslo.html" class="local-link">
-          Oslo
-        </a>
-
-        <a href="catering-lillestrom.html" class="local-link">
-          Lillestrøm
-        </a>
-
-        <a href="catering-ski.html" class="local-link active">
-          Ski
-        </a>
-
-        <a href="catering-vinterbro.html" class="local-link">
-          Vinterbro
-        </a>
-
-        <a href="catering-akershus.html" class="local-link">
-          Akershus
-        </a>
-
-        <a href="catering-vestby.html" class="local-link">
-          Vestby
-        </a>
-
-        <a href="catering-moss.html" class="local-link">
-          Moss
-        </a>
-
-        <a href="catering-fredrikstad.html" class="local-link">
-          Fredrikstad
-        </a>
-
-        <a href="catering-sarpsborg.html" class="local-link">
-          Sarpsborg
-        </a>
-
-        <a href="catering-halden.html" class="local-link">
-          Halden
-        </a>
-
-        <a href="catering-viken.html" class="local-link">
-          Viken
-        </a>
-
-        <a href="catering-asker.html" class="local-link">
-          Asker
-        </a>
-
-        <a href="catering-drammen.html" class="local-link">
-          Drammen
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- INTRO -->
-    <section id="om">
-
-      <div class="container intro-grid">
-
-        <div class="intro-copy">
-
-          <div class="section-kicker">
-            Catering i Ski
+</div>
+</header>
+<!-- =========================================
+       HERO
+  ========================================= -->
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<div class="hero-label">
+            Halal catering på Østlandet
           </div>
-
-          <h2>
-            Mat som samler mennesker.
-          </h2>
-
-          <p>
-            Skal du arrangere selskap i Ski? Tradisjon Catering
-            lager mat til både små og store anledninger – fra
-            familiemiddager og bursdager til bryllup, møter
-            og større arrangementer.
-          </p>
-
-          <p>
-            Vi kombinerer kurdiske, persiske, arabiske og tyrkiske
-            mattradisjoner med et moderne uttrykk. Målet er enkelt:
-            god mat, rause porsjoner og en meny som passer anledningen.
-          </p>
-
-          <p>
-            Vi tar imot forespørsler om catering i Ski og
-            nærliggende områder. Kontakt oss gjerne med dato,
-            antall gjester og hva slags arrangement du planlegger.
-          </p>
-
-        </div>
-
-        <div class="intro-image">
-
-          <img
-            src="forside.jpeg"
-            alt="Tradisjon Catering – halal catering og selskapsmat i Ski"
-            loading="lazy"
-          >
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- PHILOSOPHY -->
-    <section class="philosophy">
-
-      <div class="container philosophy-grid">
-
-        <div>
-
-          <div class="section-kicker">
-            Vår filosofi
-          </div>
-
-          <h2>
-            Gode råvarer.<br>
-            Rike smaker.<br>
-            Mat med personlighet.
-          </h2>
-
-        </div>
-
-        <div>
-
-          <p class="philosophy-text">
-            For oss handler catering om mer enn å levere mat.
-            Det handler om å skape en god opplevelse rundt bordet.
-            Derfor legger vi vekt på smak, kvalitet og presentasjon –
-            samtidig som maten skal føles ekte og hjemmelaget.
-          </p>
-
-          <div class="philosophy-items">
-
-            <div class="philosophy-item">
-
-              <div class="philosophy-number">
-                01
-              </div>
-
-              <div>
-                <strong>Halal mat</strong>
-
-                <span>
-                  Vi holder menyen halal og fokuserer på retter
-                  med gode råvarer og tydelige smaker.
-                </span>
-              </div>
-
+<h1>Catering i<br/><span>Ski.</span></h1>
+<p class="hero-text">Tradisjon Catering tilbyr halal catering i Ski for bryllup, bursdager, familieselskaper, møter og større arrangementer. Vi lager mat med kurdiske, persiske, arabiske og tyrkiske smaker – med respekt for tradisjon.</p>
+<div class="hero-buttons">
+<a class="btn btn-gold" href="#contactForm">
+              Be om tilbud →
+            </a>
+<a class="btn btn-outline" href="#meny">
+              Se menyen
+            </a>
+</div>
+</div>
+<div class="hero-image">
+<img alt="Tradisjonell mat fra Tradisjon Catering" src="forside.jpeg"/>
+</div>
+</div>
+</section>
+<!-- =========================================
+         LOCAL SEO STRIP
+    ========================================= -->
+<div class="local-strip">
+<div class="container local-strip-inner">
+<strong>
+          Catering i Oslo og Østlandet
+        </strong>
+<span>
+  Oslo · Akershus · Viken · Lillestrøm · Moss · Sarpsborg ·
+  Halden · Vestby · Ski · Vinterbro · Asker · Drammen · Fredrikstad
+</span>
+</div>
+</div>
+<!-- =========================================
+         SPECIAL OFFER PROMO
+    ========================================= -->
+<div class="offer-promo">
+<div class="container offer-promo-inner">
+<div class="offer-promo-text">
+<div>
+<strong>Cateringtilbud <em>· 250 kr per person</em></strong>
+<span class="offer-promo-menu">3 TYPER RIS · 2 TYPER GRYTER · KYLLING · 3 TYPER SALATER</span>
+</div>
+</div>
+<a class="btn" href="#tilbud">
+          Se tilbudet →
+        </a>
+</div>
+</div>
+<!-- =========================================
+         SPECIAL OFFER
+    ========================================= -->
+<section class="special-offer-section" id="tilbud">
+<div class="container">
+<div class="offer-layout">
+<div class="offer-card">
+<div class="offer-eyebrow">
+              🔥 Begrenset tilbud
             </div>
-
-            <div class="philosophy-item">
-
-              <div class="philosophy-number">
-                02
-              </div>
-
-              <div>
-                <strong>Tradisjonelle smaker</strong>
-
-                <span>
-                  Inspirasjon fra kurdiske, persiske, arabiske
-                  og tyrkiske kjøkkentradisjoner.
-                </span>
-              </div>
-
+<h2>
+              Selskapsmeny til kun 250 kr per person.
+            </h2>
+<p>
+              Gjør selskapet enkelt. Du får en komplett selskapsmeny med flere retter samlet til én fast pris. Velg antall personer og se totalprisen med én gang.
+            </p>
+<div class="offer-includes">
+<div>🍚 3 typer ris</div>
+<div>🍲 2 typer gryter</div>
+<div>🍗 Kylling</div>
+<div>🥗 3 typer salater</div>
+</div>
+<div class="offer-deadline">
+              Gjelder nye bestillinger frem til nyttårsaften.
             </div>
-
-            <div class="philosophy-item">
-
-              <div class="philosophy-number">
-                03
+</div>
+<div class="offer-form-card">
+<div class="offer-calculator-heading">
+<small>Spesialtilbud</small>
+<h3>Bestill tilbudet</h3>
+<p>Velg antall personer, se totalprisen og send forespørselen.</p>
+</div>
+<div class="offer-calculator">
+<div class="offer-calculator-top">
+<div>
+<label for="offerGuests">Antall personer</label>
+<div class="offer-person-count"><span id="offerGuestValue">40</span> personer</div>
+</div>
+<div>
+<div class="offer-total-label">Totalpris</div>
+<div class="offer-total" id="offerTotal">10 000 kr</div>
+</div>
+</div>
+<input aria-label="Velg antall personer" class="offer-range" id="offerGuests" max="300" min="1" name="tilbud_antall_personer_slider" step="1" type="range" value="40"/>
+<div class="offer-range-scale">
+<span>1 person</span>
+<span>300 personer</span>
+</div>
+</div>
+<form action="https://formspree.io/f/mpqgazyp" class="offer-form" id="offerForm" method="POST">
+<input name="type" type="hidden" value="SPECIALTILBUD – 250 KR PER PERSON"/>
+<input id="offerHiddenGuests" name="antall_personer" type="hidden" value="40"/>
+<input id="offerHiddenTotal" name="beregnet_totalpris" type="hidden" value="10 000 kr"/>
+<input name="tilbud_meny" type="hidden" value="3 typer ris, 2 typer gryter, kylling og 3 typer salater"/>
+<input name="tilbud_gjelder" type="hidden" value="Nye bestillinger frem til nyttårsaften"/>
+<div class="form-grid">
+<div class="form-group">
+<label for="offerName">Navn</label>
+<input id="offerName" name="navn" placeholder="Ditt navn" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="offerPhone">Telefon</label>
+<input id="offerPhone" name="telefon" placeholder="Telefonnummer" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label for="offerEmail">E-post</label>
+<input id="offerEmail" name="epost" placeholder="din@email.no" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="offerDate">Dato for arrangement</label>
+<input id="offerDate" name="dato" required="" type="date"/>
+</div>
+<div class="form-group">
+<label for="offerOccasion">Anledning</label>
+<select id="offerOccasion" name="anledning" required="">
+<option value="">Velg anledning</option>
+<option value="Bryllup">Bryllup</option>
+<option value="Bursdag">Bursdag</option>
+<option value="Familieselskap">Familieselskap</option>
+<option value="Bedriftsarrangement">Bedriftsarrangement</option>
+<option value="Idrettsarrangement">Idrettsarrangement</option>
+<option value="Annet">Annet</option>
+</select>
+</div>
+<div class="form-group">
+<label for="offerPlace">Sted / område</label>
+<input id="offerPlace" name="sted_omrade" placeholder="F.eks. Oslo, Halden eller Moss" required="" type="text"/>
+</div>
+<div class="form-group full">
+<label for="offerMessage">Melding</label>
+<textarea id="offerMessage" name="melding" placeholder="Fortell gjerne litt om arrangementet, tidspunkt og andre ønsker..."></textarea>
+</div>
+</div>
+<button class="btn btn-gold" type="submit">
+                Jeg vil ha tilbudet →
+              </button>
+<div aria-live="polite" class="form-status" id="offerFormStatus"></div>
+<div class="offer-note">
+                Vi kontakter deg for å bekrefte detaljer og tilgjengelighet.
               </div>
+</form>
+<a class="btn btn-gold offer-other-orders" href="#contactForm">
+              Andre bestillinger →
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================
+         PHILOSOPHY
+    ========================================= -->
+<section class="philosophy-section" id="om-oss">
+<div class="container philosophy-grid">
+<div class="philosophy-image">
+<img alt="Smak som bringer mennesker sammen" loading="lazy" src="bilde6.jpeg"/>
+</div>
+<div class="philosophy-text">
+<div class="section-heading">
+<small>Om Tradisjon Catering · Ski</small>
+<h2>Mat som samler mennesker.</h2>
+</div>
 
-              <div>
-                <strong>Tilpasset ditt arrangement</strong>
 
-                <span>
-                  Menyen kan tilpasses antall gjester og typen
-                  arrangement du planlegger.
-                </span>
-              </div>
 
-            </div>
+<p>Skal du arrangere selskap i Ski? Tradisjon Catering lager mat til både små og store anledninger – fra familiemiddager og bursdager til bryllup, møter og større arrangementer.</p><p>Vi kombinerer kurdiske, persiske, arabiske og tyrkiske mattradisjoner med et moderne uttrykk. Målet er enkelt: god mat, rause porsjoner og en meny som passer anledningen.</p><p>Vi tar imot forespørsler om catering i Ski og nærliggende områder. Kontakt oss gjerne med dato, antall gjester og hva slags arrangement du planlegger.</p><p>For oss handler catering om mer enn å levere mat. Det handler om å skape en god opplevelse rundt bordet. Derfor legger vi vekt på smak, kvalitet og presentasjon – samtidig som maten skal føles ekte og hjemmelaget.</p><div class="signature">
 
-          </div>
+            Shala Jalil
 
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- MENU -->
-    <section id="meny" class="menu-section">
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <div class="section-kicker">
-            Meny
-          </div>
-
-          <h2>
-            Retter laget for å deles.
-          </h2>
-
-          <p>
-            Utforsk noen av kategoriene våre. Menyen kan tilpasses
-            arrangementet ditt og antall gjester.
-          </p>
-
-        </div>
-
-        <div class="menu-tabs" id="menuTabs">
-
-          <button
-            class="menu-tab active"
-            data-menu="gryter"
-            type="button"
-          >
+            <span>
+              Grunnlegger · Tradisjon Catering
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================
+         MENU
+    ========================================= -->
+<section class="menu-section" id="meny">
+<div class="container">
+<div class="section-heading">
+<small>
+            Vår meny
+          </small>
+<h2>Retter laget for å deles.</h2>
+<p>Utforsk noen av kategoriene våre. Menyen kan tilpasses arrangementet ditt og antall gjester.</p>
+</div>
+<div aria-label="Meny kategorier" class="menu-tabs" id="menuTabs" role="tablist">
+<button aria-selected="true" class="menu-tab active" data-menu="gryter" role="tab" type="button">
             Gryter
           </button>
-
-          <button
-            class="menu-tab"
-            data-menu="ris"
-            type="button"
-          >
+<button aria-selected="false" class="menu-tab" data-menu="ris" role="tab" type="button">
             Ris
           </button>
-
-          <button
-            class="menu-tab"
-            data-menu="kjott"
-            type="button"
-          >
+<button aria-selected="false" class="menu-tab" data-menu="kjott" role="tab" type="button">
             Kjøtt
           </button>
-
-          <button
-            class="menu-tab"
-            data-menu="kylling"
-            type="button"
-          >
+<button aria-selected="false" class="menu-tab" data-menu="kylling" role="tab" type="button">
             Kylling
           </button>
-
-          <button
-            class="menu-tab"
-            data-menu="salater"
-            type="button"
-          >
+<button aria-selected="false" class="menu-tab" data-menu="salater" role="tab" type="button">
             Salater
           </button>
-
-          <button
-            class="menu-tab"
-            data-menu="tilbehor"
-            type="button"
-          >
-            Tilbehør
+<button aria-selected="false" class="menu-tab" data-menu="frukt" role="tab" type="button">
+            Frukt
           </button>
-
-          <button
-            class="menu-tab"
-            data-menu="dessert"
-            type="button"
-          >
+<button aria-selected="false" class="menu-tab" data-menu="dessert" role="tab" type="button">
             Dessert
           </button>
-
-        </div>
-
-        <p
-          class="menu-description"
-          id="menuDescription"
-        ></p>
-
-        <div
-          class="menu-gallery"
-          id="menuGallery"
-        ></div>
-
-        <div
-          class="gallery-dots"
-          id="galleryDots"
-        ></div>
-
-      </div>
-
-    </section>
-
-    <!-- OCCASIONS -->
-    <section id="anledninger">
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <div class="section-kicker">
+</div>
+<div class="menu-box">
+<div class="menu-content">
+<small>
+              TRADISJON CATERING · MENY
+            </small>
+<h3 id="menuTitle">
+              Gryter
+            </h3>
+<p id="menuText">
+              Varme og fyldige gryter med gode råvarer
+              og krydder fra Midtøsten.
+            </p>
+<ul id="menuItems">
+<li>
+                Fasolia / bønnegryte
+              </li>
+<li>
+                Tapsi og grønnsaksgryter
+              </li>
+<li>
+                Bame
+              </li>
+<li>
+                Dolma
+              </li>
+</ul>
+<a class="btn btn-outline" href="#contactForm">
+              Be om tilbud →
+            </a>
+</div>
+<div class="menu-gallery">
+<div class="menu-gallery-track" id="menuGallery">
+<div class="menu-gallery-item">
+<img alt="Gryter – Tradisjon Catering" src="bildegryte1.jpeg"/>
+</div>
+<div class="menu-gallery-item">
+<img alt="Gryteretter – Tradisjon Catering" loading="lazy" src="bildegryte2.jpeg"/>
+</div>
+<div class="menu-gallery-item">
+<img alt="Tradisjonelle gryter – Tradisjon Catering" loading="lazy" src="bildegryte3.jpeg"/>
+</div>
+</div>
+<div class="gallery-bottom">
+<div class="gallery-dots" id="galleryDots">
+<span class="gallery-dot active"></span>
+<span class="gallery-dot"></span>
+<span class="gallery-dot"></span>
+</div>
+<span class="gallery-hint">
+                Sveip for å se mer →
+              </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================
+         OCCASIONS
+    ========================================= -->
+<section class="occasion-section" id="anledninger">
+<div class="container">
+<div class="section-heading">
+<small>
             Anledninger
-          </div>
-
-          <h2>
-            Catering til øyeblikkene som betyr noe.
-          </h2>
-
-          <p>
-            Enten du planlegger en liten familiesamling eller et
-            større arrangement, hjelper vi deg med maten.
-          </p>
-
-        </div>
-
-        <div class="occasion-grid">
-
-          <div class="occasion-card">
-
-            <div class="occasion-icon">
-              ♡
+          </small>
+<h2>Catering til øyeblikkene som betyr noe.</h2>
+<p>Enten du planlegger en liten familiesamling eller et større arrangement, hjelper vi deg med maten.</p>
+</div>
+<div class="occasion-grid">
+<article class="occasion-card">
+<div class="occasion-number">
+              01
             </div>
-
-            <h3>
-              Bryllup
-            </h3>
-
-            <p>
-              En smakfull meny til den store dagen,
-              tilpasset selskapet og deres ønsker.
-            </p>
-
-          </div>
-
-          <div class="occasion-card">
-
-            <div class="occasion-icon">
-              ✦
+<h3>Bryllup</h3>
+<p>En smakfull meny til den store dagen, tilpasset selskapet og deres ønsker.</p>
+<a href="#contactForm">
+              Be om tilbud →
+            </a>
+</article>
+<article class="occasion-card">
+<div class="occasion-number">
+              02
             </div>
-
-            <h3>
-              Familieselskap
-            </h3>
-
-            <p>
-              Rause retter som passer til bursdager,
-              jubileer og familiesammenkomster.
-            </p>
-
-          </div>
-
-          <div class="occasion-card">
-
-            <div class="occasion-icon">
-              ▣
+<h3>Familieselskap</h3>
+<p>Rause retter som passer til bursdager, jubileer og familiesammenkomster.</p>
+<a href="#contactForm">
+              Be om tilbud →
+            </a>
+</article>
+<article class="occasion-card">
+<div class="occasion-number">
+              03
             </div>
-
-            <h3>
-              Møter
-            </h3>
-
-            <p>
-              Catering til bedrifter, møter og
-              arrangementer der maten skal være enkel
-              å samle seg rundt.
-            </p>
-
-          </div>
-
-          <div class="occasion-card">
-
-            <div class="occasion-icon">
-              ＋
+<h3>Møter</h3>
+<p>Catering til bedrifter, møter og arrangementer der maten skal være enkel å samle seg rundt.</p>
+<a href="#contactForm">
+              Be om tilbud →
+            </a>
+</article>
+<article class="occasion-card">
+<div class="occasion-number">
+              04
             </div>
-
-            <h3>
-              Store arrangementer
-            </h3>
-
-            <p>
-              Vi kan planlegge menyer for større
-              selskaper og arrangementer.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- AREAS -->
-    <section
-      id="omrader"
-      class="areas-section"
-    >
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <div class="section-kicker">
-            Områder
-          </div>
-
-          <h2>
-            Catering i Ski og nærliggende områder.
-          </h2>
-
-          <p>
-            Vi tar imot forespørsler fra kunder i Ski og
-            nærliggende områder. Send oss informasjon om
-            arrangementet ditt, så ser vi på mulighetene.
-          </p>
-
-        </div>
-
-        <div class="areas-grid">
-
-          <div class="area-card">
-
-            <h3>
-              Ski
-            </h3>
-
-            <p>
-              Catering til selskaper, familier, bedrifter og
-              arrangementer i Ski.
-            </p>
-
-            <div class="area-list">
-
-              <span class="area-pill">
-                Ski sentrum
-              </span>
-
-              <span class="area-pill">
-                Langhus
-              </span>
-
-              <span class="area-pill">
-                Siggerud
-              </span>
-
-              <span class="area-pill">
-                Kråkstad
-              </span>
-
-            </div>
-
-          </div>
-
-          <div class="area-card">
-
-            <h3>
-              Nærliggende områder
-            </h3>
-
-            <p>
-              Vi kan også ta imot cateringforespørsler fra
-              nærliggende områder rundt Ski.
-            </p>
-
-            <div class="area-list">
-
-              <span class="area-pill">
-                Vinterbro
-              </span>
-
-              <span class="area-pill">
-                Vestby
-              </span>
-
-              <span class="area-pill">
-                Lillestrøm
-              </span>
-
-              <span class="area-pill">
-                Oslo
-              </span>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- LOCAL PAGES -->
-    <section>
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <div class="section-kicker">
-            Lokale catering-sider
-          </div>
-
-          <h2>
-            Finn catering nær deg.
-          </h2>
-
-          <p>
-            Se våre lokale sider for ulike områder rundt Oslo
-            og Østlandet.
-          </p>
-
-        </div>
-
-        <div class="local-pages-grid">
-
-          <a
-            href="catering-oslo.html"
-            class="local-page-link"
-          >
-            Oslo <span>→</span>
-          </a>
-
-          <a
-            href="catering-lillestrom.html"
-            class="local-page-link"
-          >
-            Lillestrøm <span>→</span>
-          </a>
-
-          <a
-            href="catering-ski.html"
-            class="local-page-link active"
-          >
-            Ski <span>→</span>
-          </a>
-
-          <a
-            href="catering-vinterbro.html"
-            class="local-page-link"
-          >
-            Vinterbro <span>→</span>
-          </a>
-
-          <a
-            href="catering-vestby.html"
-            class="local-page-link"
-          >
-            Vestby <span>→</span>
-          </a>
-
-          <a
-            href="catering-moss.html"
-            class="local-page-link"
-          >
-            Moss <span>→</span>
-          </a>
-
-          <a
-            href="catering-fredrikstad.html"
-            class="local-page-link"
-          >
-            Fredrikstad <span>→</span>
-          </a>
-
-          <a
-            href="catering-sarpsborg.html"
-            class="local-page-link"
-          >
-            Sarpsborg <span>→</span>
-          </a>
-
-          <a
-            href="catering-halden.html"
-            class="local-page-link"
-          >
-            Halden <span>→</span>
-          </a>
-
-          <a
-            href="catering-asker.html"
-            class="local-page-link"
-          >
-            Asker <span>→</span>
-          </a>
-
-          <a
-            href="catering-akershus.html"
-            class="local-page-link"
-          >
-            Akershus <span>→</span>
-          </a>
-
-          <a
-            href="catering-viken.html"
-            class="local-page-link"
-          >
-            Viken <span>→</span>
-          </a>
-
-          <a
-            href="catering-drammen.html"
-            class="local-page-link"
-          >
-            Drammen <span>→</span>
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- FAQ -->
-    <section
-      id="faq"
-      class="faq-section"
-    >
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <div class="section-kicker">
-            Vanlige spørsmål
-          </div>
-
-          <h2>
-            Spørsmål om catering i Ski?
-          </h2>
-
-          <p>
-            Her finner du noen av spørsmålene vi ofte får.
-            Du kan også kontakte oss direkte.
-          </p>
-
-        </div>
-
-        <div class="faq-list">
-
-          <div class="faq-item">
-
-            <button
-              class="faq-question"
-              type="button"
-            >
-              Tilbyr dere halal catering i Ski?
-
-              <span>
-                +
-              </span>
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                Ja. Tradisjon Catering tilbyr halal catering
-                med inspirasjon fra kurdiske, persiske,
-                arabiske og tyrkiske mattradisjoner.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="faq-item">
-
-            <button
-              class="faq-question"
-              type="button"
-            >
-              Hvilke arrangementer kan dere levere catering til i Ski?
-
-              <span>
-                +
-              </span>
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                Vi lager catering til blant annet bryllup,
-                bursdager, familieselskaper, møter, bedrifter
-                og større arrangementer.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="faq-item">
-
-            <button
-              class="faq-question"
-              type="button"
-            >
-              Kan menyen tilpasses arrangementet?
-
-              <span>
-                +
-              </span>
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                Ja. Vi kan tilpasse menyen etter type arrangement,
-                antall gjester og ønsket kombinasjon av retter.
-                Ta kontakt med oss for å diskutere behovene dine.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="faq-item">
-
-            <button
-              class="faq-question"
-              type="button"
-            >
-              Leverer dere catering i områder rundt Ski?
-
-              <span>
-                +
-              </span>
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                Vi tar imot forespørsler fra Ski og nærliggende
-                områder. Oppgi sted, dato og antall gjester
-                når du kontakter oss, så vurderer vi
-                forespørselen.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="faq-item">
-
-            <button
-              class="faq-question"
-              type="button"
-            >
-              Hvor tidlig bør jeg bestille catering?
-
-              <span>
-                +
-              </span>
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                Vi anbefaler å ta kontakt så tidlig som mulig,
-                spesielt dersom du planlegger bryllup eller et
-                større arrangement. Da har vi bedre mulighet til
-                å planlegge menyen sammen med deg.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="faq-item">
-
-            <button
-              class="faq-question"
-              type="button"
-            >
-              Hvordan får jeg et tilbud?
-
-              <span>
-                +
-              </span>
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                Send oss en forespørsel gjennom kontaktskjemaet
-                nederst på siden eller ring oss på
-                +47 471 52 310. Fortell gjerne dato,
-                antall gjester og hvilken type arrangement
-                du planlegger.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- CONTACT -->
-    <section
-      id="kontakt"
-      class="contact-section"
-    >
-
-      <div class="container contact-grid">
-
-        <div class="contact-copy">
-
-          <div class="section-kicker">
-            Ta kontakt
-          </div>
-
-          <h2>
-            Skal vi planlegge maten?
-          </h2>
-
-          <p>
-            Fortell oss litt om arrangementet ditt, så kan vi
-            se på en passende meny og løsning.
-          </p>
-
-          <div class="contact-details">
-
-            <div class="contact-detail">
-
-              <strong>
+<h3>Store arrangementer</h3>
+<p>Vi kan planlegge menyer for større selskaper og arrangementer.</p>
+<a href="#contactForm">
+              Be om tilbud →
+            </a>
+</article>
+</div>
+</div>
+</section>
+<!-- =========================================
+         AREAS
+    ========================================= -->
+<section class="areas" id="omrader">
+<div class="container areas-grid">
+<div>
+<div class="section-heading">
+<small>
+              Leveringsområder
+            </small>
+<h2>Catering i Ski og nærliggende områder.</h2>
+<p>Vi tar imot forespørsler fra kunder i Ski og nærliggende områder. Send oss informasjon om arrangementet ditt, så ser vi på mulighetene.</p><p>Vi kan også ta imot cateringforespørsler fra nærliggende områder rundt Ski.</p><p>Catering til selskaper, familier, bedrifter og arrangementer i Ski.</p>
+</div>
+<div class="areas-list">
+<a class="area" href="catering-oslo.html">
+    Oslo
+  </a>
+<a class="area" href="catering-akershus.html">
+    Akershus
+  </a>
+<a class="area" href="catering-viken.html">
+    Viken
+  </a>
+<a class="area" href="catering-lillestrom.html">
+    Lillestrøm
+  </a>
+<a class="area" href="catering-moss.html">
+    Moss
+  </a>
+<a class="area" href="catering-sarpsborg.html">
+    Sarpsborg
+  </a>
+<a class="area" href="catering-halden.html">
+    Halden
+  </a>
+<a class="area" href="catering-vestby.html">
+    Vestby
+  </a>
+<a class="area" href="catering-ski.html">
+    Ski
+  </a>
+<a class="area" href="catering-vinterbro.html">
+    Vinterbro
+  </a>
+<a class="area" href="catering-asker.html">
+    Asker
+  </a>
+<a class="area" href="catering-drammen.html">
+    Drammen
+  </a>
+<a class="area" href="catering-fredrikstad.html">
+    Fredrikstad
+  </a>
+</div>
+</div>
+<div class="areas-image">
+<img alt="Catering i ditt område" loading="lazy" src="bilde7.jpeg"/>
+</div>
+</div>
+</section>
+<!-- =========================================
+         CONTACT
+    ========================================= -->
+<section class="contact-section" id="kontakt">
+<div class="container contact-grid">
+<div class="contact-info">
+<div class="section-heading">
+<small>
+              Be om tilbud
+            </small>
+<h2>Skal vi planlegge maten?</h2>
+</div>
+<p>Fortell oss litt om arrangementet ditt, så kan vi se på en passende meny og løsning.</p>
+<div class="contact-details">
+<a class="contact-detail" href="tel:+4747152310">
+<span>
                 Telefon
-              </strong>
-
-              <a href="tel:+4747152310">
-                +47 471 52 310
-              </a>
-
-            </div>
-
-            <div class="contact-detail">
-
-              <strong>
-                E-post
-              </strong>
-
-              <a href="mailto:tradisjoncatering@gmail.com">
-                tradisjoncatering@gmail.com
-              </a>
-
-            </div>
-
-            <div class="contact-detail">
-
-              <strong>
-                Område
-              </strong>
-
-              <span>
-                Ski · Oslo · Akershus og nærliggende områder
               </span>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <form
-          class="contact-form"
-          id="contactForm"
-          action="https://formspree.io/f/mpqgazyp"
-          method="POST"
-        >
-
-          <div class="form-row">
-
-            <div class="form-group">
-
-              <label for="name">
+<strong>+47 471 52 310</strong>
+</a>
+<a class="contact-detail" href="mailto:tradisjoncatering@gmail.com">
+<span>
+                E-post
+              </span>
+<strong>tradisjoncatering@gmail.com</strong>
+</a>
+</div>
+</div>
+<form action="https://formspree.io/f/mpqgazyp" class="contact-form" id="contactForm" method="POST">
+<div class="form-grid">
+<div class="form-group">
+<label for="name">
                 Navn
               </label>
-
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Ditt navn"
-                required
-              >
-
-            </div>
-
-            <div class="form-group">
-
-              <label for="phone">
+<input id="name" name="navn" placeholder="Ditt navn" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="phone">
                 Telefon
               </label>
-
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Telefonnummer"
-                required
-              >
-
-            </div>
-
-          </div>
-
-          <div class="form-group">
-
-            <label for="email">
-              E-post
-            </label>
-
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="din@epost.no"
-              required
-            >
-
-          </div>
-
-          <div class="form-row">
-
-            <div class="form-group">
-
-              <label for="date">
+<input id="phone" name="telefon" placeholder="Telefonnummer" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label for="email">
+                E-post
+              </label>
+<input id="email" name="epost" placeholder="din@email.no" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="guests">
+                Antall personer
+              </label>
+<input id="guests" min="1" name="antall_personer" placeholder="F.eks. 40" type="number"/>
+</div>
+<div class="form-group">
+<label for="occasion">
+                Anledning
+              </label>
+<select id="occasion" name="anledning">
+<option value="">
+                  Velg anledning
+                </option>
+<option value="Bryllup">
+                  Bryllup
+                </option>
+<option value="Bursdag">
+                  Bursdag
+                </option>
+<option value="Familieselskap">
+                  Familieselskap
+                </option>
+<option value="Bedriftsarrangement">
+                  Bedriftsarrangement
+                </option>
+<option value="Idrettsarrangement">
+                  Idrettsarrangement
+                </option>
+<option value="Annet">
+                  Annet
+                </option>
+</select>
+</div>
+<div class="form-group">
+<label for="date">
                 Dato
               </label>
-
-              <input
-                type="date"
-                id="date"
-                name="date"
-              >
-
-            </div>
-
-            <div class="form-group">
-
-              <label for="guests">
-                Antall gjester
+<input id="date" name="dato" type="date"/>
+</div>
+<div class="form-group full">
+<label for="message">
+                Fortell litt om arrangementet
               </label>
-
-              <input
-                type="number"
-                id="guests"
-                name="guests"
-                min="1"
-                placeholder="F.eks. 30"
-              >
-
-            </div>
-
-          </div>
-
-          <div class="form-group">
-
-            <label for="occasion">
-              Type arrangement
-            </label>
-
-            <select
-              id="occasion"
-              name="occasion"
-            >
-
-              <option value="">
-                Velg arrangement
-              </option>
-
-              <option value="Bryllup">
-                Bryllup
-              </option>
-
-              <option value="Familieselskap">
-                Familieselskap
-              </option>
-
-              <option value="Bursdag">
-                Bursdag
-              </option>
-
-              <option value="Bedriftsarrangement">
-                Bedriftsarrangement
-              </option>
-
-              <option value="Møte">
-                Møte
-              </option>
-
-              <option value="Annet">
-                Annet
-              </option>
-
-            </select>
-
-          </div>
-
-          <div class="form-group">
-
-            <label for="message">
-              Fortell litt om arrangementet
-            </label>
-
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Skriv gjerne ønsket meny, sted eller andre detaljer..."
-              required
-            ></textarea>
-
-          </div>
-
-          <input
-            type="hidden"
-            name="location"
-            value="Ski"
-          >
-
-          <input
-            type="hidden"
-            name="_subject"
-            value="Cateringforespørsel – Ski"
-          >
-
-          <button
-            type="submit"
-            class="form-submit"
-          >
-            Send forespørsel
+<textarea id="message" name="melding" placeholder="Fortell gjerne om ønsket meny, sted, tidspunkt og andre ønsker..." required=""></textarea>
+</div>
+</div>
+<button class="btn btn-gold" type="submit">
+            Send forespørsel →
           </button>
-
-          <div
-            class="form-status"
-            id="formStatus"
-            aria-live="polite"
-          ></div>
-
-        </form>
-
-      </div>
-
-    </section>
-
-  
-
-
+<div aria-live="polite" class="form-status" id="formStatus"></div>
+</form>
+</div>
+</section>
+<!-- =========================================
+         FAQ
+    ========================================= -->
+<section class="faq-section" id="faq">
+<div class="container">
+<div class="section-heading">
+<small>
+            Spørsmål
+          </small>
+<nav aria-label="Snarveier" class="faq-links">
+<a href="#meny">Meny</a>
+<a href="#anledninger">Anledninger</a>
+<a href="#omrader">Områder</a>
+<a href="#faq">FAQ</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+<div class="faq-brand">
+            © <span id="year"></span> Tradisjon Catering<br/>
+<span>Mat med historie</span>
+</div>
+</div>
+<div class="faq-list"><details class="faq-item"><summary>Tilbyr dere halal catering i Ski?</summary><div class="faq-answer">Ja. Tradisjon Catering tilbyr halal catering med inspirasjon fra kurdiske, persiske, arabiske og tyrkiske mattradisjoner.</div></details><details class="faq-item"><summary>Hvilke arrangementer kan dere levere catering til i Ski?</summary><div class="faq-answer">Vi lager catering til blant annet bryllup, bursdager, familieselskaper, møter, bedrifter og større arrangementer.</div></details><details class="faq-item"><summary>Kan menyen tilpasses arrangementet?</summary><div class="faq-answer">Ja. Vi kan tilpasse menyen etter type arrangement, antall gjester og ønsket kombinasjon av retter. Ta kontakt med oss for å diskutere behovene dine.</div></details><details class="faq-item"><summary>Leverer dere catering i områder rundt Ski?</summary><div class="faq-answer">Vi tar imot forespørsler fra Ski og nærliggende områder. Oppgi sted, dato og antall gjester når du kontakter oss, så vurderer vi forespørselen.</div></details><details class="faq-item"><summary>Hvor tidlig bør jeg bestille catering?</summary><div class="faq-answer">Vi anbefaler å ta kontakt så tidlig som mulig, spesielt dersom du planlegger bryllup eller et større arrangement. Da har vi bedre mulighet til å planlegge menyen sammen med deg.</div></details><details class="faq-item"><summary>Hvordan får jeg et tilbud?</summary><div class="faq-answer">Send oss en forespørsel gjennom kontaktskjemaet nederst på siden eller ring oss på +47 471 52 310. Fortell gjerne dato, antall gjester og hvilken type arrangement du planlegger.</div></details></div>
+</div>
+</section>
 </main>
+<!-- =========================================
+       JAVASCRIPT
+  ========================================= -->
+<script>
 
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-
-          <div class="brand-icon">
-            B
-          </div>
-
-          <h3>
-            Tradisjon Catering
-          </h3>
-
-          <p>
-            Mat med historie. Halal catering med kurdiske,
-            persiske, arabiske og tyrkiske smaker – til
-            selskaper, bedrifter og arrangementer.
-          </p>
-
-        </div>
-
-        <div class="footer-column">
-
-          <h4>
-            Meny
-          </h4>
-
-          <a href="index.html#meny">
-            Se meny
-          </a>
-
-          <a href="index.html#anledninger">
-            Anledninger
-          </a>
-
-          <a href="#kontakt">
-            Be om tilbud
-          </a>
-
-          <a href="#faq">
-            FAQ
-          </a>
-
-        </div>
-
-        <div class="footer-column">
-
-          <h4>
-            Områder
-          </h4>
-
-          <a href="catering-oslo.html">
-            Oslo
-          </a>
-
-          <a href="catering-ski.html">
-            Ski
-          </a>
-
-          <a href="catering-vinterbro.html">
-            Vinterbro
-          </a>
-
-          <a href="catering-vestby.html">
-            Vestby
-          </a>
-
-          <a href="catering-akershus.html">
-            Akershus
-          </a>
-
-          <a href="catering-viken.html">
-            Viken
-          </a>
-
-          <a href="catering-drammen.html">
-            Drammen
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-
-        <span>
-          © <span id="currentYear"></span> Tradisjon Catering
-        </span>
-
-        <span>
-          Mat med historie
-        </span>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-  <script>
-
-    /* =========================
+    /* =========================================
        MOBILE MENU
-    ========================= */
+    ========================================= */
 
-    const menuToggle =
-      document.getElementById("menuToggle");
+    const mobileMenuBtn =
+      document.getElementById("mobileMenuBtn");
 
     const navLinks =
       document.getElementById("navLinks");
 
+    const headerLogoImage =
+      document.getElementById("headerLogoImage");
 
-    menuToggle.addEventListener("click", () => {
+    function toggleLogoLight() {
+      const isLit = headerLogoImage.classList.toggle("is-lit");
+      headerLogoImage.setAttribute("aria-pressed", isLit ? "true" : "false");
+    }
 
-      const isOpen =
-        navLinks.classList.toggle("open");
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
-
-      menuToggle.textContent =
-        isOpen ? "×" : "☰";
-
+    headerLogoImage.addEventListener("click", toggleLogoLight);
+    headerLogoImage.addEventListener("keydown", function(event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleLogoLight();
+      }
     });
+
+
+    mobileMenuBtn.addEventListener(
+      "click",
+      function() {
+
+        const isOpen =
+          navLinks.classList.toggle("mobile-open");
+
+        mobileMenuBtn.setAttribute(
+          "aria-expanded",
+          isOpen ? "true" : "false"
+        );
+
+        mobileMenuBtn.setAttribute(
+          "aria-label",
+          isOpen ? "Lukk meny" : "Åpne meny"
+        );
+
+      }
+    );
 
 
     document
       .querySelectorAll(".nav-links a")
-      .forEach(link => {
+      .forEach(function(link) {
 
-        link.addEventListener("click", () => {
+        link.addEventListener(
+          "click",
+          function() {
 
-          navLinks.classList.remove("open");
+            navLinks.classList.remove(
+              "mobile-open"
+            );
 
-          menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-          );
+            mobileMenuBtn.setAttribute(
+              "aria-expanded",
+              "false"
+            );
 
-          menuToggle.textContent = "☰";
+            mobileMenuBtn.setAttribute(
+              "aria-label",
+              "Åpne meny"
+            );
 
-        });
+          }
+        );
 
       });
 
 
-    /* =========================
+
+    /* =========================================
        MENU DATA
-    ========================= */
+    ========================================= */
 
     const menuData = {
 
@@ -3305,29 +693,20 @@
 
         title: "Gryter",
 
-        description:
-          "Smaksrike gryter som passer godt til selskaper og større serveringer.",
+        text:
+          "Varme og fyldige gryter med gode råvarer og krydder fra Midtøsten.",
 
         items: [
+          "Fasolia / bønnegryte",
+          "Tapsi og grønnsaksgryter",
+          "Bame",
+          "Dolma"
+        ],
 
-          {
-            name: "Bame gryte",
-            text: "Med bame og krydder.",
-            image: "bildegryte1.jpeg"
-          },
-
-          {
-            name: "Lammegryte",
-            text: "Mørt lam med varme krydder og gode råvarer.",
-            image: "bildegryte2.jpeg"
-          },
-
-          {
-            name: "Fasolia bønner",
-            text: "Bønner i en smakfull og kremet gryte.",
-            image: "bildegryte3.jpeg"
-          }
-
+        images: [
+          "bildegryte1.jpeg",
+          "bildegryte2.jpeg",
+          "bildegryte3.jpeg"
         ]
 
       },
@@ -3335,31 +714,22 @@
 
       ris: {
 
-        title: "Ris",
+        title: "Ris typer",
 
-        description:
-          "Risretter som passer både som tilbehør og som en sentral del av måltidet.",
+        text:
+          "Luftig og smakfull ris som passer til både gryter, kjøtt, kylling og selskapsmenyer.",
 
         items: [
+          "Hvit ris",
+          "Biryani",
+          "Ris med dill",
+          "Ris med zereshk"
+        ],
 
-          {
-            name: "Hvit ris",
-            text: "Luftig ris som passer til mange av våre retter.",
-            image: "bilderis1.jpeg"
-          },
-
-          {
-            name: "Biryani",
-            text: "Krydret risrett med aromatiske smaker.",
-            image: "bilderis2.jpeg"
-          },
-
-          {
-            name: "Ris med dill",
-            text: "Aromatisk ris med frisk dill.",
-            image: "bilderis3.jpeg"
-          }
-
+        images: [
+          "bilderis1.jpeg",
+          "bilderis2.jpeg",
+          "bilderis3.jpeg"
         ]
 
       },
@@ -3367,31 +737,21 @@
 
       kjott: {
 
-        title: "Kjøtt",
+        title: "Kjøttretter",
 
-        description:
-          "Kjøttretter med tydelige krydder, gode råvarer og tradisjonelle smaker.",
+        text:
+          "Smakfulle kjøttretter og selskapsfat tilpasset arrangementet.",
 
         items: [
+          "Sauekjøtt",
+          "Grill",
+          "Selskapsfat etter avtale"
+        ],
 
-          {
-            name: "Lamme kjøtt",
-            text: "Mørt kjøtt tilpasset selskapsservering.",
-            image: "bildekjott1.jpeg"
-          },
-
-          {
-            name: "Kjøtt av lam i fat",
-            text: "Kjøtt som passer godt på buffet.",
-            image: "bildekjott2.jpeg"
-          },
-
-          {
-            name: "Krydret kjøtt",
-            text: "Saftig kjøtt med varme krydder og urter.",
-            image: "bildekjott3.jpeg"
-          }
-
+        images: [
+          "bildekjott1.jpeg",
+          "bildekjott2.jpeg",
+          "bildekjott3.jpeg"
         ]
 
       },
@@ -3399,31 +759,20 @@
 
       kylling: {
 
-        title: "Kylling",
+        title: "Kyllingretter",
 
-        description:
-          "Kyllingretter med krydder og smaker inspirert av Midtøsten.",
+        text:
+          "Saftige kyllingretter med krydder og smaker som passer hele selskapsmenyen.",
 
         items: [
+          "Kyllinglår",
+          "Kyllinggryte"
+        ],
 
-          {
-            name: "Kyllingvinger",
-            text: "Saftige kyllingvinger med krydder.",
-            image: "bildekylling1.jpeg"
-          },
-
-          {
-            name: "Kylling",
-            text: "Kyllingkjøtt marinert med aromatiske krydder.",
-            image: "bildekylling2.jpeg"
-          },
-
-          {
-            name: "Kyllinggryte",
-            text: "Saftig kylling i en fyldig gryte.",
-            image: "bildekylling3.jpeg"
-          }
-
+        images: [
+          "bildekylling1.jpeg",
+          "bildekylling2.jpeg",
+          "bildekylling3.jpeg"
         ]
 
       },
@@ -3433,61 +782,42 @@
 
         title: "Salater",
 
-        description:
-          "Friske salater som gir farge, syre og balanse til måltidet.",
+        text:
+          "Friske salater og sideretter som balanserer og kompletterer hovedrettene.",
 
         items: [
+          "Frisk husets salat",
+          "Yoghurt- og agurksalat",
+          "Tabbouleh-inspirert salat",
+          "Tilpasses etter ønsket meny"
+        ],
 
-          {
-            name: "Salater",
-            text: "Frisk salater med grønnsaker.",
-            image: "bildesalater1.jpeg"
-          },
-
-          {
-            name: "Youghurt dip",
-            text: "Frisk smak av yoghurt til maten.",
-            image: "bildesalater2.jpeg"
-          },
-
-          {
-            name: "Turshiat",
-            text: "I flere farger.",
-            image: "bildesalater3.jpeg"
-          }
-
+        images: [
+          "bildesalater1.jpeg",
+          "bildesalater2.jpeg",
+          "bildesalater3.jpeg"
         ]
 
       },
 
 
-      tilbehor: {
+      frukt: {
 
-        title: "Tilbehør",
+        title: "Fruktfat",
 
-        description:
-          "Små detaljer som gjør hele måltidet komplett.",
+        text:
+          "Fargerike fat med søt og frisk frukt – perfekt som et lett og fristende innslag på bordet.",
 
         items: [
+          "Søte fruktfat med melon, druer og bær",
+          "Friske sesongfrukter skåret i fine biter",
+          "Eksotisk frukt som mango, ananas og kiwi"
+        ],
 
-          {
-            name: "Frukt",
-            text: "Frisk frukt som passer godt til buffet og selskaper.",
-            image: "bildefrukt1.jpeg"
-          },
-
-          {
-            name: "Fruktfat",
-            text: "Et fargerikt utvalg av frisk frukt.",
-            image: "bildefrukt2.jpeg"
-          },
-
-          {
-            name: "Frisk frukt",
-            text: "Friske råvarer som gir en lett og naturlig avslutning.",
-            image: "bildefrukt3.jpeg"
-          }
-
+        images: [
+          "bildefrukt1.jpeg",
+          "bildefrukt2.jpeg",
+          "bildefrukt3.jpeg"
         ]
 
       },
@@ -3497,29 +827,20 @@
 
         title: "Dessert",
 
-        description:
-          "Søte avslutninger inspirert av tradisjoner fra regionen.",
+        text:
+          "Søte avslutninger som kan bestilles som en del av en komplett selskapsmeny.",
 
         items: [
+          "Dessert i kopp",
+          "Kaker",
+          "Frukt og søte fat",
+          "Kan tilpasses etter arrangement"
+        ],
 
-          {
-            name: "Dessert i kopp",
-            text: "Kake og krem i kopp.",
-            image: "bildedeser1.jpeg"
-          },
-
-          {
-            name: "Halal gele",
-            text: "Vegansk gele i kopp.",
-            image: "bildedeser2.jpeg"
-          },
-
-          {
-            name: "Baklava",
-            text: "Sprø lag med nøtter og søt sirup.",
-            image: "bildedeser3.jpeg"
-          }
-
+        images: [
+          "bildedeser1.jpeg",
+          "bildedeser2.jpeg",
+          "bildedeser3.jpeg"
         ]
 
       }
@@ -3527,303 +848,339 @@
     };
 
 
-    /* =========================
-       RENDER MENU
-    ========================= */
+
+    /* =========================================
+       MENU ELEMENTS
+    ========================================= */
 
     const menuTabs =
-      document.querySelectorAll(".menu-tab");
+      document.getElementById("menuTabs");
+
+    const menuTitle =
+      document.getElementById("menuTitle");
+
+    const menuText =
+      document.getElementById("menuText");
+
+    const menuItems =
+      document.getElementById("menuItems");
 
     const menuGallery =
       document.getElementById("menuGallery");
-
-    const menuDescription =
-      document.getElementById("menuDescription");
 
     const galleryDots =
       document.getElementById("galleryDots");
 
 
-    function renderMenu(category) {
 
-      const data =
-        menuData[category];
+    /* =========================================
+       RENDER MENU GALLERY
+    ========================================= */
 
-      if (!data) return;
-
-      menuDescription.textContent =
-        data.description;
+    function renderMenuGallery(images, title) {
 
       menuGallery.innerHTML = "";
-
       galleryDots.innerHTML = "";
 
 
-      data.items.forEach((item, index) => {
+      images.forEach(function(image, index) {
 
-        const card =
-          document.createElement("article");
+        const item =
+          document.createElement("div");
 
-        card.className =
-          "menu-card";
+        item.className =
+          "menu-gallery-item";
 
-        card.innerHTML = `
 
-          <div class="menu-card-image">
+        const img =
+          document.createElement("img");
 
-            <img
-              src="${item.image}"
-              alt="${item.name} – Tradisjon Catering i Ski"
-              loading="${index === 0 ? "eager" : "lazy"}"
-            >
+        img.src = image;
 
-          </div>
+        img.alt =
+          title + " – Tradisjon Catering";
 
-          <div class="menu-card-body">
+        if (index > 0) {
+          img.loading = "lazy";
+        }
 
-            <strong>
-              ${item.name}
-            </strong>
 
-            <span>
-              ${item.text}
-            </span>
+        item.appendChild(img);
 
-          </div>
-
-        `;
-
-        menuGallery.appendChild(card);
+        menuGallery.appendChild(item);
 
 
         const dot =
-          document.createElement("button");
-
-        dot.type = "button";
+          document.createElement("span");
 
         dot.className =
           "gallery-dot" +
           (index === 0 ? " active" : "");
-
-        dot.setAttribute(
-          "aria-label",
-          "Vis bilde " + (index + 1)
-        );
-
-
-        dot.addEventListener("click", () => {
-
-          const cards =
-            menuGallery.querySelectorAll(
-              ".menu-card"
-            );
-
-          if (cards[index]) {
-
-            menuGallery.scrollTo({
-
-              left:
-                cards[index].offsetLeft,
-
-              behavior:
-                "smooth"
-
-            });
-
-          }
-
-        });
 
 
         galleryDots.appendChild(dot);
 
       });
 
+
+      menuGallery.scrollLeft = 0;
+
     }
 
 
-    menuTabs.forEach(tab => {
 
-      tab.addEventListener("click", () => {
+    /* =========================================
+       CHANGE MENU
+    ========================================= */
 
-        menuTabs.forEach(item => {
+    function changeMenu(menuKey) {
 
-          item.classList.remove("active");
-
-        });
-
-        tab.classList.add("active");
-
-        renderMenu(
-          tab.dataset.menu
-        );
-
-      });
-
-    });
+      const data =
+        menuData[menuKey];
 
 
-    menuGallery.addEventListener(
-      "scroll",
-      () => {
+      if (!data) {
+        return;
+      }
 
-        const cards =
-          menuGallery.querySelectorAll(
-            ".menu-card"
+
+      document
+        .querySelectorAll(".menu-tab")
+        .forEach(function(tab) {
+
+          const active =
+            tab.getAttribute("data-menu") === menuKey;
+
+          tab.classList.toggle(
+            "active",
+            active
           );
 
-        const dots =
-          galleryDots.querySelectorAll(
-            ".gallery-dot"
-          );
-
-        if (!cards.length) return;
-
-
-        let closestIndex = 0;
-
-        let closestDistance =
-          Infinity;
-
-
-        cards.forEach(
-          (card, index) => {
-
-            const distance =
-              Math.abs(
-                card.offsetLeft -
-                menuGallery.scrollLeft
-              );
-
-
-            if (
-              distance <
-              closestDistance
-            ) {
-
-              closestDistance =
-                distance;
-
-              closestIndex =
-                index;
-
-            }
-
-          }
-        );
-
-
-        dots.forEach(dot => {
-
-          dot.classList.remove(
-            "active"
+          tab.setAttribute(
+            "aria-selected",
+            active ? "true" : "false"
           );
 
         });
 
 
-        if (dots[closestIndex]) {
+      menuTitle.textContent =
+        data.title;
 
-          dots[closestIndex]
-            .classList.add("active");
 
+      menuText.textContent =
+        data.text;
+
+
+      menuItems.innerHTML =
+        data.items
+          .map(function(item) {
+
+            return "<li>" + item + "</li>";
+
+          })
+          .join("");
+
+
+      renderMenuGallery(
+        data.images,
+        data.title
+      );
+
+    }
+
+
+
+    /* =========================================
+       MENU BUTTONS
+    ========================================= */
+
+    menuTabs.addEventListener(
+      "click",
+      function(event) {
+
+        const button =
+          event.target.closest(".menu-tab");
+
+
+        if (!button) {
+          return;
         }
+
+
+        const menuKey =
+          button.getAttribute("data-menu");
+
+
+        changeMenu(menuKey);
 
       }
     );
 
 
-    renderMenu("gryter");
 
+    /* =========================================
+       GALLERY SCROLL / DOTS
+    ========================================= */
 
-    /* =========================
-       FAQ
-    ========================= */
+    menuGallery.addEventListener(
+      "scroll",
+      function() {
 
-    const faqItems =
-      document.querySelectorAll(
-        ".faq-item"
-      );
-
-
-    faqItems.forEach(item => {
-
-      const question =
-        item.querySelector(
-          ".faq-question"
-        );
-
-      const answer =
-        item.querySelector(
-          ".faq-answer"
-        );
-
-
-      question.addEventListener(
-        "click",
-        () => {
-
-          const isOpen =
-            item.classList.contains(
-              "open"
-            );
-
-
-          faqItems.forEach(
-            otherItem => {
-
-              otherItem.classList.remove(
-                "open"
-              );
-
-              const otherAnswer =
-                otherItem.querySelector(
-                  ".faq-answer"
-                );
-
-              otherAnswer.style.maxHeight =
-                null;
-
-            }
+        const items =
+          menuGallery.querySelectorAll(
+            ".menu-gallery-item"
           );
 
 
-          if (!isOpen) {
+        if (!items.length) {
+          return;
+        }
 
-            item.classList.add(
-              "open"
+
+        const itemWidth =
+          items[0].offsetWidth + 14;
+
+
+        const activeIndex =
+          Math.round(
+            menuGallery.scrollLeft / itemWidth
+          );
+
+
+        galleryDots
+          .querySelectorAll(".gallery-dot")
+          .forEach(function(dot, index) {
+
+            dot.classList.toggle(
+              "active",
+              index === activeIndex
             );
 
-            answer.style.maxHeight =
-              answer.scrollHeight +
-              "px";
+          });
 
+      },
+      {
+        passive: true
+      }
+    );
+
+
+
+    /* =========================================
+       SPECIAL OFFER CALCULATOR
+    ========================================= */
+
+    const OFFER_PRICE_PER_PERSON = 250;
+
+    const offerGuests =
+      document.getElementById("offerGuests");
+
+    const offerGuestValue =
+      document.getElementById("offerGuestValue");
+
+    const offerTotal =
+      document.getElementById("offerTotal");
+
+    const offerHiddenGuests =
+      document.getElementById("offerHiddenGuests");
+
+    const offerHiddenTotal =
+      document.getElementById("offerHiddenTotal");
+
+    function formatNOK(value) {
+      return new Intl.NumberFormat("nb-NO")
+        .format(value) + " kr";
+    }
+
+
+    function updateOfferPrice() {
+
+      const guests =
+        Number(offerGuests.value);
+
+      const total =
+        guests * OFFER_PRICE_PER_PERSON;
+
+      offerGuestValue.textContent = guests;
+      offerTotal.textContent = formatNOK(total);
+      offerHiddenGuests.value = guests;
+      offerHiddenTotal.value = formatNOK(total);
+
+    }
+
+
+    offerGuests.addEventListener(
+      "input",
+      updateOfferPrice
+    );
+
+    updateOfferPrice();
+
+
+    const offerForm =
+      document.getElementById("offerForm");
+
+    const offerFormStatus =
+      document.getElementById("offerFormStatus");
+
+    offerForm.addEventListener(
+      "submit",
+      async function(event) {
+        event.preventDefault();
+        updateOfferPrice();
+
+        const submitButton =
+          offerForm.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.textContent = "Sender tilbudsforespørsel...";
+        offerFormStatus.className = "form-status";
+        offerFormStatus.textContent = "";
+
+        try {
+          const response = await fetch(offerForm.action, {
+            method: "POST",
+            body: new FormData(offerForm),
+            headers: { "Accept": "application/json" }
+          });
+
+          if (!response.ok) {
+            throw new Error("Kunne ikke sende");
           }
 
+          const guests = Number(offerGuests.value);
+          offerForm.reset();
+          offerGuests.value = guests;
+          updateOfferPrice();
+          offerFormStatus.className = "form-status success";
+          offerFormStatus.textContent =
+            "Takk! Tilbudsforespørselen er sendt. Vi tar kontakt så snart som mulig.";
+        } catch (error) {
+          offerFormStatus.className = "form-status error";
+          offerFormStatus.textContent =
+            "Noe gikk galt. Prøv igjen eller kontakt oss direkte på telefon eller e-post.";
         }
-      );
 
-    });
+        submitButton.disabled = false;
+        submitButton.textContent = "Jeg vil ha tilbudet →";
+      }
+    );
 
 
-    /* =========================
-       CONTACT FORM
-    ========================= */
+    /* =========================================
+       FORM
+    ========================================= */
 
     const contactForm =
-      document.getElementById(
-        "contactForm"
-      );
+      document.getElementById("contactForm");
 
     const formStatus =
-      document.getElementById(
-        "formStatus"
-      );
+      document.getElementById("formStatus");
 
 
     contactForm.addEventListener(
       "submit",
-      async event => {
+      async function(event) {
 
         event.preventDefault();
 
@@ -3834,15 +1191,14 @@
           );
 
 
-        const originalText =
-          submitButton.textContent;
-
-
-        submitButton.disabled =
-          true;
+        submitButton.disabled = true;
 
         submitButton.textContent =
           "Sender...";
+
+
+        formStatus.className =
+          "form-status";
 
         formStatus.textContent =
           "";
@@ -3857,119 +1213,70 @@
                 method: "POST",
 
                 body:
-                  new FormData(
-                    contactForm
-                  ),
+                  new FormData(contactForm),
 
                 headers: {
-                  "Accept":
-                    "application/json"
+                  "Accept": "application/json"
                 }
-
               }
             );
 
 
-          if (response.ok) {
-
-            contactForm.reset();
-
-            formStatus.textContent =
-              "Takk! Vi har mottatt forespørselen din og tar kontakt så snart vi kan.";
-
-          } else {
-
-            formStatus.textContent =
-              "Noe gikk galt. Ring oss gjerne på +47 471 52 310.";
-
+          if (!response.ok) {
+            throw new Error("Kunne ikke sende");
           }
+
+
+          contactForm.reset();
+
+
+          formStatus.className =
+            "form-status success";
+
+
+          formStatus.textContent =
+            "Takk! Forespørselen din er sendt. Vi tar kontakt så snart som mulig.";
+
 
         } catch (error) {
 
+          formStatus.className =
+            "form-status error";
+
+
           formStatus.textContent =
-            "Kunne ikke sende forespørselen. Ring oss gjerne på +47 471 52 310.";
-
-        } finally {
-
-          submitButton.disabled =
-            false;
-
-          submitButton.textContent =
-            originalText;
+            "Noe gikk galt. Prøv igjen eller kontakt oss direkte på telefon eller e-post.";
 
         }
+
+
+        submitButton.disabled =
+          false;
+
+
+        submitButton.textContent =
+          "Send forespørsel →";
 
       }
     );
 
 
-    /* =========================
-       YEAR
-    ========================= */
 
-    document.getElementById(
-      "currentYear"
-    ).textContent =
+    /* =========================================
+       YEAR
+    ========================================= */
+
+    document.getElementById("year").textContent =
       new Date().getFullYear();
 
+
+
+    /* =========================================
+       START MENU
+    ========================================= */
+
+    changeMenu("gryter");
+
   </script>
-
-
-<div class="offer-popup" id="offerPopup">
-  <button
-    class="offer-popup-close"
-    id="offerPopupClose"
-    aria-label="Lukk tilbud"
-  >
-    ×
-  </button>
-
-  <div class="offer-popup-badge">
-    Årets cateringtilbud
-  </div>
-
-  <div class="offer-popup-price">
-    250 kr per person
-  </div>
-
-  <h3>
-    Gjør selskapet ekstra godt
-  </h3>
-
-  <p>
-    3 typer ris · 2 typer gryter · kylling · 3 typer salater
-  </p>
-
-  <a
-    href="index.html#tilbud"
-    class="offer-popup-button"
-  >
-    Se tilbudet →
-  </a>
-</div>
-
-
-<script id="offer-popup-script">
-document.addEventListener("DOMContentLoaded", function () {
-
-  const popup = document.getElementById("offerPopup");
-  const closeButton = document.getElementById("offerPopupClose");
-
-  if (!popup) return;
-
-  setTimeout(function () {
-    popup.classList.add("show");
-  }, 10000);
-
-  if (closeButton) {
-    closeButton.addEventListener("click", function () {
-      popup.classList.remove("show");
-    });
-  }
-
-});
-</script>
-
 </body>
 </html>
-```

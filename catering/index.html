@@ -18,7 +18,7 @@
     content="Tradisjon Catering tilbyr halal catering med kurdiske, persiske, arabiske og tyrkiske smaker. Gryter, ris, kjøtt, kylling, salater og desserter til selskaper og arrangementer."
   >
 
-  <meta name="theme-color" content="#160f0a">
+  <meta name="theme-color" content="#24080d">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,2094 +37,7 @@
   <meta property="og:url" content="https://tradisjoncatering.no/">
 
   <meta name="twitter:card" content="summary_large_image">
-
-  <style>
-
-    :root {
-      --ink: #160f0a;
-      --ink-light: #21160f;
-
-      --cream: #f4ecdd;
-      --cream-light: #fbf7ef;
-      --cream-dark: #e9dcc4;
-
-      --gold: #d69a3c;
-      --gold-light: #e8b968;
-
-      --red: #b13521;
-      --red-dark: #8f2819;
-
-      --text: #2a1d14;
-      --muted: #756756;
-
-      --border-light: rgba(244,236,221,.15);
-      --border-dark: rgba(42,29,20,.15);
-
-      --serif: "Fraunces", Georgia, serif;
-      --sans: "Karla", Arial, sans-serif;
-
-      --max-width: 1180px;
-    }
-
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-
-    body {
-      background: var(--cream-light);
-      color: var(--text);
-      font-family: var(--sans);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-
-    img {
-      max-width: 100%;
-    }
-
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-
-    .container {
-      width: min(
-        calc(100% - 40px),
-        var(--max-width)
-      );
-
-      margin: 0 auto;
-    }
-
-
-    /* =========================================
-       BUTTONS
-    ========================================= */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      min-height: 48px;
-
-      padding: 0 24px;
-
-      border: 1px solid transparent;
-
-      font-family: var(--sans);
-
-      font-size: 11px;
-      font-weight: 800;
-
-      letter-spacing: .1em;
-      text-transform: uppercase;
-
-      cursor: pointer;
-
-      transition:
-        background .25s ease,
-        color .25s ease,
-        border-color .25s ease,
-        transform .25s ease;
-    }
-
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-
-    .btn:disabled {
-      opacity: .65;
-      cursor: wait;
-      transform: none;
-    }
-
-
-    .btn-gold {
-      background: var(--gold);
-      color: var(--ink);
-    }
-
-
-    .btn-gold:hover {
-      background: var(--gold-light);
-    }
-
-
-    .btn-outline {
-      border-color: var(--gold);
-      color: var(--gold-light);
-      background: transparent;
-    }
-
-
-    .btn-outline:hover {
-      background: var(--gold);
-      color: var(--ink);
-    }
-
-
-    /* =========================================
-       HEADER
-    ========================================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      background: rgba(22,15,10,.96);
-
-      border-bottom: 1px solid var(--border-light);
-
-      backdrop-filter: blur(14px);
-    }
-
-
-    .nav {
-      min-height: 82px;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 30px;
-    }
-
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      flex-shrink: 0;
-    }
-
-
-    .logo-mark {
-      width: 42px;
-      height: 42px;
-
-      display: grid;
-      place-items: center;
-
-      border: 1px solid var(--gold);
-
-      color: var(--gold);
-
-      font-family: var(--serif);
-      font-size: 22px;
-
-      border-radius: 50%;
-    }
-
-
-    .logo-text strong {
-      display: block;
-
-      color: var(--cream);
-
-      font-family: var(--serif);
-
-      font-size: 18px;
-      font-weight: 600;
-
-      line-height: 1;
-    }
-
-
-    .logo-text span {
-      display: block;
-
-      margin-top: 4px;
-
-      color: var(--gold);
-
-      font-size: 8px;
-      font-weight: 800;
-
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-
-
-    .nav-links {
-      display: flex;
-
-      align-items: center;
-
-      gap: 28px;
-    }
-
-
-    .nav-links a {
-      color: rgba(244,236,221,.72);
-
-      font-size: 11px;
-      font-weight: 700;
-
-      letter-spacing: .08em;
-      text-transform: uppercase;
-
-      transition: color .2s ease;
-    }
-
-
-    .nav-links a:hover {
-      color: var(--gold-light);
-    }
-
-
-    .mobile-menu-btn {
-      display: none;
-
-      width: 44px;
-      height: 44px;
-
-      border: 1px solid var(--border-light);
-
-      background: transparent;
-
-      color: var(--cream);
-
-      cursor: pointer;
-    }
-
-
-    /* =========================================
-       HERO
-    ========================================= */
-
-    .hero {
-      background: var(--ink);
-      color: var(--cream);
-      padding: 80px 0 90px;
-    }
-
-
-    .hero-grid {
-      display: grid;
-
-      grid-template-columns: 1.05fr .95fr;
-
-      align-items: center;
-
-      gap: 70px;
-    }
-
-
-    .hero-label {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 10px;
-
-      margin-bottom: 24px;
-
-      color: var(--gold-light);
-
-      font-size: 10px;
-      font-weight: 800;
-
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-
-
-    .hero-label::before {
-      content: "";
-
-      width: 30px;
-      height: 1px;
-
-      background: var(--gold);
-    }
-
-
-    .hero h1 {
-      max-width: 700px;
-
-      font-family: var(--serif);
-
-      font-size: clamp(48px, 7vw, 82px);
-
-      font-weight: 500;
-
-      line-height: .98;
-
-      letter-spacing: -.035em;
-    }
-
-
-    .hero h1 em {
-      color: var(--gold);
-      font-style: normal;
-    }
-
-
-    .hero-text {
-      max-width: 580px;
-
-      margin-top: 26px;
-
-      color: rgba(244,236,221,.68);
-
-      font-size: 17px;
-
-      line-height: 1.75;
-    }
-
-
-    .hero-buttons {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-top: 34px;
-    }
-
-
-    .hero-image {
-      position: relative;
-
-      min-height: 540px;
-
-      overflow: hidden;
-
-      background: var(--ink-light);
-    }
-
-
-    .hero-image img {
-      width: 100%;
-      height: 540px;
-
-      display: block;
-
-      object-fit: cover;
-    }
-
-
-    .hero-image::after {
-      content: "";
-
-      position: absolute;
-
-      inset: 0;
-
-      background:
-        linear-gradient(
-          180deg,
-          rgba(22,15,10,.05),
-          rgba(22,15,10,.28)
-        );
-    }
-
-
-    .hero-card {
-      position: absolute;
-
-      z-index: 2;
-
-      left: 24px;
-      bottom: 24px;
-
-      max-width: 300px;
-
-      padding: 20px;
-
-      background: rgba(22,15,10,.88);
-
-      border: 1px solid var(--border-light);
-    }
-
-
-    .hero-card small {
-      color: var(--gold);
-
-      font-size: 9px;
-      font-weight: 800;
-
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-
-
-    .hero-card strong {
-      display: block;
-
-      margin-top: 6px;
-
-      color: var(--cream);
-
-      font-family: var(--serif);
-
-      font-size: 20px;
-      font-weight: 500;
-    }
-
-
-    /* =========================================
-       LOCAL SEO STRIP
-    ========================================= */
-
-    .local-strip {
-      background: var(--red);
-      color: var(--cream);
-      padding: 18px 0;
-    }
-
-
-    .local-strip-inner {
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      gap: 20px;
-
-      text-align: center;
-    }
-
-
-    .local-strip strong {
-      font-size: 11px;
-
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-
-    .local-strip span {
-      color: rgba(244,236,221,.78);
-      font-size: 12px;
-    }
-
-
-    /* =========================================
-       GENERAL SECTIONS
-    ========================================= */
-
-    section {
-      padding: 100px 0;
-    }
-
-
-    .section-dark {
-      background: var(--ink);
-      color: var(--cream);
-    }
-
-
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 55px;
-    }
-
-
-    .section-heading small {
-      display: block;
-
-      margin-bottom: 14px;
-
-      color: var(--gold);
-
-      font-size: 10px;
-      font-weight: 800;
-
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-
-
-    .section-heading h2 {
-      font-family: var(--serif);
-
-      font-size: clamp(38px, 5vw, 58px);
-
-      font-weight: 500;
-
-      line-height: 1.05;
-
-      letter-spacing: -.025em;
-    }
-
-
-    .section-heading p {
-      margin-top: 18px;
-
-      color: var(--muted);
-
-      font-size: 16px;
-
-      line-height: 1.75;
-    }
-
-
-    .section-dark .section-heading p {
-      color: rgba(244,236,221,.62);
-    }
-
-
-    /* =========================================
-       PHILOSOPHY
-    ========================================= */
-
-    .philosophy-grid {
-      display: grid;
-
-      grid-template-columns: .9fr 1.1fr;
-
-      gap: 90px;
-
-      align-items: center;
-    }
-
-
-    .philosophy-image {
-      height: 580px;
-      overflow: hidden;
-    }
-
-
-    .philosophy-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-
-    .philosophy-text p {
-      margin-bottom: 22px;
-
-      color: var(--muted);
-
-      font-size: 17px;
-
-      line-height: 1.8;
-    }
-
-
-    .signature {
-      margin-top: 35px;
-
-      color: var(--gold);
-
-      font-family: var(--serif);
-
-      font-size: 28px;
-    }
-
-
-    .signature span {
-      display: block;
-
-      margin-top: 4px;
-
-      color: var(--muted);
-
-      font-family: var(--sans);
-
-      font-size: 9px;
-      font-weight: 800;
-
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-
-
-    /* =========================================
-       MENU
-    ========================================= */
-
-    .menu-section {
-      background: var(--ink);
-      color: var(--cream);
-    }
-
-
-    .menu-tabs {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      justify-content: center;
-
-      gap: 9px;
-
-      margin-bottom: 35px;
-    }
-
-
-    .menu-tab {
-      appearance: none;
-      -webkit-appearance: none;
-
-      background: transparent;
-
-      color: rgba(244,236,221,.65);
-
-      border: 1px solid var(--border-light);
-
-      padding: 12px 18px;
-
-      cursor: pointer;
-
-      font-family: var(--sans);
-
-      font-size: 10px;
-      font-weight: 800;
-
-      letter-spacing: .12em;
-      text-transform: uppercase;
-
-      transition:
-        background .25s ease,
-        color .25s ease,
-        border-color .25s ease,
-        transform .25s ease;
-
-      user-select: none;
-    }
-
-
-    .menu-tab:hover {
-      background: rgba(214,154,60,.12);
-      color: var(--gold-light);
-      border-color: var(--gold);
-    }
-
-
-    .menu-tab.active {
-      background: var(--gold);
-      color: var(--ink);
-      border-color: var(--gold);
-    }
-
-
-    .menu-tab:focus-visible {
-      outline: 2px solid var(--gold-light);
-      outline-offset: 3px;
-    }
-
-
-    .menu-box {
-      display: grid;
-
-      grid-template-columns: .8fr 1.2fr;
-
-      gap: 45px;
-
-      padding: 45px;
-
-      background: var(--ink-light);
-
-      border: 1px solid var(--border-light);
-    }
-
-
-    .menu-content {
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-    }
-
-
-    .menu-content small {
-      display: block;
-
-      margin-bottom: 16px;
-
-      color: var(--gold);
-
-      font-size: 9px;
-      font-weight: 800;
-
-      letter-spacing: .18em;
-    }
-
-
-    .menu-content h3 {
-      margin-bottom: 16px;
-
-      color: var(--cream);
-
-      font-family: var(--serif);
-
-      font-size: 43px;
-
-      font-weight: 500;
-
-      line-height: 1.05;
-    }
-
-
-    .menu-content p {
-      margin-bottom: 24px;
-
-      color: rgba(244,236,221,.62);
-
-      font-size: 15px;
-
-      line-height: 1.75;
-    }
-
-
-    .menu-content ul {
-      list-style: none;
-      margin-bottom: 30px;
-    }
-
-
-    .menu-content li {
-      position: relative;
-
-      padding: 11px 0 11px 22px;
-
-      border-bottom: 1px solid var(--border-light);
-
-      color: var(--cream);
-
-      font-size: 14px;
-
-      font-weight: 700;
-    }
-
-
-    .menu-content li::before {
-      content: "•";
-
-      position: absolute;
-
-      left: 0;
-
-      color: var(--gold);
-
-      font-size: 18px;
-    }
-
-
-    .menu-content .btn {
-      align-self: flex-start;
-    }
-
-
-    /* =========================================
-       MENU GALLERY
-    ========================================= */
-
-    .menu-gallery {
-      width: 100%;
-      min-width: 0;
-      overflow: hidden;
-      position: relative;
-    }
-
-
-    .menu-gallery-track {
-      display: flex;
-
-      gap: 14px;
-
-      overflow-x: auto;
-      overflow-y: hidden;
-
-      scroll-snap-type: x mandatory;
-
-      scroll-behavior: smooth;
-
-      -webkit-overflow-scrolling: touch;
-
-      scrollbar-width: none;
-
-      overscroll-behavior-x: contain;
-
-      padding-bottom: 5px;
-    }
-
-
-    .menu-gallery-track::-webkit-scrollbar {
-      display: none;
-    }
-
-
-    .menu-gallery-item {
-      flex: 0 0 100%;
-
-      height: 500px;
-
-      scroll-snap-align: start;
-
-      overflow: hidden;
-
-      position: relative;
-
-      background: var(--ink);
-    }
-
-
-    .menu-gallery-item img {
-      width: 100%;
-      height: 100%;
-
-      display: block;
-
-      object-fit: cover;
-
-      transition: transform .7s ease;
-    }
-
-
-    .menu-gallery-item:hover img {
-      transform: scale(1.025);
-    }
-
-
-    .gallery-bottom {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      margin-top: 14px;
-
-      padding: 0 2px;
-    }
-
-
-    .gallery-dots {
-      display: flex;
-
-      align-items: center;
-
-      gap: 7px;
-    }
-
-
-    .gallery-dot {
-      width: 6px;
-      height: 6px;
-
-      border-radius: 50%;
-
-      background: rgba(214,154,60,.25);
-
-      transition:
-        width .25s ease,
-        background .25s ease;
-    }
-
-
-    .gallery-dot.active {
-      width: 22px;
-
-      border-radius: 10px;
-
-      background: var(--gold);
-    }
-
-
-    .gallery-hint {
-      color: rgba(244,236,221,.45);
-
-      font-family: var(--sans);
-
-      font-size: 9px;
-      font-weight: 700;
-
-      letter-spacing: .12em;
-
-      text-transform: uppercase;
-    }
-
-
-    /* =========================================
-       OCCASIONS
-    ========================================= */
-
-    .occasion-grid {
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 18px;
-    }
-
-
-    .occasion-card {
-      min-height: 280px;
-
-      padding: 34px;
-
-      background: var(--cream);
-
-      border: 1px solid var(--border-dark);
-
-      transition:
-        transform .25s ease,
-        border-color .25s ease;
-    }
-
-
-    .occasion-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--gold);
-    }
-
-
-    .occasion-number {
-      color: var(--gold);
-
-      font-family: var(--serif);
-
-      font-size: 25px;
-    }
-
-
-    .occasion-card h3 {
-      margin-top: 35px;
-
-      font-family: var(--serif);
-
-      font-size: 29px;
-
-      font-weight: 500;
-    }
-
-
-    .occasion-card p {
-      margin-top: 10px;
-
-      max-width: 470px;
-
-      color: var(--muted);
-
-      font-size: 14px;
-
-      line-height: 1.7;
-    }
-
-
-    .occasion-card a {
-      display: inline-block;
-
-      margin-top: 22px;
-
-      color: var(--red);
-
-      font-size: 10px;
-      font-weight: 800;
-
-      letter-spacing: .12em;
-
-      text-transform: uppercase;
-    }
-
-
-    /* =========================================
-       AREAS
-    ========================================= */
-
-    .areas {
-      background: var(--cream-dark);
-    }
-
-
-    .areas-grid {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 70px;
-
-      align-items: center;
-    }
-
-
-    .areas-list {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 9px;
-    }
-
-
-    .area {
-      padding: 10px 15px;
-
-      border: 1px solid rgba(42,29,20,.15);
-
-      color: var(--text);
-
-      font-size: 11px;
-      font-weight: 700;
-
-      background: rgba(251,247,239,.45);
-
-      transition:
-        transform .2s ease,
-        border-color .2s ease,
-        background .2s ease;
-    }
-
-
-    .area:hover {
-      transform: translateY(-2px);
-      border-color: var(--gold);
-      background: var(--cream-light);
-    }
-
-
-    .areas-image {
-      height: 400px;
-      overflow: hidden;
-    }
-
-
-    .areas-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-
-    /* =========================================
-       LOCAL PAGES
-    ========================================= */
-
-    .local-pages-section {
-      background: var(--cream-light);
-    }
-
-
-    .local-pages-grid {
-      display: grid;
-
-      grid-template-columns: repeat(4, 1fr);
-
-      gap: 12px;
-    }
-
-
-    .local-card {
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: space-between;
-
-      min-height: 115px;
-
-      padding: 20px;
-
-      background: var(--cream);
-
-      border: 1px solid var(--border-dark);
-
-      transition:
-        transform .2s ease,
-        border-color .2s ease,
-        background .2s ease;
-    }
-
-
-    .local-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--gold);
-      background: var(--cream-light);
-    }
-
-
-    .local-card strong {
-      font-family: var(--serif);
-
-      font-size: 22px;
-
-      font-weight: 500;
-    }
-
-
-    .local-card span {
-      margin-top: 15px;
-
-      color: var(--red);
-
-      font-size: 9px;
-      font-weight: 800;
-
-      letter-spacing: .1em;
-
-      text-transform: uppercase;
-    }
-
-
-    /* =========================================
-       FAQ
-    ========================================= */
-
-    .faq-section {
-      background: var(--cream-light);
-    }
-
-
-    .faq-list {
-      max-width: 900px;
-    }
-
-
-    .faq-item {
-      border-top: 1px solid var(--border-dark);
-    }
-
-
-    .faq-item:last-child {
-      border-bottom: 1px solid var(--border-dark);
-    }
-
-
-    .faq-item summary {
-      display: flex;
-
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 20px;
-
-      padding: 23px 0;
-
-      cursor: pointer;
-
-      list-style: none;
-
-      font-family: var(--serif);
-
-      font-size: 21px;
-    }
-
-
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-
-    .faq-item summary::after {
-      content: "+";
-
-      color: var(--gold);
-
-      font-family: var(--sans);
-
-      font-size: 25px;
-      font-weight: 400;
-    }
-
-
-    .faq-item[open] summary::after {
-      content: "−";
-    }
-
-
-    .faq-answer {
-      max-width: 760px;
-
-      padding: 0 0 25px;
-
-      color: var(--muted);
-
-      font-size: 14px;
-
-      line-height: 1.75;
-    }
-
-
-    /* =========================================
-       CONTACT
-    ========================================= */
-
-    .contact-section {
-      background: var(--ink);
-      color: var(--cream);
-    }
-
-
-    .contact-grid {
-      display: grid;
-
-      grid-template-columns: .8fr 1.2fr;
-
-      gap: 80px;
-    }
-
-
-    .contact-info h2 {
-      font-family: var(--serif);
-
-      font-size: clamp(40px, 5vw, 60px);
-
-      font-weight: 500;
-
-      line-height: 1.05;
-    }
-
-
-    .contact-info p {
-      max-width: 470px;
-
-      margin-top: 20px;
-
-      color: rgba(244,236,221,.62);
-
-      line-height: 1.75;
-    }
-
-
-    .contact-details {
-      margin-top: 35px;
-    }
-
-
-    .contact-detail {
-      display: block;
-
-      margin-bottom: 15px;
-
-      color: var(--cream);
-    }
-
-
-    .contact-detail span {
-      display: block;
-
-      margin-bottom: 3px;
-
-      color: var(--gold);
-
-      font-size: 9px;
-      font-weight: 800;
-
-      letter-spacing: .14em;
-
-      text-transform: uppercase;
-    }
-
-
-    .contact-detail strong {
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-
-    .contact-form {
-      padding: 40px;
-
-      background: var(--ink-light);
-
-      border: 1px solid var(--border-light);
-    }
-
-
-    .form-grid {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 16px;
-    }
-
-
-    .form-group {
-      margin-bottom: 16px;
-    }
-
-
-    .form-group.full {
-      grid-column: 1 / -1;
-    }
-
-
-    .form-group label {
-      display: block;
-
-      margin-bottom: 7px;
-
-      color: rgba(244,236,221,.65);
-
-      font-size: 10px;
-      font-weight: 800;
-
-      letter-spacing: .1em;
-
-      text-transform: uppercase;
-    }
-
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-
-      padding: 14px 15px;
-
-      background: rgba(244,236,221,.04);
-
-      border: 1px solid var(--border-light);
-
-      color: var(--cream);
-
-      outline: none;
-
-      border-radius: 0;
-    }
-
-
-    .form-group select option {
-      color: var(--text);
-    }
-
-
-    .form-group textarea {
-      min-height: 150px;
-
-      resize: vertical;
-    }
-
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--gold);
-    }
-
-
-    .form-status {
-      display: none;
-
-      margin-top: 16px;
-
-      padding: 12px;
-
-      font-size: 13px;
-    }
-
-
-    .form-status.success {
-      display: block;
-
-      background: rgba(86,140,90,.15);
-
-      color: #b9dfbd;
-    }
-
-
-    .form-status.error {
-      display: block;
-
-      background: rgba(177,53,33,.15);
-
-      color: #f0aaa0;
-    }
-
-
-    /* =========================================
-       FOOTER
-    ========================================= */
-
-    footer {
-      padding: 45px 0;
-
-      background: #100a07;
-
-      color: var(--cream);
-    }
-
-
-    .footer-top {
-      display: flex;
-
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 30px;
-
-      padding-bottom: 30px;
-
-      border-bottom: 1px solid var(--border-light);
-    }
-
-
-    .footer-nav {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 20px;
-    }
-
-
-    .footer-nav a {
-      color: rgba(244,236,221,.55);
-
-      font-size: 10px;
-      font-weight: 700;
-
-      letter-spacing: .08em;
-
-      text-transform: uppercase;
-    }
-
-
-    .footer-nav a:hover {
-      color: var(--gold);
-    }
-
-
-    .footer-bottom {
-      display: flex;
-
-      justify-content: space-between;
-
-      gap: 20px;
-
-      padding-top: 25px;
-
-      color: rgba(244,236,221,.4);
-
-      font-size: 10px;
-    }
-
-
-    /* =========================================
-       SPECIAL OFFER
-    ========================================= */
-
-    .offer-promo {
-      background: var(--red);
-      color: var(--cream);
-      padding: 22px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .offer-promo::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.08) 45%, transparent 60%);
-      transform: translateX(-100%);
-      animation: offerShine 4s infinite;
-    }
-
-    @keyframes offerShine {
-      0%, 55% { transform: translateX(-100%); }
-      75%, 100% { transform: translateX(100%); }
-    }
-
-    .offer-promo-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .offer-promo-text {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .offer-promo-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--cream);
-      color: var(--red);
-      font-size: 23px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.16);
-    }
-
-    .offer-promo-text strong {
-      display: block;
-      font-family: var(--serif);
-      font-size: 25px;
-      line-height: 1.1;
-    }
-
-    .offer-promo-text span {
-      display: block;
-      margin-top: 4px;
-      color: rgba(244,236,221,.82);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .offer-promo .btn {
-      flex-shrink: 0;
-      background: var(--cream);
-      color: var(--red-dark);
-      border-color: var(--cream);
-      box-shadow: 0 8px 25px rgba(0,0,0,.16);
-    }
-
-    .offer-promo .btn:hover {
-      background: #fff;
-      color: var(--ink);
-    }
-
-    .special-offer-section {
-      background: var(--cream);
-      padding: 90px 0;
-      scroll-margin-top: 82px;
-    }
-
-    .offer-layout {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .offer-card,
-    .offer-form-card {
-      border: 1px solid rgba(42,29,20,.13);
-      background: var(--cream-light);
-    }
-
-    .offer-card {
-      padding: 42px;
-      background: var(--red);
-      color: var(--cream);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .offer-card::after {
-      content: "250";
-      position: absolute;
-      right: -30px;
-      bottom: -60px;
-      color: rgba(244,236,221,.06);
-      font-family: var(--serif);
-      font-size: 220px;
-      line-height: 1;
-      pointer-events: none;
-    }
-
-    .offer-eyebrow {
-      color: var(--gold-light);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-
-    .offer-card h2 {
-      margin-top: 15px;
-      max-width: 520px;
-      font-family: var(--serif);
-      font-size: clamp(38px, 5vw, 60px);
-      font-weight: 500;
-      line-height: 1;
-      letter-spacing: -.025em;
-    }
-
-    .offer-price {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin: 25px 0 22px;
-    }
-
-    .offer-price strong {
-      font-family: var(--serif);
-      font-size: 58px;
-      line-height: 1;
-      color: var(--cream);
-    }
-
-    .offer-price span {
-      color: rgba(244,236,221,.78);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .offer-card > p {
-      max-width: 520px;
-      color: rgba(244,236,221,.8);
-      font-size: 15px;
-      line-height: 1.75;
-    }
-
-    .offer-includes {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 9px;
-      margin-top: 28px;
-    }
-
-    .offer-includes div {
-      padding: 13px 14px;
-      border: 1px solid rgba(244,236,221,.18);
-      background: rgba(22,15,10,.13);
-      color: var(--cream);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .offer-deadline {
-      margin-top: 25px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(244,236,221,.2);
-      color: var(--gold-light);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .04em;
-    }
-
-    .offer-form-card {
-      padding: 38px;
-      background: var(--ink);
-      color: var(--cream);
-    }
-
-    .offer-form-heading small {
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-
-    .offer-form-heading h3 {
-      margin-top: 10px;
-      font-family: var(--serif);
-      font-size: 34px;
-      font-weight: 500;
-      line-height: 1.1;
-    }
-
-    .offer-form-heading p {
-      margin-top: 9px;
-      color: rgba(244,236,221,.6);
-      font-size: 13px;
-    }
-
-    .offer-calculator {
-      margin: 25px 0 28px;
-      padding: 22px;
-      background: var(--ink-light);
-      border: 1px solid var(--border-light);
-    }
-
-    .offer-calculator-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: end;
-    }
-
-    .offer-calculator label {
-      display: block;
-      color: rgba(244,236,221,.65);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    .offer-person-count {
-      margin-top: 4px;
-      color: var(--gold-light);
-      font-family: var(--serif);
-      font-size: 32px;
-      line-height: 1;
-    }
-
-    .offer-total-label {
-      color: rgba(244,236,221,.5);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .1em;
-      text-align: right;
-      text-transform: uppercase;
-    }
-
-    .offer-total {
-      margin-top: 3px;
-      color: var(--cream);
-      font-family: var(--serif);
-      font-size: 31px;
-      line-height: 1;
-      text-align: right;
-    }
-
-    .offer-range {
-      width: 100%;
-      margin-top: 22px;
-      accent-color: var(--gold);
-      cursor: pointer;
-    }
-
-    .offer-range-scale {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 5px;
-      color: rgba(244,236,221,.4);
-      font-size: 9px;
-      font-weight: 700;
-    }
-
-    .offer-form .form-group input,
-    .offer-form .form-group textarea,
-    .offer-form .form-group select {
-      background: rgba(244,236,221,.04);
-    }
-
-    .offer-form .btn {
-      width: 100%;
-      min-height: 54px;
-      font-size: 11px;
-    }
-
-    .offer-note {
-      margin-top: 13px;
-      color: rgba(244,236,221,.4);
-      font-size: 10px;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    /* =========================================
-       RESPONSIVE
-    ========================================= */
-
-    @media (max-width: 900px) {
-
-      .nav-links {
-        display: none;
-
-        position: absolute;
-
-        top: 82px;
-        left: 0;
-        right: 0;
-
-        padding: 25px 20px;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 0;
-
-        background: var(--ink);
-
-        border-bottom: 1px solid var(--border-light);
-      }
-
-
-      .nav-links.mobile-open {
-        display: flex;
-      }
-
-
-      .nav-links a {
-        padding: 14px 0;
-
-        border-bottom: 1px solid var(--border-light);
-      }
-
-
-      .mobile-menu-btn {
-        display: block;
-      }
-
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-
-      .hero-image {
-        min-height: 420px;
-      }
-
-
-      .hero-image img {
-        height: 420px;
-      }
-
-
-      .philosophy-grid,
-      .areas-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-
-      .menu-box {
-        grid-template-columns: 1fr;
-
-        padding: 30px;
-
-        gap: 35px;
-      }
-
-
-      .menu-gallery {
-        order: 2;
-      }
-
-
-      .menu-content {
-        order: 1;
-      }
-
-
-      .local-pages-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-    }
-
-
-    @media (max-width: 900px) {
-
-      .offer-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-promo-inner {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .offer-promo .btn {
-        width: 100%;
-      }
-
-    }
-
-    @media (max-width: 650px) {
-      .offer-promo {
-        padding: 18px 0;
-      }
-
-      .offer-promo-text {
-        align-items: flex-start;
-      }
-
-      .offer-promo-badge {
-        min-width: 42px;
-        width: 42px;
-        height: 42px;
-        font-size: 20px;
-      }
-
-      .offer-promo-text strong {
-        font-size: 20px;
-      }
-
-      .offer-promo-text span {
-        font-size: 10px;
-      }
-
-      .special-offer-section {
-        padding: 65px 0;
-      }
-
-      .offer-card,
-      .offer-form-card {
-        padding: 26px;
-      }
-
-      .offer-includes {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-calculator {
-        padding: 18px;
-      }
-
-      .offer-calculator-top {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .offer-total-label,
-      .offer-total {
-        text-align: left;
-      }
-
-
-
-      .container {
-        width: min(
-          calc(100% - 28px),
-          var(--max-width)
-        );
-      }
-
-
-      section {
-        padding: 75px 0;
-      }
-
-
-      .hero {
-        padding: 60px 0 70px;
-      }
-
-
-      .hero h1 {
-        font-size: 50px;
-      }
-
-
-      .hero-text {
-        font-size: 15px;
-      }
-
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-
-      .hero-buttons .btn {
-        width: 100%;
-      }
-
-
-      .local-strip-inner {
-        flex-direction: column;
-        gap: 5px;
-      }
-
-
-      .occasion-grid {
-        grid-template-columns: 1fr;
-      }
-
-
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-
-      .form-group.full {
-        grid-column: auto;
-      }
-
-
-      .contact-form {
-        padding: 25px;
-      }
-
-
-      .footer-top,
-      .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-
-      .menu-tabs {
-        justify-content: flex-start;
-
-        overflow-x: auto;
-
-        flex-wrap: nowrap;
-
-        padding-bottom: 5px;
-
-        scrollbar-width: none;
-      }
-
-
-      .menu-tabs::-webkit-scrollbar {
-        display: none;
-      }
-
-
-      .menu-tab {
-        flex: 0 0 auto;
-      }
-
-
-      .menu-box {
-        padding: 24px;
-      }
-
-
-      .menu-content h3 {
-        font-size: 37px;
-      }
-
-
-      .menu-gallery-item {
-        height: 380px;
-      }
-
-
-      .gallery-hint {
-        font-size: 8px;
-      }
-
-
-      .philosophy-image {
-        height: 420px;
-      }
-
-
-      .areas-image {
-        height: 330px;
-      }
-
-
-      .local-pages-grid {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-  </style>
+  <link rel="stylesheet" href="index-design.css">
 
 
   <script type="application/ld+json">
@@ -2170,10 +83,11 @@
   }
   </script>
 
+  <link rel="stylesheet" href="brand-theme.css">
 </head>
 
 
-<body id="hjem">
+<body id="hjem" data-location="home">
 
 
   <!-- =========================================
@@ -2186,9 +100,16 @@
 
       <a href="#hjem" class="logo">
 
-        <div class="logo-mark">
-          T
-        </div>
+        <img
+          src="logo.jpeg"
+          alt="Tradisjon Catering logo"
+          class="header-logo-image"
+          id="headerLogoImage"
+          role="button"
+          tabindex="0"
+          aria-label="Slå på eller av rødt lys på logoen"
+          aria-pressed="false"
+        >
 
         <div class="logo-text">
 
@@ -2223,7 +144,7 @@
           FAQ
         </a>
 
-        <a href="#tilbud">
+        <a href="#contactForm">
           Be om tilbud
         </a>
 
@@ -2281,7 +202,7 @@
           <div class="hero-buttons">
 
             <a
-              href="#tilbud"
+              href="#contactForm"
               class="btn btn-gold"
             >
               Be om tilbud →
@@ -2307,18 +228,6 @@
           >
 
 
-          <div class="hero-card">
-
-            <small>
-              Tradisjon Catering
-            </small>
-
-            <strong>
-              Smaker samlet rundt bordet.
-            </strong>
-
-          </div>
-
         </div>
 
       </div>
@@ -2340,8 +249,8 @@
         </strong>
 
        <span>
-  Oslo · Akershus · Asker · Lillestrøm · Moss ·
-  Fredrikstad · Sarpsborg · Halden · Drammen
+  Oslo · Akershus · Viken · Lillestrøm · Moss · Sarpsborg ·
+  Halden · Vestby · Ski · Vinterbro · Asker · Drammen · Fredrikstad
 </span>
       </div>
 
@@ -2358,10 +267,9 @@
       <div class="container offer-promo-inner">
 
         <div class="offer-promo-text">
-          <span class="offer-promo-badge">🔥</span>
           <div>
-            <strong>Årets cateringtilbud · 250 kr per person</strong>
-            <span>3 typer ris · 2 typer gryter · kylling · 3 typer salater</span>
+            <strong>Cateringtilbud <em>· 250 kr per person</em></strong>
+            <span class="offer-promo-menu">3 TYPER RIS · 2 TYPER GRYTER · KYLLING · 3 TYPER SALATER</span>
           </div>
         </div>
 
@@ -2395,11 +303,6 @@
               Selskapsmeny til kun 250 kr per person.
             </h2>
 
-            <div class="offer-price">
-              <strong>250 kr</strong>
-              <span>per person</span>
-            </div>
-
             <p>
               Gjør selskapet enkelt. Du får en komplett selskapsmeny med flere retter samlet til én fast pris. Velg antall personer og se totalprisen med én gang.
             </p>
@@ -2420,26 +323,23 @@
 
           <div class="offer-form-card">
 
-            <div class="offer-form-heading">
-              <small>Bestill tilbudet</small>
-              <h3>Hvor mange skal spise?</h3>
-              <p>Velg antall personer, fyll ut skjemaet og send forespørselen.</p>
+            <div class="offer-calculator-heading">
+              <small>Spesialtilbud</small>
+              <h3>Bestill tilbudet</h3>
+              <p>Velg antall personer, se totalprisen og send forespørselen.</p>
             </div>
 
             <div class="offer-calculator">
-
               <div class="offer-calculator-top">
                 <div>
                   <label for="offerGuests">Antall personer</label>
                   <div class="offer-person-count"><span id="offerGuestValue">40</span> personer</div>
                 </div>
-
                 <div>
                   <div class="offer-total-label">Totalpris</div>
                   <div class="offer-total" id="offerTotal">10 000 kr</div>
                 </div>
               </div>
-
               <input
                 type="range"
                 id="offerGuests"
@@ -2451,14 +351,11 @@
                 class="offer-range"
                 aria-label="Velg antall personer"
               >
-
               <div class="offer-range-scale">
                 <span>1 person</span>
                 <span>300 personer</span>
               </div>
-
             </div>
-
 
             <form
               class="offer-form"
@@ -2466,35 +363,29 @@
               action="https://formspree.io/f/mpqgazyp"
               method="POST"
             >
-
               <input type="hidden" name="type" value="SPECIALTILBUD – 250 KR PER PERSON">
               <input type="hidden" id="offerHiddenGuests" name="antall_personer" value="40">
-              <input type="hidden" id="offerHiddenTotal" name="beregnet_totalpris" value="10000 kr">
+              <input type="hidden" id="offerHiddenTotal" name="beregnet_totalpris" value="10 000 kr">
               <input type="hidden" name="tilbud_meny" value="3 typer ris, 2 typer gryter, kylling og 3 typer salater">
               <input type="hidden" name="tilbud_gjelder" value="Nye bestillinger frem til nyttårsaften">
 
               <div class="form-grid">
-
                 <div class="form-group">
                   <label for="offerName">Navn</label>
                   <input type="text" id="offerName" name="navn" placeholder="Ditt navn" required>
                 </div>
-
                 <div class="form-group">
                   <label for="offerPhone">Telefon</label>
                   <input type="tel" id="offerPhone" name="telefon" placeholder="Telefonnummer" required>
                 </div>
-
                 <div class="form-group">
                   <label for="offerEmail">E-post</label>
                   <input type="email" id="offerEmail" name="epost" placeholder="din@email.no" required>
                 </div>
-
                 <div class="form-group">
                   <label for="offerDate">Dato for arrangement</label>
                   <input type="date" id="offerDate" name="dato" required>
                 </div>
-
                 <div class="form-group">
                   <label for="offerOccasion">Anledning</label>
                   <select id="offerOccasion" name="anledning" required>
@@ -2507,30 +398,28 @@
                     <option value="Annet">Annet</option>
                   </select>
                 </div>
-
                 <div class="form-group">
                   <label for="offerPlace">Sted / område</label>
                   <input type="text" id="offerPlace" name="sted_omrade" placeholder="F.eks. Oslo, Halden eller Moss" required>
                 </div>
-
                 <div class="form-group full">
                   <label for="offerMessage">Melding</label>
                   <textarea id="offerMessage" name="melding" placeholder="Fortell gjerne litt om arrangementet, tidspunkt og andre ønsker..."></textarea>
                 </div>
-
               </div>
 
               <button type="submit" class="btn btn-gold">
                 Jeg vil ha tilbudet →
               </button>
-
               <div class="form-status" id="offerFormStatus" aria-live="polite"></div>
-
               <div class="offer-note">
-                Ved å sende inn forespørselen ber du om dette spesialtilbudet. Vi kontakter deg for å bekrefte detaljer og tilgjengelighet.
+                Vi kontakter deg for å bekrefte detaljer og tilgjengelighet.
               </div>
-
             </form>
+
+            <a href="#contactForm" class="btn btn-gold offer-other-orders">
+              Andre bestillinger →
+            </a>
 
           </div>
 
@@ -2546,7 +435,7 @@
          PHILOSOPHY
     ========================================= -->
 
-    <section id="om-oss">
+    <section id="om-oss" class="philosophy-section">
 
       <div class="container philosophy-grid">
 
@@ -2638,9 +527,7 @@
           </h2>
 
           <p>
-            Utforsk noen av rettene vi tilbyr. Menyen kan
-            tilpasses etter arrangement, antall gjester
-            og dine ønsker.
+            Menyen tilpasses selskapet, gjestene og ønskene dine.
           </p>
 
         </div>
@@ -2711,11 +598,11 @@
           <button
             type="button"
             class="menu-tab"
-            data-menu="tilbehor"
+            data-menu="frukt"
             role="tab"
             aria-selected="false"
           >
-            Tilbehør
+            Frukt
           </button>
 
 
@@ -2776,7 +663,7 @@
 
 
             <a
-              href="#tilbud"
+              href="#contactForm"
               class="btn btn-outline"
             >
               Be om tilbud →
@@ -2861,7 +748,7 @@
          OCCASIONS
     ========================================= -->
 
-    <section id="anledninger">
+    <section id="anledninger" class="occasion-section">
 
       <div class="container">
 
@@ -2902,7 +789,7 @@
               den store dagen og gjestene dine.
             </p>
 
-            <a href="#tilbud">
+            <a href="#contactForm">
               Be om tilbud →
             </a>
 
@@ -2925,7 +812,7 @@
               dåp og andre viktige dager.
             </p>
 
-            <a href="#tilbud">
+            <a href="#contactForm">
               Be om tilbud →
             </a>
 
@@ -2948,7 +835,7 @@
               firmafester og større samlinger.
             </p>
 
-            <a href="#tilbud">
+            <a href="#contactForm">
               Be om tilbud →
             </a>
 
@@ -2971,7 +858,7 @@
               anledninger hvor mange skal spise godt.
             </p>
 
-            <a href="#tilbud">
+            <a href="#contactForm">
               Be om tilbud →
             </a>
 
@@ -3017,7 +904,7 @@
           </div>
 
 
-          <<div class="areas-list">
+          <div class="areas-list">
 
   <a class="area" href="catering-oslo.html">
     Oslo
@@ -3083,220 +970,6 @@
             alt="Catering i ditt område"
             loading="lazy"
           >
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         LOCAL PAGES
-    ========================================= -->
-
-    <section
-      class="local-pages-section"
-      aria-labelledby="lokale-sider"
-    >
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <small>
-            Lokale catering-sider
-          </small>
-
-          <h2 id="lokale-sider">
-            Catering nær deg.
-          </h2>
-
-          <p>
-            Se informasjon om catering i områdene vi dekker.
-            Hver side gir informasjon om meny, arrangementer
-            og hvordan du kan be om tilbud.
-          </p>
-
-        </div>
-
-
-        <div class="local-pages-grid">
-
-          <a class="local-card" href="catering-oslo.html">
-            <strong>Oslo</strong>
-            <span>Se catering i Oslo →</span>
-          </a>
-
-          <a class="local-card" href="catering-lillestrom.html">
-            <strong>Lillestrøm</strong>
-            <span>Se catering i Lillestrøm →</span>
-          </a>
-
-          <a class="local-card" href="catering-moss.html">
-            <strong>Moss</strong>
-            <span>Se catering i Moss →</span>
-          </a>
-
-          <a class="local-card" href="catering-sarpsborg.html">
-            <strong>Sarpsborg</strong>
-            <span>Se catering i Sarpsborg →</span>
-          </a>
-
-          <a class="local-card" href="catering-halden.html">
-            <strong>Halden</strong>
-            <span>Se catering i Halden →</span>
-          </a>
-
-          <a class="local-card" href="catering-vestby.html">
-            <strong>Vestby</strong>
-            <span>Se catering i Vestby →</span>
-          </a>
-
-          <a class="local-card" href="catering-ski.html">
-            <strong>Ski</strong>
-            <span>Se catering i Ski →</span>
-          </a>
-
-          <a class="local-card" href="catering-vinterbro.html">
-            <strong>Vinterbro</strong>
-            <span>Se catering i Vinterbro →</span>
-          </a>
-
-      <a class="local-card" href="catering-akershus.html">
-  <strong>Akershus</strong>
-  <span>Se catering i Akershus →</span>
-</a>
-
-
-
-          <a class="local-card" href="catering-asker.html">
-            <strong>Asker</strong>
-            <span>Se catering i Asker →</span>
-          </a>
-
-         <a class="local-card" href="catering-viken.html">
-  <strong>Viken</strong>
-  <span>Se catering i Viken →</span>
-</a>
-
-          <a class="local-card" href="catering-drammen.html">
-            <strong>Drammen</strong>
-            <span>Se catering i Drammen →</span>
-          </a>
-
-          <a class="local-card" href="catering-fredrikstad.html">
-            <strong>Fredrikstad</strong>
-            <span>Se catering i Fredrikstad →</span>
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         FAQ
-    ========================================= -->
-
-    <section
-      id="faq"
-      class="faq-section"
-    >
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <small>
-            Spørsmål
-          </small>
-
-          <h2>
-            Vanlige spørsmål.
-          </h2>
-
-        </div>
-
-
-        <div class="faq-list">
-
-          <details class="faq-item">
-
-            <summary>
-              Tilbyr dere halal catering?
-            </summary>
-
-          <div class="faq-answer">
-  Vi leverer blant annet i Oslo, Akershus, Asker,
-  Lillestrøm, Moss, Fredrikstad, Sarpsborg,
-  Halden, Drammen og flere områder på Østlandet.
-</div>
-          </details>
-
-
-          <details class="faq-item">
-
-            <summary>
-              Hvor mange personer kan dere lage mat til?
-            </summary>
-
-            <div class="faq-answer">
-              Vi kan hjelpe både med mindre familieselskaper
-              og større arrangementer. Ta kontakt med antall
-              gjester, så finner vi en løsning som passer.
-            </div>
-
-          </details>
-
-
-          <details class="faq-item">
-
-            <summary>
-              Kan menyen tilpasses?
-            </summary>
-
-            <div class="faq-answer">
-              Ja. Menyen kan tilpasses etter anledning,
-              antall gjester og ønskede retter.
-            </div>
-
-          </details>
-
-
-          <details class="faq-item">
-
-            <summary>
-              Hvor leverer dere?
-            </summary>
-
-            <div class="faq-answer">
-              Vi leverer blant annet i Oslo, Bærum, Asker,
-              Lillestrøm, Moss, Fredrikstad, Sarpsborg,
-              Halden, Drammen og flere områder på Østlandet.
-            </div>
-
-          </details>
-
-
-          <details class="faq-item">
-
-            <summary>
-              Hvor tidlig bør jeg bestille?
-            </summary>
-
-            <div class="faq-answer">
-              Vi anbefaler å ta kontakt så tidlig som mulig,
-              spesielt ved bryllup og større arrangementer.
-              Vi forsøker selvfølgelig å hjelpe også ved
-              kortere frister dersom kapasiteten tillater det.
-            </div>
-
-          </details>
 
         </div>
 
@@ -3554,83 +1227,123 @@
 
     </section>
 
+    <!-- =========================================
+         FAQ
+    ========================================= -->
+
+    <section
+      id="faq"
+      class="faq-section"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <small>
+            Spørsmål
+          </small>
+
+          <nav class="faq-links" aria-label="Snarveier">
+            <a href="#meny">Meny</a>
+            <a href="#anledninger">Anledninger</a>
+            <a href="#omrader">Områder</a>
+            <a href="#faq">FAQ</a>
+            <a href="#kontakt">Kontakt</a>
+          </nav>
+
+          <div class="faq-brand">
+            © <span id="year"></span> Tradisjon Catering<br>
+            <span>Mat med historie</span>
+          </div>
+
+        </div>
+
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+
+            <summary>
+              Tilbyr dere halal catering?
+            </summary>
+
+          <div class="faq-answer">
+  Vi leverer blant annet i Oslo, Akershus, Asker,
+  Lillestrøm, Moss, Fredrikstad, Sarpsborg,
+  Halden, Drammen og flere områder på Østlandet.
+</div>
+          </details>
+
+
+          <details class="faq-item">
+
+            <summary>
+              Hvor mange personer kan dere lage mat til?
+            </summary>
+
+            <div class="faq-answer">
+              Vi kan hjelpe både med mindre familieselskaper
+              og større arrangementer. Ta kontakt med antall
+              gjester, så finner vi en løsning som passer.
+            </div>
+
+          </details>
+
+
+          <details class="faq-item">
+
+            <summary>
+              Kan menyen tilpasses?
+            </summary>
+
+            <div class="faq-answer">
+              Ja. Menyen kan tilpasses etter anledning,
+              antall gjester og ønskede retter.
+            </div>
+
+          </details>
+
+
+          <details class="faq-item">
+
+            <summary>
+              Hvor leverer dere?
+            </summary>
+
+            <div class="faq-answer">
+              Vi leverer blant annet i Oslo, Bærum, Asker,
+              Lillestrøm, Moss, Fredrikstad, Sarpsborg,
+              Halden, Drammen og flere områder på Østlandet.
+            </div>
+
+          </details>
+
+
+          <details class="faq-item">
+
+            <summary>
+              Hvor tidlig bør jeg bestille?
+            </summary>
+
+            <div class="faq-answer">
+              Vi anbefaler å ta kontakt så tidlig som mulig,
+              spesielt ved bryllup og større arrangementer.
+              Vi forsøker selvfølgelig å hjelpe også ved
+              kortere frister dersom kapasiteten tillater det.
+            </div>
+
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
   </main>
-
-
-
-  <!-- =========================================
-       FOOTER
-  ========================================= -->
-
-  <footer>
-
-    <div class="container">
-
-      <div class="footer-top">
-
-        <a href="#hjem" class="logo">
-
-          <div class="logo-mark">
-            T
-          </div>
-
-          <div class="logo-text">
-
-            <strong>
-              Tradisjon Catering
-            </strong>
-
-            <span>
-              Mat med historie
-            </span>
-
-          </div>
-
-        </a>
-
-
-        <nav class="footer-nav">
-
-          <a href="#meny">
-            Meny
-          </a>
-
-          <a href="#anledninger">
-            Anledninger
-          </a>
-
-          <a href="#omrader">
-            Områder
-          </a>
-
-          <a href="#faq">
-            FAQ
-          </a>
-
-          <a href="#kontakt">
-            Kontakt
-          </a>
-
-        </nav>
-
-      </div>
-
-
-      <div class="footer-bottom">
-
-        <span>
-          © <span id="year"></span> Tradisjon Catering
-        </span>
-
-        <span>
-          Mat med historie
-        </span>
-
-      </div>
-
-    </div>
-
-  </footer>
 
 
 
@@ -3649,6 +1362,22 @@
 
     const navLinks =
       document.getElementById("navLinks");
+
+    const headerLogoImage =
+      document.getElementById("headerLogoImage");
+
+    function toggleLogoLight() {
+      const isLit = headerLogoImage.classList.toggle("is-lit");
+      headerLogoImage.setAttribute("aria-pressed", isLit ? "true" : "false");
+    }
+
+    headerLogoImage.addEventListener("click", toggleLogoLight);
+    headerLogoImage.addEventListener("keydown", function(event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleLogoLight();
+      }
+    });
 
 
     mobileMenuBtn.addEventListener(
@@ -3819,18 +1548,17 @@
       },
 
 
-      tilbehor: {
+      frukt: {
 
-        title: "Tilbehør",
+        title: "Fruktfat",
 
         text:
-          "Brød, sauser, dips og småretter som gjør menyen komplett.",
+          "Fargerike fat med søt og frisk frukt – perfekt som et lett og fristende innslag på bordet.",
 
         items: [
-          "Brød",
-          "Sauser og dips",
-          "Sylteagurk og grønnsaker",
-          "Tilbehør etter menyvalg"
+          "Søte fruktfat med melon, druer og bær",
+          "Friske sesongfrukter skåret i fine biter",
+          "Eksotisk frukt som mango, ananas og kiwi"
         ],
 
         images: [
@@ -4107,7 +1835,6 @@
     const offerHiddenTotal =
       document.getElementById("offerHiddenTotal");
 
-
     function formatNOK(value) {
       return new Intl.NumberFormat("nb-NO")
         .format(value) + " kr";
@@ -4138,83 +1865,53 @@
     updateOfferPrice();
 
 
-    /* =========================================
-       SPECIAL OFFER FORM
-    ========================================= */
-
     const offerForm =
       document.getElementById("offerForm");
 
     const offerFormStatus =
       document.getElementById("offerFormStatus");
 
-
     offerForm.addEventListener(
       "submit",
       async function(event) {
-
         event.preventDefault();
-
         updateOfferPrice();
 
         const submitButton =
-          offerForm.querySelector(
-            'button[type="submit"]'
-          );
-
+          offerForm.querySelector('button[type="submit"]');
         submitButton.disabled = true;
         submitButton.textContent = "Sender tilbudsforespørsel...";
-
         offerFormStatus.className = "form-status";
         offerFormStatus.textContent = "";
 
         try {
-
-          const response =
-            await fetch(
-              offerForm.action,
-              {
-                method: "POST",
-                body: new FormData(offerForm),
-                headers: {
-                  "Accept": "application/json"
-                }
-              }
-            );
+          const response = await fetch(offerForm.action, {
+            method: "POST",
+            body: new FormData(offerForm),
+            headers: { "Accept": "application/json" }
+          });
 
           if (!response.ok) {
             throw new Error("Kunne ikke sende");
           }
 
           const guests = Number(offerGuests.value);
-          const total = guests * OFFER_PRICE_PER_PERSON;
-
           offerForm.reset();
           offerGuests.value = guests;
           updateOfferPrice();
-
-          offerFormStatus.className =
-            "form-status success";
-
+          offerFormStatus.className = "form-status success";
           offerFormStatus.textContent =
             "Takk! Tilbudsforespørselen er sendt. Vi tar kontakt så snart som mulig.";
-
         } catch (error) {
-
-          offerFormStatus.className =
-            "form-status error";
-
+          offerFormStatus.className = "form-status error";
           offerFormStatus.textContent =
             "Noe gikk galt. Prøv igjen eller kontakt oss direkte på telefon eller e-post.";
-
         }
 
         submitButton.disabled = false;
         submitButton.textContent = "Jeg vil ha tilbudet →";
-
       }
     );
-
 
 
     /* =========================================

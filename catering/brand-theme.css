@@ -1,0 +1,217 @@
+/* Shared brand system for every Tradisjon Catering page. */
+:root {
+  --ink: #24080d;
+  --ink-light: #3a0d16;
+  --ink-soft: #3a0d16;
+  --dark: #24080d;
+  --cream: #fff0ed;
+  --cream-light: #fff8f6;
+  --cream-dark: #f5dedb;
+  --paper: #fff8f6;
+  --bg: #fff8f6;
+  --card: #fff8f6;
+  --white: #fff8f6;
+  --text: #351018;
+  --muted: #80545b;
+  --gold: #d65353;
+  --gold-light: #f08080;
+  --gold-dark: #b13521;
+  --red: #b13521;
+  --red-dark: #8f2819;
+  --red-deep: #5c101a;
+  --accent: #b13521;
+  --accent-dark: #8f2819;
+  --line: rgba(92, 16, 26, .15);
+  --border-light: rgba(255, 240, 237, .16);
+  --border-dark: rgba(92, 16, 26, .16);
+  --shadow: 0 18px 50px rgba(36, 8, 13, .12);
+  --radius: 22px;
+  --max: 1180px;
+  --max-width: 1180px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--cream-light);
+  font-family: "Karla", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.section-title {
+  font-family: "Fraunces", Georgia, serif;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+img {
+  max-width: 100%;
+}
+
+header,
+.site-header {
+  background-color: rgba(36, 8, 13, .97);
+  color: var(--cream);
+  border-color: rgba(255, 240, 237, .14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+header a,
+.site-header a {
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.logo-mark,
+.brand-mark,
+.brand-icon {
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+}
+
+.logo-text span,
+.brand-tagline,
+.logo-sub,
+.logo-tagline {
+  color: var(--gold-light);
+}
+
+.hero .eyebrow,
+.hero .hero-label,
+.hero .hero-note,
+.hero .section-label {
+  color: #ffaaaa;
+}
+
+.eyebrow,
+.section-label,
+.section-kicker,
+.section-heading small {
+  color: var(--red);
+}
+
+.btn,
+[class*="btn-"],
+.nav-cta,
+.header-cta,
+.mobile-cta {
+  border-radius: 999px;
+  transition: transform .22s ease, box-shadow .22s ease, color .22s ease,
+    background-color .22s ease, border-color .22s ease;
+}
+
+.btn:hover,
+[class*="btn-"]:hover,
+.nav-cta:hover,
+.header-cta:hover,
+.mobile-cta:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary,
+.btn-gold,
+.nav-cta,
+.header-cta,
+.mobile-cta {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+
+.btn-primary:hover,
+.btn-gold:hover,
+.nav-cta:hover,
+.header-cta:hover,
+.mobile-cta:hover {
+  background-color: var(--gold-light);
+  border-color: var(--gold-light);
+  color: var(--ink);
+  box-shadow: 0 8px 24px rgba(214, 83, 83, .24);
+}
+
+.btn-secondary,
+.btn-outline,
+.btn-light {
+  border-color: rgba(240, 128, 128, .55);
+}
+
+.local-strip,
+.local-nav,
+.local-links {
+  background-color: var(--red-deep);
+  color: var(--cream);
+}
+
+.area-card,
+.local-page-card,
+.local-page-link,
+.local-link,
+.info-card,
+.occasion-card,
+.occasion,
+.menu-card,
+.menu-panel,
+.philosophy-card,
+.philosophy-item,
+.pillar,
+.faq-item {
+  border-radius: 16px;
+}
+
+.area-card,
+.local-page-card,
+.local-page-link,
+.local-link,
+.info-card,
+.occasion-card,
+.occasion,
+.menu-card,
+.menu-panel,
+.philosophy-card,
+.philosophy-item,
+.pillar {
+  border-color: var(--line);
+  box-shadow: 0 12px 34px rgba(36, 8, 13, .07);
+}
+
+.faq-item {
+  border-color: rgba(255, 240, 237, .2);
+}
+
+.contact-detail {
+  border-radius: 14px;
+  border-color: rgba(214, 83, 83, .28);
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  border-radius: 10px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
+}
