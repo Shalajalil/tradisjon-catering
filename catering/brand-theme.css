@@ -194,6 +194,227 @@ header a,
   border-color: rgba(214, 83, 83, .28);
 }
 
+/* Keep the occasions section compact and consistent across every page. */
+.occasion-section {
+  padding: 30px 0;
+}
+
+.occasion-section .section-heading {
+  max-width: 780px;
+  margin-bottom: 16px;
+}
+
+.occasion-section .section-heading small {
+  margin-bottom: 8px;
+  font-size: 9px;
+}
+
+.occasion-section .section-heading h2 {
+  font-size: clamp(30px, 3.8vw, 44px);
+  line-height: 1.08;
+}
+
+.occasion-section .section-heading p {
+  max-width: 680px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.occasion-grid {
+  gap: 10px;
+}
+
+.occasion-card {
+  min-height: 0;
+  padding: 15px;
+}
+
+.occasion-number {
+  min-width: 30px;
+  height: 30px;
+  font-size: 13px;
+}
+
+.occasion-card h3 {
+  margin-top: 11px;
+  font-size: 19px;
+}
+
+.occasion-card p {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.occasion-card a {
+  margin-top: 9px;
+  font-size: 9px;
+}
+
+@media (max-width: 650px) {
+  .occasion-section {
+    padding: 24px 0;
+  }
+
+  .occasion-section .section-heading h2 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .occasion-section .section-heading p {
+    font-size: 13px;
+  }
+
+  .occasion-card {
+    padding: 14px;
+  }
+}
+
+/* Compact delivery areas across the homepage and location pages. */
+.areas,
+.areas-section {
+  padding: 48px 0;
+}
+
+.areas-grid {
+  gap: 38px;
+}
+
+.areas .section-heading,
+.areas-section .section-heading {
+  max-width: 600px;
+  margin-bottom: 18px;
+}
+
+.areas .section-heading small,
+.areas-section .section-heading small {
+  margin-bottom: 8px;
+  font-size: 9px;
+}
+
+.areas .section-heading h2,
+.areas-section .section-heading h2 {
+  font-size: clamp(30px, 3.7vw, 42px);
+  line-height: 1.08;
+}
+
+.areas .section-heading p,
+.areas-section .section-heading p {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.areas-list {
+  gap: 7px;
+}
+
+.area {
+  padding: 8px 11px;
+  font-size: 10px;
+}
+
+.areas-image {
+  height: 280px;
+  border-radius: 4px 48px 4px 4px;
+  box-shadow: 10px 10px 0 rgba(177, 53, 33, .12);
+}
+
+@media (max-width: 900px) {
+  .areas-grid {
+    gap: 26px;
+  }
+
+  .areas-image {
+    height: 240px;
+  }
+}
+
+@media (max-width: 650px) {
+  .areas,
+  .areas-section {
+    padding: 32px 0;
+  }
+
+  .areas .section-heading h2,
+  .areas-section .section-heading h2 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .areas-image {
+    height: 210px;
+  }
+}
+
+/* Compact the about section while keeping its image and copy readable. */
+.philosophy-section {
+  padding: 48px 0;
+}
+
+.philosophy-grid {
+  gap: 42px;
+}
+
+.philosophy-image {
+  height: 340px;
+  border-radius: 4px 48px 4px 4px;
+  box-shadow: 10px 10px 0 rgba(177, 53, 33, .12);
+}
+
+.philosophy-text .section-heading {
+  margin-bottom: 16px;
+}
+
+.philosophy-text .section-heading small {
+  margin-bottom: 8px;
+  font-size: 9px;
+}
+
+.philosophy-text .section-heading h2 {
+  font-size: clamp(30px, 3.7vw, 42px);
+  line-height: 1.08;
+}
+
+.philosophy-text p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.signature {
+  margin-top: 14px;
+  padding-left: 12px;
+  font-size: 22px;
+}
+
+@media (max-width: 900px) {
+  .philosophy-grid {
+    gap: 26px;
+  }
+
+  .philosophy-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 650px) {
+  .philosophy-section {
+    padding: 32px 0;
+  }
+
+  .philosophy-image {
+    height: min(68vw, 260px);
+  }
+
+  .philosophy-text .section-heading h2 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .philosophy-text p {
+    font-size: 13px;
+  }
+}
+
 input,
 textarea,
 select,
