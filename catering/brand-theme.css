@@ -415,6 +415,84 @@ header a,
   }
 }
 
+@media (max-width: 650px) {
+  .occasion-section {
+    padding: 20px 0;
+  }
+
+  .occasion-section .section-heading {
+    margin-bottom: 12px;
+  }
+
+  .occasion-section .section-heading small {
+    margin-bottom: 6px;
+  }
+
+  .occasion-section .section-heading h2 {
+    font-size: clamp(26px, 7.5vw, 32px);
+  }
+
+  .occasion-section .section-heading p {
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .occasion-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .occasion-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .occasion-number {
+    min-width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+
+  .occasion-card h3 {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+
+  .occasion-card p {
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .occasion-card a {
+    margin-top: auto;
+    padding-top: 8px;
+    font-size: 8px;
+    letter-spacing: .06em;
+  }
+}
+
+@media (max-width: 360px) {
+  .occasion-card {
+    padding: 8px;
+  }
+
+  .occasion-card h3 {
+    font-size: 15px;
+  }
+
+  .occasion-card p {
+    font-size: 10px;
+  }
+
+  .occasion-card a {
+    font-size: 7px;
+    letter-spacing: .03em;
+  }
+}
+
 input,
 textarea,
 select,
