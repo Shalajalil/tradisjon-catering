@@ -551,6 +551,110 @@
     }
 
 
+    .culture-section {
+      background: var(--cream);
+      color: var(--ink);
+    }
+
+
+    .culture-section .section-heading {
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+
+    .culture-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+
+    .culture-card {
+      padding: 26px 22px;
+      border: 1px solid rgba(36,8,13,.12);
+      border-radius: 16px;
+      background: rgba(255,255,255,.58);
+    }
+
+
+    .culture-card h3 {
+      margin-bottom: 12px;
+      color: var(--wine, #5b1720);
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+
+    .culture-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+
+    .reviews-section {
+      background: var(--cream-light);
+      color: var(--ink);
+    }
+
+
+    .reviews-section .section-heading {
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      padding: 26px 24px;
+      border: 1px solid rgba(36,8,13,.12);
+      border-radius: 16px;
+      background: rgba(255,255,255,.68);
+    }
+
+
+    .review-stars {
+      margin-bottom: 14px;
+      color: #b47a25;
+      letter-spacing: .12em;
+    }
+
+
+    .review-card blockquote {
+      flex: 1;
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+
+    .review-author {
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+
+    .review-author span {
+      display: block;
+      margin-top: 5px;
+      color: var(--wine, #5b1720);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+
     /* =========================================
        PHILOSOPHY
     ========================================= */
@@ -2070,6 +2174,16 @@
       }
 
 
+      .culture-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+
       .hero-image {
         grid-column: 1;
         justify-self: stretch;
@@ -2138,6 +2252,15 @@
     }
 
     @media (max-width: 650px) {
+      .culture-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .review-card {
+        padding: 22px 20px;
+      }
+
       .offer-promo {
         padding: 18px 0;
       }
