@@ -634,3 +634,27 @@ header { background: rgba(62,16,38,.96); border-bottom-color: rgba(241,169,190,.
  }
  .hero .hero-image { grid-row: 5; grid-column: 1; margin-top: 6px; }
 }
+
+/* Dessert hero: larger baklava with dessert cups alongside. */
+.dessert-page .hero .dessert-hero-pair { overflow: visible; position: relative; isolation: isolate; }
+.dessert-page .hero .dessert-hero-pair img[src$="/baklava1.webp"] {
+  transform: scale(1.2);
+  transform-origin: 35% center;
+}
+.dessert-page .hero .dessert-hero-pair .dessert-cups-hero {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  height: 58%;
+  object-fit: contain;
+  transform: none;
+  background: transparent;
+  filter: drop-shadow(0 5px 12px rgba(40,8,24,.2));
+}
+@media (max-width: 650px) {
+ .dessert-page .hero .dessert-hero-pair { width: 92%; justify-self: center; }
+ .dessert-page .hero .dessert-hero-pair img[src$="/baklava1.webp"] { transform-origin: center; }
+ .dessert-page .hero .dessert-hero-pair .dessert-cups-hero { width: 42%; height: 65%; right: -4%; }
+}
