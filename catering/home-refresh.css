@@ -524,3 +524,78 @@ header { background: rgba(62,16,38,.96); border-bottom-color: rgba(241,169,190,.
   border-color: #ffd4e1;
   color: #451329;
 }
+
+/* Keep menus readable as a single compact composition across all pages. */
+#meny { padding-top: 44px; padding-bottom: 44px; scroll-margin-top: 78px; }
+#meny .section-heading { margin-bottom: 18px; }
+#meny .section-heading h2 { font-size: clamp(28px, 3vw, 38px); line-height: 1.12; }
+#meny .section-heading small { margin-bottom: 7px; }
+#meny .section-heading p { margin-top: 8px; font-size: 14px; line-height: 1.5; }
+#meny .menu-tabs { gap: 6px; padding-bottom: 12px; margin-bottom: 10px; }
+#meny .menu-tab { min-height: 44px; padding: 10px 16px; }
+#meny .menu-photo-origin { margin-bottom: 12px; }
+#meny .menu-box { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); padding: 22px; gap: 28px; min-width: 0; }
+#meny .menu-content { padding: 0; min-width: 0; }
+#meny .menu-content small { margin-bottom: 10px; }
+#meny .menu-content h3 { font-size: 32px; margin-bottom: 10px; }
+#meny .menu-content p { font-size: 14px; line-height: 1.5; margin-bottom: 12px; }
+#meny .menu-content ul { margin-bottom: 16px; }
+#meny .menu-content li { padding: 8px 0; font-size: 14px; line-height: 1.4; overflow-wrap: anywhere; }
+#meny .menu-content .business-menu-note { margin-top: 10px; margin-bottom: 0; font-size: 11px; line-height: 1.4; }
+#meny .menu-gallery { min-width: 0; align-self: center; }
+#meny .menu-gallery-item { height: clamp(240px, 29vw, 340px); min-height: 0; }
+#meny .gallery-bottom { min-height: 10px; margin-top: 10px; }
+#meny .gallery-hint { display: none; }
+/* Prevent long occasion labels from forcing grid columns outside their cards. */
+.occasion-grid, .occasion-card, .occasion-card > * { min-width: 0; }
+.occasion-card h3 { overflow-wrap: anywhere; line-height: 1.2; }
+.occasion-card a { max-width: 100%; white-space: normal; }
+@media (max-width: 900px) {
+ #meny .menu-box { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 20px; }
+ #meny .menu-gallery-item { height: 280px; }
+}
+@media (max-width: 650px) {
+ #meny { padding-block: 28px; scroll-margin-top: 76px; }
+ #meny .section-heading { margin-bottom: 14px; }
+ #meny .section-heading h2 { font-size: 27px; }
+ #meny .section-heading p { font-size: 13px; margin-top: 6px; }
+ #meny .menu-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; padding-bottom: 8px; }
+ #meny .menu-tab { flex: 0 0 auto; padding: 10px 12px; min-height: 44px; font-size: 10px; letter-spacing: .02em; }
+ #meny .menu-photo-origin { padding: 5px 8px; margin-bottom: 10px; }
+ #meny .menu-photo-origin p { font-size: 10px; }
+ #meny .menu-box { display: grid; grid-template-columns: minmax(0,1fr); gap: 10px; padding: 16px; }
+ #meny .menu-content { display: contents; }
+ #meny .menu-content > small { display: none; }
+ #meny .menu-content h3 { grid-row: 1; margin: 0; font-size: 28px; }
+ #meny .menu-content > p:not(.business-menu-note) { grid-row: 2; margin: 0; font-size: 13px; line-height: 1.45; }
+ #meny .menu-gallery { grid-row: 3; width: 100%; }
+ #meny .menu-gallery-item { height: clamp(155px, 48vw, 220px); }
+ #meny .menu-content ul { grid-row: 4; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 12px; margin: 0; }
+ #meny .menu-content li { font-size: 12px; line-height: 1.4; padding: 8px 0; }
+ #meny .menu-content .btn { grid-row: 5; justify-self: start; align-self: auto; min-height: 44px; padding: 10px 18px; font-size: 11px; }
+ #meny .menu-content .business-menu-note { grid-row: 6; max-width: none; font-size: 10px; margin: 0; }
+ #meny .gallery-bottom { padding: 0; margin-top: 6px; }
+ .dessert-page #meny img[src$="/baklava1.webp"],
+ .dessert-page #meny img[src$="/baklava2.webp"] { transform: none; }
+ .occasion-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+ .occasion-card { display: flex; flex-direction: column; align-items: flex-start; min-height: 0; padding: 14px; }
+ .occasion-card h3 { margin-top: 12px; font-size: 19px; }
+ .occasion-card p { margin-top: 8px; font-size: 12px; line-height: 1.5; }
+ .occasion-card a { margin-top: auto; padding-top: 12px; font-size: 10px; }
+ /* Put the photograph before the actions, rather than below all the buttons. */
+ .homepage-main .hero .hero-grid,
+ .dessert-page .hero .hero-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 14px; }
+ .hero-grid > div:first-child { display: contents; }
+ .hero .hero-label { grid-row: 1; margin: 0; justify-self: start; }
+ .hero h1 { grid-row: 2; margin: 0; }
+ .hero .hero-text { grid-row: 3; margin: 0; }
+ .hero .hero-image { grid-row: 4; grid-column: 1; min-height: 0; width: 100%; }
+ .homepage-main .hero .hero-image img,
+ .dessert-page .hero .hero-image img[src$="/baklava1.webp"] { height: 240px; }
+ .hero .hero-buttons { grid-row: 5; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+ .hero .hero-buttons .btn { flex: 1 1 140px; min-width: 0; padding: 12px; text-align: center; justify-content: center; }
+}
+@media (max-width: 360px) {
+ .occasion-grid { grid-template-columns: minmax(0,1fr); }
+ #meny .menu-content ul { grid-template-columns: minmax(0,1fr); }
+}
