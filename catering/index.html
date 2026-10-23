@@ -18,7 +18,7 @@
     content="Tradisjon Catering tilbyr halal catering med kurdiske, persiske, arabiske og tyrkiske smaker. Gryter, ris, kjøtt, kylling, salater og desserter til selskaper og arrangementer."
   >
 
-  <meta name="theme-color" content="#24080d">
+  <meta name="theme-color" content="#451329">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,49 +41,236 @@
 
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Caterer",
-    "name": "Tradisjon Catering",
-    "url": "https://tradisjoncatering.no/",
+{
+  "@context": "https://schema.org",
+  "@type": "Caterer",
+  "name": "Tradisjon Catering",
+  "url": "https://tradisjoncatering.no/",
+  "telephone": "+4747152310",
+  "email": "tradisjoncatering@gmail.com",
+  "description": "Halal catering med kurdisk, persisk, arabisk og tyrkisk inspirasjon til selskaper og arrangementer.",
+  "servesCuisine": [
+    "Kurdisk",
+    "Persisk",
+    "Arabisk",
+    "Tyrkisk"
+  ],
+  "areaServed": [
+    "Oslo",
+    "Akershus",
+    "Viken",
+    "Lillestrøm",
+    "Moss",
+    "Sarpsborg",
+    "Halden",
+    "Vestby",
+    "Ski",
+    "Vinterbro",
+    "Asker",
+    "Drammen",
+    "Fredrikstad"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
     "telephone": "+4747152310",
+    "contactType": "customer service",
     "email": "tradisjoncatering@gmail.com",
-    "description": "Halal catering med kurdisk, persisk, arabisk og tyrkisk inspirasjon til selskaper og arrangementer.",
-    "servesCuisine": [
-      "Kurdisk",
-      "Persisk",
-      "Arabisk",
-      "Tyrkisk"
-    ],
-   "areaServed": [
-  "Oslo",
-  "Akershus",
-  "Viken",
-  "Lillestrøm",
-  "Moss",
-  "Sarpsborg",
-  "Halden",
-  "Vestby",
-  "Ski",
-  "Vinterbro",
-  "Asker",
-  "Drammen",
-  "Fredrikstad"
-],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+4747152310",
-      "contactType": "customer service",
-      "email": "tradisjoncatering@gmail.com",
-      "availableLanguage": [
-        "no",
-        "en"
-      ]
-    }
-  }
-  </script>
+    "availableLanguage": [
+      "no",
+      "en"
+    ]
+  },
+  "@id": "https://tradisjoncatering.no/#business",
+  "image": "https://tradisjoncatering.no/forside.jpeg",
+  "logo": "https://tradisjoncatering.no/logo.jpeg",
+  "hasMenu": "https://tradisjoncatering.no/#meny"
+}
+</script>
 
   <link rel="stylesheet" href="brand-theme.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home-refresh.css">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:image" content="https://tradisjoncatering.no/forside.jpeg">
+<meta property="og:image:alt" content="Tradisjonell mat fra Tradisjon Catering">
+<meta name="twitter:image" content="https://tradisjoncatering.no/forside.jpeg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://tradisjoncatering.no/#website",
+      "url": "https://tradisjoncatering.no/",
+      "name": "Tradisjon Catering",
+      "inLanguage": "nb-NO",
+      "publisher": {
+        "@id": "https://tradisjoncatering.no/#business"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tradisjoncatering.no/#webpage",
+      "url": "https://tradisjoncatering.no/",
+      "name": "Tradisjon Catering – Mat med historie | Halal catering i Oslo og Østlandet",
+      "inLanguage": "nb-NO",
+      "isPartOf": {
+        "@id": "https://tradisjoncatering.no/#website"
+      },
+      "about": {
+        "@id": "https://tradisjoncatering.no/#business"
+      }
+    },
+    {
+      "@type": "Menu",
+      "@id": "https://tradisjoncatering.no/#meny",
+      "name": "Meny",
+      "url": "https://tradisjoncatering.no/#meny",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Gryter",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Fasolia / bønnegryte"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Tapsi og grønnsaksgryter"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Bame"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Dolma"
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Ris typer",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Hvit ris"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Biryani"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Ris med dill"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Ris med zereshk"
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Kjøttretter",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Sauekjøtt"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Grill"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Selskapsfat etter avtale"
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Kyllingretter",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Kyllinglår"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Kyllinggryte"
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Salater",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Frisk husets salat"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Yoghurt- og agurksalat"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Tabbouleh-inspirert salat"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Tilpasses etter ønsket meny"
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Fruktfat",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Søte fruktfat med melon, druer og bær"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Friske sesongfrukter skåret i fine biter"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Eksotisk frukt som mango, ananas og kiwi"
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Dessert",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Dessert i kopp"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Kaker"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Frukt og søte fat"
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Kan tilpasses etter arrangement"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 
@@ -185,16 +372,12 @@
 
 
           <h1>
-            Kurdisk, persisk, arabisk og tyrkisk catering i Oslo
+            KURDISK, PERSISK, ARABISK OG TYRKISK MAT I HELE NORGE
           </h1>
 
 
           <p class="hero-text">
-            Tradisjon Catering lager smakfulle retter med
-            inspirasjon fra kurdisk, persisk, arabisk og
-            tyrkisk matkultur. Vi lager mat til selskaper,
-            arrangementer og anledninger der maten skal
-            være en viktig del av opplevelsen.
+            Kurdisk, Persisk, Arabisk, Tyrkisk og Afghansk mat i Oslo, Akershus, Viken, Lillestrøm, Moss, Sarpsborg, Halden, Vestby, Ski, Vinterbro, Asker, Drammen og Fredrikstad.
           </p>
 
 
@@ -222,7 +405,7 @@
         <div class="hero-image">
 
           <img
-            src="forside.jpeg"
+            src="forside.jpeg" fetchpriority="high"
             alt="Tradisjonell mat fra Tradisjon Catering"
           >
 
@@ -324,7 +507,7 @@
 
             <div class="offer-calculator-heading">
               <small>Spesialtilbud</small>
-              <h3>Bestill tilbudet</h3>
+              <h3>BESTILL TILBUDET</h3>
               <p>Velg antall personer, se totalprisen og send forespørselen.</p>
             </div>
 
@@ -472,10 +655,8 @@
 
 
           <p>
-            Menyen vår henter inspirasjon fra Midtøsten og
-            kombinerer klassiske smaker med et personlig
-            preg. Alt tilberedes med omtanke og tilpasses
-            arrangementet ditt.
+            Smaker fra Midtøsten og områdene rundt, laget med omtanke
+            og tilpasset arrangementet ditt.
           </p>
 
 
@@ -512,26 +693,42 @@
       <div class="container">
         <div class="section-heading">
           <small>Smaker med røtter</small>
-          <h2 id="culture-title">Catering med inspirasjon fra fire matkulturer</h2>
-          <p>Utforsk smakene som preger menyen vår. Vi setter sammen retter etter anledning, antall gjester og ønskene dine.</p>
+          <h2 id="culture-title">Mat og desserter fra Midtøsten</h2>
+          <p>Vi lager maten akkurat som der du kommer fra – med kjente smaker og tradisjoner som får deg til å føle deg hjemme.</p>
         </div>
 
         <div class="culture-grid">
           <article class="culture-card">
-            <h3>Kurdisk catering</h3>
-            <p>Kurdisk matkultur er en del av inspirasjonen bak maten vår. Spør oss om en selskapsmeny med smaker som passer anledningen.</p>
+            <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="28" height="19" role="img" aria-label="Kurdistans flagg"><path fill="#ed2024" d="M0 0h60v40H0z"/><path fill="#fff" d="M0 13.33h60v13.34H0z"/><path fill="#278c39" d="M0 26.67h60V40H0z"/><polygon fill="#f5c800" points="30.00,10.00 30.82,14.56 32.95,10.44 32.39,15.04 35.63,11.74 33.74,15.97 37.82,13.77 34.76,17.25 39.31,16.35 35.36,18.78 39.97,19.25 35.48,20.41 39.75,22.23 35.12,22.01 38.66,25.00 34.30,23.43 36.80,27.33 33.10,24.54 34.34,29.01 31.62,25.26 31.49,29.89 30.00,25.50 28.51,29.89 28.38,25.26 25.66,29.01 26.90,24.54 23.20,27.33 25.70,23.43 21.34,25.00 24.88,22.01 20.25,22.23 24.52,20.41 20.03,19.25 24.64,18.78 20.69,16.35 25.24,17.25 22.18,13.77 26.26,15.97 24.37,11.74 27.61,15.04 27.05,10.44 29.18,14.56"/></svg> Kurdisk catering</h3>
+            <p>Tradisjonelle smaker til små og store selskaper.</p>
           </article>
           <article class="culture-card">
-            <h3>Persisk catering</h3>
-            <p>Vi henter også inspirasjon fra persisk matkultur når vi setter sammen menyer til bryllup, familieselskaper og andre arrangementer.</p>
+            <h3><span role="img" aria-label="Iran">🇮🇷</span> Persisk catering</h3>
+            <p>Persisk inspirasjon til en smakfull selskapsmeny.</p>
           </article>
           <article class="culture-card">
-            <h3>Arabisk catering</h3>
-            <p>Arabiske smaker er en del av Tradisjon Caterings mattradisjon. Ta kontakt for å planlegge en meny til selskapet ditt.</p>
+            <h3><span role="img" aria-label="Den arabiske verden">🌍</span> Arabisk catering</h3>
+            <p>Arabiske smaker tilpasset anledningen din.</p>
           </article>
           <article class="culture-card">
-            <h3>Tyrkisk catering</h3>
-            <p>Tyrkisk matkultur gir ytterligere inspirasjon til menyen vår. Vi hjelper deg med å finne en kombinasjon som passer gjestene.</p>
+            <h3><span role="img" aria-label="Tyrkia">🇹🇷</span> Tyrkisk catering</h3>
+            <p>Tyrkisk inspirasjon til et bord fullt av gode smaker.</p>
+          </article>
+          <article class="culture-card">
+            <h3><span role="img" aria-label="Afghanistan">🇦🇫</span> Afghansk catering</h3>
+            <p>Afghanske smaker som en del av menyens inspirasjon.</p>
+          </article>
+          <article class="culture-card">
+            <h3><span role="img" aria-label="Irak">🇮🇶</span> Irakisk catering</h3>
+            <p>Irakisk mattradisjon med et personlig preg.</p>
+          </article>
+          <article class="culture-card">
+            <h3><span role="img" aria-label="Libanon">🇱🇧</span> Libanesisk catering</h3>
+            <p>Libanesisk inspirasjon til måltider som deles.</p>
+          </article>
+          <article class="culture-card">
+            <h3><span role="img" aria-label="Syria">🇸🇾</span> Syrisk catering</h3>
+            <p>Syriske smaker til hyggelige samlinger rundt bordet.</p>
           </article>
         </div>
       </div>
@@ -570,237 +767,50 @@
   </div>
 </section>
 
-    <section
-      id="meny"
-      class="menu-section"
-    >
-
+    <section id="meny" class="menu-section">
       <div class="container">
-
         <div class="section-heading">
-
-          <small>
-            Vår meny
-          </small>
-
-          <h2>
-            Velg det som passer ditt selskap.
-          </h2>
-
-          <p>
-            Menyen tilpasses selskapet, gjestene og ønskene dine.
-          </p>
-
+          <small>Vår meny</small>
+          <h2>En meny til ditt arrangement.</h2>
+          <p>Vi tilpasser menyen til arrangementet ditt, antall gjester og ønskene dine.</p>
         </div>
-
-
-        <div
-          class="menu-tabs"
-          id="menuTabs"
-          role="tablist"
-          aria-label="Meny kategorier"
-        >
-
-          <button
-            type="button"
-            class="menu-tab active"
-            data-menu="gryter"
-            role="tab"
-            aria-selected="true"
-          >
-            Gryter
-          </button>
-
-
-          <button
-            type="button"
-            class="menu-tab"
-            data-menu="ris"
-            role="tab"
-            aria-selected="false"
-          >
-            Ris
-          </button>
-
-
-          <button
-            type="button"
-            class="menu-tab"
-            data-menu="kjott"
-            role="tab"
-            aria-selected="false"
-          >
-            Kjøtt
-          </button>
-
-
-          <button
-            type="button"
-            class="menu-tab"
-            data-menu="kylling"
-            role="tab"
-            aria-selected="false"
-          >
-            Kylling
-          </button>
-
-
-          <button
-            type="button"
-            class="menu-tab"
-            data-menu="salater"
-            role="tab"
-            aria-selected="false"
-          >
-            Salater
-          </button>
-
-
-          <button
-            type="button"
-            class="menu-tab"
-            data-menu="frukt"
-            role="tab"
-            aria-selected="false"
-          >
-            Frukt
-          </button>
-
-
-          <button
-            type="button"
-            class="menu-tab"
-            data-menu="dessert"
-            role="tab"
-            aria-selected="false"
-          >
-            Dessert
-          </button>
-
+        <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Meny kategorier">
+<button type="button" class="menu-tab active" data-menu="gryter" role="tab" aria-selected="true"><span>Gryter</span></button>
+<button type="button" class="menu-tab" data-menu="ris" role="tab" aria-selected="false"><span>Ris</span></button>
+<button type="button" class="menu-tab" data-menu="kjott" role="tab" aria-selected="false"><span>Kjøtt</span></button>
+<button type="button" class="menu-tab" data-menu="kylling" role="tab" aria-selected="false"><span>Kylling</span></button>
+<button type="button" class="menu-tab" data-menu="salater" role="tab" aria-selected="false"><span>Salater</span></button>
+<button type="button" class="menu-tab" data-menu="frukt" role="tab" aria-selected="false"><span>Frukt</span></button>
+<button type="button" class="menu-tab" data-menu="dessert" role="tab" aria-selected="false"><span>Dessert</span></button>
         </div>
-
-
-
-        <div class="menu-box">
-
-
+        <div class="menu-box" id="menuPanel" role="tabpanel" aria-labelledby="menu-tab-gryter" tabindex="0">
           <div class="menu-content">
-
-            <small>
-              TRADISJON CATERING · MENY
-            </small>
-
-
-            <h3 id="menuTitle">
-              Gryter
-            </h3>
-
-
-            <p id="menuText">
-              Varme og fyldige gryter med gode råvarer
-              og krydder fra Midtøsten.
-            </p>
-
-
+            <small>TRADISJON CATERING · MENY</small>
+            <h3 id="menuTitle">Gryter</h3>
+            <p id="menuText">Varme og fyldige gryter med gode råvarer og krydder fra Midtøsten.</p>
             <ul id="menuItems">
-
-              <li>
-                Fasolia / bønnegryte
-              </li>
-
-              <li>
-                Tapsi og grønnsaksgryter
-              </li>
-
-              <li>
-                Bame
-              </li>
-
-              <li>
-                Dolma
-              </li>
-
+              <li>Fasolia / bønnegryte</li>
+              <li>Tapsi og grønnsaksgryter</li>
+              <li>Bame</li>
+              <li>Dolma</li>
             </ul>
-
-
-            <a
-              href="#contactForm"
-              class="btn btn-outline"
-            >
-              Be om tilbud →
-            </a>
-
+            <a href="#contactForm" class="btn btn-outline">Be om tilbud →</a>
+            <p class="business-menu-note">Oppgi dato, antall gjester og sted i forespørselen, så hjelper vi deg med menyen.</p>
           </div>
-
-
-
           <div class="menu-gallery">
-
-            <div
-              class="menu-gallery-track"
-              id="menuGallery"
-            >
-
-              <div class="menu-gallery-item">
-
-                <img
-                  src="bildegryte1.jpeg"
-                  alt="Gryter – Tradisjon Catering"
-                >
-
-              </div>
-
-
-              <div class="menu-gallery-item">
-
-                <img
-                  src="bildegryte2.jpeg"
-                  alt="Gryteretter – Tradisjon Catering"
-                  loading="lazy"
-                >
-
-              </div>
-
-
-              <div class="menu-gallery-item">
-
-                <img
-                  src="bildegryte3.jpeg"
-                  alt="Tradisjonelle gryter – Tradisjon Catering"
-                  loading="lazy"
-                >
-
-              </div>
-
+            <div class="menu-gallery-track" id="menuGallery">
+              <div class="menu-gallery-item"><img src="bildegryte1.jpeg" alt="Gryter – Tradisjon Catering"></div>
+              <div class="menu-gallery-item"><img src="bildegryte2.jpeg" alt="Gryteretter – Tradisjon Catering" loading="lazy"></div>
+              <div class="menu-gallery-item"><img src="bildegryte3.jpeg" alt="Tradisjonelle gryter – Tradisjon Catering" loading="lazy"></div>
             </div>
-
-
             <div class="gallery-bottom">
-
-              <div
-                class="gallery-dots"
-                id="galleryDots"
-              >
-
-                <span class="gallery-dot active"></span>
-                <span class="gallery-dot"></span>
-                <span class="gallery-dot"></span>
-
+              <div class="gallery-dots" id="galleryDots">
+                <span class="gallery-dot active"></span><span class="gallery-dot"></span><span class="gallery-dot"></span>
               </div>
-
-
-              <span class="gallery-hint">
-                Sveip for å se mer →
-              </span>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
 
 
@@ -2073,8 +2083,8 @@
        YEAR
     ========================================= */
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    const yearElement = document.getElementById("year");
+    if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 
 
@@ -2086,5 +2096,63 @@
 
   </script>
 
+
+  <script>
+    (() => {
+      const tabs = [...document.querySelectorAll('#menuTabs .menu-tab')];
+      const panel = document.getElementById('menuPanel');
+      const gallery = document.getElementById('menuGallery');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      tabs.forEach(tab => {
+        tab.id = 'menu-tab-' + tab.dataset.menu;
+        tab.setAttribute('aria-controls', 'menuPanel');
+      });
+      function syncTabs() {
+        tabs.forEach(tab => tab.tabIndex = tab.classList.contains('active') ? 0 : -1);
+        const active = tabs.find(tab => tab.classList.contains('active'));
+        if (active) panel.setAttribute('aria-labelledby', active.id);
+        updateCount();
+      }
+      document.getElementById('menuTabs').addEventListener('click', syncTabs);
+      document.getElementById('menuTabs').addEventListener('keydown', event => {
+        const index = tabs.indexOf(document.activeElement);
+        if (index < 0) return;
+        let next;
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next === undefined) return;
+        event.preventDefault();
+        tabs[next].focus();
+        tabs[next].click();
+      });
+      function currentIndex() {
+        const first = gallery.firstElementChild;
+        if (!first) return 0;
+        const gap = parseFloat(getComputedStyle(gallery).gap) || 0;
+        return Math.round(gallery.scrollLeft / (first.getBoundingClientRect().width + gap));
+      }
+      function updateCount() {
+        if (!document.getElementById('menuImageCount')) return;
+        const index = currentIndex();
+        document.getElementById('menuImageCount').textContent = (index + 1) + ' / ' + gallery.children.length;
+        document.getElementById('menuPrevious').disabled = index === 0;
+        document.getElementById('menuNext').disabled = index >= gallery.children.length - 1;
+      }
+      function move(direction) {
+        const index = Math.max(0, Math.min(gallery.children.length - 1, currentIndex() + direction));
+        const gap = parseFloat(getComputedStyle(gallery).gap) || 0;
+        gallery.scrollTo({left: index * (gallery.firstElementChild.getBoundingClientRect().width + gap), behavior: reducedMotion.matches ? 'instant' : 'smooth'});
+      }
+      document.getElementById('menuPrevious')?.addEventListener('click', () => move(-1));
+      document.getElementById('menuNext')?.addEventListener('click', () => move(1));
+      gallery.addEventListener('scroll', updateCount, {passive: true});
+      window.addEventListener('resize', updateCount);
+      syncTabs();
+    })();
+  </script>
+
+  <script src="scroll-reveal.js" defer></script>
 </body>
 </html>
