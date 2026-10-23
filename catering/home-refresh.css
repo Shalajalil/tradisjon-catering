@@ -670,3 +670,5 @@ header { background: rgba(62,16,38,.96); border-bottom-color: rgba(241,169,190,.
  .dessert-page .hero .dessert-hero-pair img[src$="/baklava1.webp"],
  .dessert-page .hero .dessert-hero-pair .dessert-cups-hero { height: 230px; }
 }
+
+.contact-detail.contact-organization::before { content: "№"; }
