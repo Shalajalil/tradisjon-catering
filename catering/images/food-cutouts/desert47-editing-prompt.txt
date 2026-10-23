@@ -1,0 +1,1 @@
+Built-in imagegen background-extraction edit of desert47.jpeg. Remove room, person, equipment and table around and between desserts. Preserve all dessert cups, cupcakes, glass rims, gold bases, cream, fruit, biscuits, arrangement and perspective. Keep pale food opaque. Natural food lighting and clean edges. No invented food or added logos. True RGBA transparency.

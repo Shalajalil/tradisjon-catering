@@ -1,0 +1,5 @@
+Built-in imagegen; one edit per source photograph.
+
+Edit target: each selected dessert photograph. Replace the surrounding scene with a clean seamless pure white studio background and a subtle natural contact shadow. Preserve the dessert shape, layers, toppings, texture, color and existing plate or cup. Remove unrelated furniture, background glasses, napkins and clutter. Show the full dessert with comfortable margins. Consistent professional product photography. No text or logos. Retain realistic food detail. One standalone landscape product image per source.
+
+Sources: gryter-1.jpg, ris-1.jpg, kjott-2.jpg, kylling-2.jpg, salater-2.jpg, frukt-1.jpg, dessert-2.jpg.

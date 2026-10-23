@@ -1,0 +1,1 @@
+Built-in imagegen background-extraction edits of Kake1.jpeg, Kake2.jpeg and Kake3.jpeg. Remove tablecloth, room and clutter. Preserve cakes, decorations, plates and exact arrangement. Correct purple event-light cast to natural food lighting. Keep pale icing opaque. True RGBA transparency. No invented food, text or logos.

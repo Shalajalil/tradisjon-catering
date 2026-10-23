@@ -1,0 +1,1 @@
+Built-in imagegen background-extraction edit of baklava1.jpeg and baklava2.jpeg. Remove table and surrounding room. Preserve all pastries, layers, pistachios, orange roses, leaves, metal platters, arrangement and framing. True RGBA transparency with natural edges. No invented food or logos.
