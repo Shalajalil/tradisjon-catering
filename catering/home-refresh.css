@@ -599,3 +599,38 @@ header { background: rgba(62,16,38,.96); border-bottom-color: rgba(241,169,190,.
  .occasion-grid { grid-template-columns: minmax(0,1fr); }
  #meny .menu-content ul { grid-template-columns: minmax(0,1fr); }
 }
+
+/* Keep mobile hero actions directly with the heading and introduction. */
+@media (max-width: 650px) {
+ .homepage-main .hero .hero-grid,
+ .dessert-page .hero .hero-grid { align-items: start; justify-items: stretch; }
+ .hero .hero-buttons {
+   grid-row: 4;
+   grid-column: 1;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   align-items: center;
+   align-content: start;
+   justify-self: stretch;
+   gap: 9px;
+   margin: 4px 0 0;
+   width: 100%;
+ }
+ .hero .hero-buttons .btn {
+   flex: 0 1 auto;
+   width: auto;
+   max-width: 100%;
+   min-width: 0;
+   height: auto;
+   min-height: 46px;
+   padding: 11px 15px;
+   font-size: 12px;
+   line-height: 1.3;
+   text-align: center;
+   align-self: auto;
+   justify-content: center;
+ }
+ .hero .hero-image { grid-row: 5; grid-column: 1; margin-top: 6px; }
+}
