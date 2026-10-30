@@ -763,14 +763,14 @@
 <button type="button" class="menu-tab" data-menu="salater" role="tab" aria-selected="false"><span>Salater</span></button>
 <button type="button" class="menu-tab" data-menu="frukt" role="tab" aria-selected="false"><span>Frukt</span></button>
 <button type="button" class="menu-tab" data-menu="dessert" role="tab" aria-selected="false"><span>Dessert</span></button>
-        </div>
+<button aria-selected="false" class="menu-tab" data-menu="dolma" role="tab" type="button">Dolma</button></div>
 <div class="menu-photo-origin"><p>Alle matbildene viser mat vi har laget til kunder. Bakgrunnene er redigert for et enhetlig uttrykk.</p></div>
         <div class="menu-box" id="menuPanel" role="tabpanel" aria-labelledby="menu-tab-gryter" tabindex="0">
           <div class="menu-content">
             <small>TRADISJON CATERING · MENY</small>
             <h3 id="menuTitle">Gryter og tradisjonsretter</h3>
             <p id="menuText">Spør oss om disse rettene til ditt arrangement. Menyen tilpasses antall gjester og ønsker.</p>
-            <ul id="menuItems"><li>Fasolia / bønnegryte</li><li>Tapsi og grønnsaksgryter</li><li>Bame</li><li>Dolma</li></ul>
+            <ul id="menuItems"><li>Fasolia / bønnegryte</li><li>Tapsi og grønnsaksgryter</li><li>Bame</li></ul>
             <a href="#contactForm" class="btn btn-outline">Be om tilbud →</a>
             <p class="business-menu-note">Bildene viser mat fra Tradisjon Catering og er illustrasjoner. Oppgi ønskede retter, dato, antall gjester og sted i forespørselen.</p>
           </div>
@@ -1491,7 +1491,6 @@
       "Fasolia / bønnegryte",
       "Tapsi og grønnsaksgryter",
       "Bame",
-      "Dolma"
     ],
     "images": [
       "images/food-cutouts/bildegryte1.webp",
@@ -1576,6 +1575,19 @@
       "images/food-cutouts/bildedeser1.webp",
       "images/food-cutouts/bildedeser2.webp",
       "images/food-cutouts/bildedeser3.webp"
+    ]
+  },
+  "dolma": {
+    "title": "Dolma",
+    "text": "Tradisjonell dolma som kan bestilles i vegetarvariant eller med kjøtt.",
+    "items": [
+      "Dolma vegetar",
+      "Dolma kjøtt"
+    ],
+    "images": [
+      "Dolma1-cutout.png",
+      "Dolma2-cutout.png",
+      "Dolma3-cutout.png"
     ]
   }
 };
@@ -1675,6 +1687,8 @@
       if (!data) {
         return;
       }
+
+      menuGallery.classList.toggle("dolma-gallery", menuKey === "dolma");
 
 
       document

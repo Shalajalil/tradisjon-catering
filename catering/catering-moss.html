@@ -543,7 +543,7 @@
 <button aria-selected="false" class="menu-tab" data-menu="dessert" role="tab" type="button">
             Dessert
           </button>
-</div>
+<button aria-selected="false" class="menu-tab" data-menu="dolma" role="tab" type="button">Dolma</button></div>
 <div class="menu-photo-origin"><p>Alle matbildene viser mat vi har laget til kunder. Bakgrunnene er redigert for et enhetlig uttrykk.</p></div>
 <div id="menuPanel" role="tabpanel" aria-labelledby="menuTitle" tabindex="0" class="menu-box">
 <div class="menu-content">
@@ -566,9 +566,6 @@
               </li>
 <li>
                 Bame
-              </li>
-<li>
-                Dolma
               </li>
 </ul>
 <a class="btn btn-outline" href="#contactForm">
@@ -905,7 +902,6 @@
           "Fasolia / bønnegryte",
           "Tapsi og grønnsaksgryter",
           "Bame",
-          "Dolma"
         ],
 
         images: [
@@ -1048,8 +1044,20 @@
           "images/food-cutouts/bildedeser3.webp"
         ]
 
-      }
-
+      },
+  "dolma": {
+    "title": "Dolma",
+    "text": "Tradisjonell dolma som kan bestilles i vegetarvariant eller med kjøtt.",
+    "items": [
+      "Dolma vegetar",
+      "Dolma kjøtt"
+    ],
+    "images": [
+      "Dolma1-cutout.png",
+      "Dolma2-cutout.png",
+      "Dolma3-cutout.png"
+    ]
+  }
     };
 
 
@@ -1147,6 +1155,8 @@
       if (!data) {
         return;
       }
+
+      menuGallery.classList.toggle("dolma-gallery", menuKey === "dolma");
 
 
       document
