@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # All public pages, including dessert ordering and cuisine pages.
-Sitemap: https://tradisjoncatering.no/sitemap.xml
+Sitemap: https://www.tradisjoncatering.no/sitemap.xml
