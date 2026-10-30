@@ -755,7 +755,8 @@
 <button type="button" class="menu-tab" data-menu="salater" role="tab" aria-selected="false"><span>Salater</span></button>
 <button type="button" class="menu-tab" data-menu="frukt" role="tab" aria-selected="false"><span>Frukt</span></button>
 <button type="button" class="menu-tab" data-menu="dessert" role="tab" aria-selected="false"><span>Dessert</span></button>
-<button aria-selected="false" class="menu-tab" data-menu="dolma" role="tab" type="button">Dolma</button></div>
+<button aria-selected="false" class="menu-tab" data-menu="dolma" role="tab" type="button">Dolma</button>
+<button aria-selected="false" class="menu-tab" data-menu="grill" role="tab" type="button">Grill</button></div>
 <div class="menu-photo-origin"><p>Alle matbildene viser mat vi har laget til kunder. Bakgrunnene er redigert for et enhetlig uttrykk.</p></div>
         <div class="menu-box" id="menuPanel" role="tabpanel" aria-labelledby="menu-tab-gryter" tabindex="0">
           <div class="menu-content">
@@ -1579,6 +1580,19 @@
       "Dolma2-cutout.png",
       "Dolma3-cutout.png"
     ]
+  },
+  "grill": {
+    "title": "Grill",
+    "text": "Grillretter til selskapsmenyen, med kebab grill og kylling grill.",
+    "items": [
+      "Kebab grill",
+      "Kylling grill"
+    ],
+    "images": [
+      "grill1-cutout.png",
+      "grill2-cutout.png",
+      "grill3-cutout.png"
+    ]
   }
 };
 
@@ -1679,6 +1693,7 @@
       }
 
       menuGallery.classList.toggle("dolma-gallery", menuKey === "dolma");
+      menuGallery.classList.toggle("grill-gallery", menuKey === "grill");
 
 
       document
