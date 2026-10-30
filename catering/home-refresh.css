@@ -676,16 +676,19 @@ header { background: rgba(62,16,38,.96); border-bottom-color: rgba(241,169,190,.
 
 /* Dolma cutouts use transparent backgrounds in every menu gallery. */
 #meny #menuGallery.dolma-gallery .menu-gallery-item,
-#meny #menuGallery.grill-gallery .menu-gallery-item {
+#meny #menuGallery.grill-gallery .menu-gallery-item,
+#meny #menuGallery.gryter-gallery .menu-gallery-item {
   background: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
   overflow: visible;
 }
 #meny #menuGallery.dolma-gallery .menu-gallery-item::after,
-#meny #menuGallery.grill-gallery .menu-gallery-item::after { content: none !important; }
+#meny #menuGallery.grill-gallery .menu-gallery-item::after,
+#meny #menuGallery.gryter-gallery .menu-gallery-item::after { content: none !important; }
 #meny #menuGallery.dolma-gallery .menu-gallery-item img,
-#meny #menuGallery.grill-gallery .menu-gallery-item img {
+#meny #menuGallery.grill-gallery .menu-gallery-item img,
+#meny #menuGallery.gryter-gallery .menu-gallery-item img {
   object-fit: contain !important;
   background: transparent !important;
 }
